@@ -1,0 +1,4 @@
+# alles voor info blokje
+^\+-+\+-+\+\n\| \|image[0-9]+\|[^\|]*\|([^\|]*)\|\n*.*\n.*
+# vervangen voor 
+.. note::\n\t$1
