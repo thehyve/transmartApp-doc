@@ -1,48 +1,48 @@
-Chapter 5: Advanced Workflow Analyses
-=====================================
+Chapter 5: Advanced Workflows
+=============================
 
 tranSMART provides the ability to generate the following analyses and
 visualizations:
 
--  *aCGH Survival Analysis* (page 46)
+-  `aCGH Survival Analysis`_
 
--  *Box Plot with ANOVA* (page 48)
+-  `Box Plot with ANOVA`_
 
--  *Correlation Analysis* (page 50)
+-  `Correlation Analysis`_
 
--  *Forest Plot* (page 51)
+-  `Forest Plot`_
 
--  *Frequency Plot for aCGH* (page 55)
+-  `Frequency Plot for aCGH`_
 
--  *Group Test for aCGH* (page 56)
+-  `Group Test for aCGH`_
 
--  *Group Test for RNASeq* (page 57)
+-  `Group Test for RNASeq`_
 
--  *Heatmaps* (page 59):
+-  `Heatmaps`_:
 
-   -  *Standard Heatmap* (page 60)
+   -  `Standard Heatmap`_
 
-   -  *Hierarchical Clustering* (page 61)
+   -  `Hierarchical Clustering`_
 
-   -  *K-Means Clustering* (page 63)
+   -  `K-Means Clustering`_
 
-   -  *Marker Selection* (page 64)
+   -  `Marker Selection`_
 
--  *IC50 Dose Response Curve* (page 66)
+-  `IC50 Dose Response Curve`_
 
--  *Line Graph* (page 68)
+-  `Line Graph`_
 
--  *Logistic Regression* (page 69)
+-  `Logistic Regression`_
 
--  *PCA* (page 71)
+-  `PCA`_
 
--  *Scatter Plot with Linear Regression* (page 73)
+-  `Scatter Plot with Linear Regression`_
 
--  *Survival Analysis* (page 77)
+-  `Survival Analysis`_
 
--  *Table with Fisher Test* (page 78)
+-  `Table with Fisher Test`_
 
--  *Waterfall Plot* (page 81)
+-  `Waterfall Plot`_
 
 Advanced Workflows use the R software environment for statistical
 computing and to generate analyses and visualizations. For more
@@ -51,14 +51,14 @@ information, visit http://www.r-project.org.
 Running the Analyses
 --------------------
 
-#. To begin to run any analysis:
+To begin to run any analysis:
 
-   1. In **Analyze**, open the study of interest, or open the Advanced
-      Trials folder to run an analysis of data from multiple studies.
+#.  In **Analyze**, open the study of interest, or open the Advanced
+    Trials folder to run an analysis of data from multiple studies.
 
-   2. Define the cohort(s) you want to analyze by dragging one or more
-      concepts into empty subset definition boxes. For more information,
-      see *Defining the Cohorts* on page 21.
+#.  Define the cohort(s) you want to analyze by dragging one or more
+    concepts into empty subset definition boxes. For more information,
+    see *Defining the Cohorts* on page 21.
 
 The following sections describe how to run specific analyses after you
 perform the above steps.
@@ -76,65 +76,63 @@ This is a statistical test (logrank) for survival data and called copy
 number data. The testing is recommended to be performed on
 high-dimensional data nodes containing chromosomal region information.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform an aCGH Survival Analysis:
+To perform an aCGH Survival Analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2. Select **aCGH Survival Analysis**.
+#.  Select **aCGH Survival Analysis**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define the following variables:
+#.  Define the following variables:
 
-   -  **Region**: A high-dimensional data node containing the
-      chromosomal regions.
+    -  **Region**: A high-dimensional data node containing the
+       chromosomal regions.
 
-   -  **Survival Time**: A numerical data node containing survival time
-      of interest (for example: Overall Survival [days]).
+    -  **Survival Time**: A numerical data node containing survival time
+       of interest (for example: Overall Survival [days]).
 
-   -  **Censoring Variable**: A categorical data node indicating status
-      subjects in which the selected event in survival time did NOT
-      happen (for example, for Overall Survival Time, the Censoring
-      Variable to select is Alive).
+    -  **Censoring Variable**: A categorical data node indicating status
+       subjects in which the selected event in survival time did NOT
+       happen (for example, for Overall Survival Time, the Censoring
+       Variable to select is Alive).
 
-   -  **Alteration type**: The type of chromosomal alteration used to
-      test association to survival (gains, losses, both).
+    -  **Alteration type**: The type of chromosomal alteration used to
+       test association to survival (gains, losses, both).
 
-   -  **Permutations**: The significance of the p-values is evaluated
-      through permutations, and a false discovery rate is calculated. At
-      least 10,000 permutations are recommended for final calculations.
-      This will require a significant amount of time. (Permutations can
-      be lowered for exploratory purposes.)
+    -  **Permutations**: The significance of the p-values is evaluated
+       through permutations, and a false discovery rate is calculated. At
+       least 10,000 permutations are recommended for final calculations.
+       This will require a significant amount of time. (Permutations can
+       be lowered for exploratory purposes.)
 
-   1. Click **Run Analysis**. As this may take a while, users are
-      advised to select the option **Run Job in Background** in the
-      popup window. The analysis can be retrieved at a later time in the
-      **Analysis Jobs** tab.
+#.  Click **Run Analysis**. As this may take a while, users are
+    advised to select the option **Run Job in Background** in the
+    popup window. The analysis can be retrieved at a later time in the
+    **Analysis Jobs** tab.
 
-#. Results appear in two sections:
+#.  Results appear in two sections:
+    
+    -   The chromosomal regions present in the high-dimensional data node
+        are shown in a table, appended with p-values and false discovery
+        rates.
 
-   1. The chromosomal regions present in the high-dimensional data node
-      are shown in a table, appended with p-values and false discovery
-      rates.
+    -   You can sort through the chromosomal regions, click on a region of
+        interest and press the button **Show Survival Plot**. This will
+        plot the survival curve for that particular region (see example
+        below).
 
-   2. You can sort through the chromosomal regions, click on a region of
-      interest and press the button **Show Survival Plot**. This will
-      plot the survival curve for that particular region (see example
-      below).
-
-You can also opt to click **Download Result**, in which case both the
-table and all survival plots are obtained.
+#.  You can also opt to click **Download Result**, in which case both the
+    table and all survival plots are obtained.
 
 |image97|
 
 **Reference**
-
-Wiel et al. (2005) "CGHMultiArray: exact p-values for multi-array
-comparative genomic hybridization data." *Bioinformatics* 21: 3193-3194.
+    Wiel et al. (2005) "CGHMultiArray: exact p-values for multi-array
+    comparative genomic hybridization data." *Bioinformatics* 21: 3193-3194.
 
 Box Plot with ANOVA 
 ~~~~~~~~~~~~~~~~~~~~
@@ -142,44 +140,44 @@ Box Plot with ANOVA
 A box plot with ANOVA analysis displays a box and whisker plot with
 corresponding analysis of variance in the sample(s).
 
-To begin the analysis, see *Running the Analyses* on page 46, then
-perform the following steps.
+To begin the analysis, see `Running the Analyses`_, then
+perform the following steps. 
 
-#. To perform a box plot with ANOVA analysis:
+To perform a box plot with ANOVA analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2. Select **Box Plot with ANOVA**.
+#.  Select **Box Plot with ANOVA**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define an independent variable and a dependent variable, following
-      the instructions above the boxes. You must use one categorical
-      variable and one continuous variable. The boxes are plotted based
-      on the categorical variable:
+#.  Define an independent variable and a dependent variable, following
+    the instructions above the boxes. You must use one categorical
+    variable and one continuous variable. The boxes are plotted based
+    on the categorical variable:
 
-   -  If the *independent variable* is categorical, the boxes are
-      plotted horizontally.
+    -  If the *independent variable* is categorical, the boxes are
+       plotted horizontally.
 
-   -  If the *dependent variable* is categorical, the boxes are plotted
-      vertically.
+    -  If the *dependent variable* is categorical, the boxes are plotted
+       vertically.
 
-   -  If you select two continuous variables, you must bin one to create
-      a categorical value.
+    -  If you select two continuous variables, you must bin one to create
+       a categorical value.
 
-   1. Optionally, enable binning by selecting **Enable** **binning**.
+#.  Optionally, enable binning by selecting **Enable** **binning**.
 
-Data binning refers to a pre-processing technique used to reduce minor
-observation errors. Clusters of data are replaced by a value
-representative of that cluster (the central value). For information on
-binning, see *Data Binning Using Box Plot with ANOVA* on page 84.
+    Data binning refers to a pre-processing technique used to reduce minor
+    observation errors. Clusters of data are replaced by a value
+    representative of that cluster (the central value). For information on
+    binning, see `Data Binning Using Box Plot with ANOVA`_.
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+    Your analysis appears below:
 
-   |image98|
+    |image98|
+
 
 Correlation Analysis
 ~~~~~~~~~~~~~~~~~~~~
@@ -187,39 +185,36 @@ Correlation Analysis
 In a correlation analysis, you are using statistical correlation to
 assess the relationship between variables.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a correlation analysis:
+To perform a correlation analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2. Select **Correlation Analysis**.
+#.  Select **Correlation Analysis**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define two or more continuous (or numerical) variables (for
-      example, Age).
+#.  Define two or more continuous (or numerical) variables (for example, Age).
 
-   4. Indicate how you want to run the correlation in the **Run
-      Correlation** dropdown menu.
+#.  Indicate how you want to run the correlation in the **Run Correlation** dropdown menu.
 
-**Note:** At this time, correlations are run by variable only.
+    **Note:** At this time, correlations are run by variable only.
 
-1. Select the analysis you want to perform from the **Correlation Type**
-   dropdown menu:
+#.  Select the analysis you want to perform from the **Correlation Type** dropdown menu:
 
-   |image99|
+    |image99|
 
-.. note::
-	 The analyses listed under **Correlation Type** refer to different regression algorithms.   
+    .. note::
+        The analyses listed under **Correlation Type** refer to different regression algorithms.   
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+    Your analysis appears below:
 
-   |image101|
+    |image101|
+
 
 Forest Plot 
 ~~~~~~~~~~~~
@@ -228,62 +223,62 @@ A forest plot graphically displays the relative strength of treatment
 effects among various cohorts (for example, people who took the same
 drug). Relative strength can be calculated in two ways:
 
--  As relative risk given exposure to a treatment or an environmental
-   factor — that is, the probability of an event occurring in a group of
-   exposed subjects measured against the probability of the event
-   occurring in a group of non-exposed subjects.
+-   As relative risk given exposure to a treatment or an environmental
+    factor — that is, the probability of an event occurring in a group of
+    exposed subjects measured against the probability of the event
+    occurring in a group of non-exposed subjects.
 
--  As an odds ratio — that is, the odds of an event occurring in one
-   group measured against the odds of an event occurring in a different
-   group.
+-   As an odds ratio — that is, the odds of an event occurring in one
+    group measured against the odds of an event occurring in a different
+    group.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a forest plot analysis:
+To perform a forest plot analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2. Select **Forest Plot**.
+#.  Select **Forest Plot**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define the following variables:
+#.  Define the following variables:
 
-   -  **Independent variable:** Specifies the experimental or treatment
-      variable being measured in the analysis. If this variable is
-      continuous, it requires binning.
+    -   **Independent variable:** Specifies the experimental or treatment
+        variable being measured in the analysis. If this variable is
+        continuous, it requires binning.
 
-   -  **Control or Reference variable:** Indicates the control or
-      reference variable for the analysis; for example, no treatment or
-      placebo. If this variable is continuous, it requires binning.
+    -   **Control or Reference variable:** Indicates the control or
+        reference variable for the analysis; for example, no treatment or
+        placebo. If this variable is continuous, it requires binning.
 
-   -  **Dependent Variable:** Indicates the event outcome. Variables
-      entered must be mutually exclusive; for example, Alive and Dead.
+    -   **Dependent Variable:** Indicates the event outcome. Variables
+        entered must be mutually exclusive; for example, Alive and Dead.
+ 
+        If there is only one node in the concept you want to use for Dependent
+        variable, use the checkbox below the box to create the second node. For
+        example, the only node in Gender is Female. tranSMART presumes that each
+        subject for whom Female does not apply is Other.
 
-If there is only one node in the concept you want to use for Dependent
-variable, use the checkbox below the box to create the second node. For
-example, the only node in Gender is Female. tranSMART presumes that each
-subject for whom Female does not apply is Other.
+        If this variable is continuous, it requires binning.
 
-If this variable is continuous, it requires binning.
+    -   **Stratification Variable:** Stratifies the relationship between the
+        dependent and independent variables by the variable specified here.
+        For example, if you add the stratification variable Cancer Stage,
+        data is plotted and displayed for each stage. Without stratification,
+        data displays as a single summary value in the graph.
 
--  **Stratification Variable:** Stratifies the relationship between the
-   dependent and independent variables by the variable specified here.
-   For example, if you add the stratification variable Cancer Stage,
-   data is plotted and displayed for each stage. Without stratification,
-   data displays as a single summary value in the graph.
 
-If this variable is continuous, it requires binning.
+    If this variable is continuous, it requires binning.
 
-1. Optionally, enable binning by clicking the **Enable** button.
+#.  Optionally, enable binning by clicking the **Enable** button.
 
-For information, see *Data Binning Using Forest Plot* on page 85.
+    For information, see `Data Binning Using Forest Plot`_ on page 85.
 
-1. In **Statistic Type**, click **Odds Ratio** or **Relative Risk**.
+#.  In **Statistic Type**, click **Odds Ratio** or **Relative Risk**.
 
-2. Click **Run.**
+#.  Click **Run.**
 
 Your analysis appears below:
 
@@ -305,7 +300,7 @@ containing chromosomal region information.
 .. note::
 	 This analysis represents a quick way to investigate alteration frequencies of the selected groups and is very similar to the advanced workflow analysis *Group Test for aCGH* (page 56), in which statistical testing is performed. It is advisable to use the Frequency Plot for aCGH analysis for exploratory purposes before performing statistical testing (which requires a significant amount of time).   
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
 #. To perform a Frequency Plot for aCGH analysis:
@@ -338,11 +333,11 @@ Example of a plot of one group:
 |image105|
 
 **Reference**
+    Mark A. van de Wiel, Kyung In Kim, Sjoerd J. Vosse, Wessel N. van
+    Wieringen, Saskia M. Wilting and Bauke Ylstra. " CGHcall: calling
+    aberrations for array CGH tumor profiles." *Bioinformatics, 23*,
+    892-894.
 
-Mark A. van de Wiel, Kyung In Kim, Sjoerd J. Vosse, Wessel N. van
-Wieringen, Saskia M. Wilting and Bauke Ylstra. " CGHcall: calling
-aberrations for array CGH tumor profiles." *Bioinformatics, 23*,
-892-894.
 
 Group Test for aCGH
 ~~~~~~~~~~~~~~~~~~~
@@ -355,67 +350,66 @@ nodes containing chromosomal region information.
 This analysis plots the copy number aberration frequencies for different
 groups and indicates significant different regions between these groups.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a Group test for aCGH analysis:
+To perform a Group test for aCGH analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2. Select **Group Test for aCGH**.
+#.  Select **Group Test for aCGH**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define the following variables:
+#.  Define the following variables:
 
-   -  **Region**: A high-dimensional data node containing the
-      chromosomal regions.
+    -   **Region**: A high-dimensional data node containing the
+        chromosomal regions.
 
-   -  **Group:** Categorical data nodes separating the samples into two
-      or more groups.
+    -   **Group:** Categorical data nodes separating the samples into two
+        or more groups.
 
-   -  **Statistical Test:** Select the test to perform:
+    -   **Statistical Test:** Select the test to perform:
 
-      -  **Chi-square**: Test for the association between alteration
-         pattern and group label. Supports multiple comparisons.
+        -   **Chi-square**: Test for the association between alteration
+            pattern and group label. Supports multiple comparisons.
 
-      -  **Wilcoxon**: Rank-sum test for two groups.
+        -   **Wilcoxon**: Rank-sum test for two groups.
 
-      -  **Kruskal-Wallis**: Generalization for Wilcoxon for more than
-         two groups.
+        -   **Kruskal-Wallis**: Generalization for Wilcoxon for more than
+            two groups.
 
-   -  **Alteration type**: The type of chromosomal alteration used to
-      test the association (gains, losses, both).
+    -   **Alteration type**: The type of chromosomal alteration used to
+        test the association (gains, losses, both).
 
-   -  **Permutations**: The significance of the p-values is evaluated
-      through permutations, and a false discovery rate is calculated. At
-      least 10,000 permutations are recommended for final calculations.
-      This will require a significant amount of time. (Permutations can
-      be lowered for exploratory purposes in lieu of generating a
-      Frequency Plot for aCGH.)
+    -   **Permutations**: The significance of the p-values is evaluated
+        through permutations, and a false discovery rate is calculated. At
+        least 10,000 permutations are recommended for final calculations.
+        This will require a significant amount of time. (Permutations can
+        be lowered for exploratory purposes in lieu of generating a
+        Frequency Plot for aCGH.)
 
-   1. Click **Run Analysis**. As this may take a while, consider
-      selecting the option **Run Job in Background** in the popup
-      window. The analysis can be retrieved at a later time in the
-      **Analysis Jobs** tab.
+#.  Click **Run Analysis**. As this may take a while, consider
+    selecting the option **Run Job in Background** in the popup
+    window. The analysis can be retrieved at a later time in the
+    **Analysis Jobs** tab.
 
-#. Results appear in two sections:
+#.  Results appear in two sections:
 
-   1. The chromosomal regions present in the high-dimensional data node
-      are shown in a table, appended with p-values and false discovery
-      rates.
+    -   The chromosomal regions present in the high-dimensional data node
+        are shown in a table, appended with p-values and false discovery
+        rates.
 
-   1. Frequency plots of copy number alterations in each defined group
-      are shown. In particular, "Mirror frequency plots" are shown; for
-      example:
+    -   Frequency plots of copy number alterations in each defined group
+        are shown. In particular, "Mirror frequency plots" are shown; for
+        example:
 
-|image106|
+        |image106|
 
-#. Reference
+**Reference**
+    Wiel et al. (2005) "CGHMultiArray: exact p-values for multi-array
+    comparative genomic hybridization data." *Bioinformatics* 21: 3193-3194.
 
-Wiel et al. (2005) "CGHMultiArray: exact p-values for multi-array
-comparative genomic hybridization data." *Bioinformatics* 21: 3193-3194.
 
 Group Test for RNASeq
 ~~~~~~~~~~~~~~~~~~~~~
@@ -438,54 +432,54 @@ the differentially expressed genes (or tags, or exons, etc.) and plots
 visualizing the level of (dis)similarity of individual samples (MDS
 plot) as well as the DGE data (MA plot).
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a Group Test for RNASeq analysis:
+To perform a Group Test for RNASeq analysis:
 
-1. Click the **Advanced Workflow** tab, and then open the **Analysis**
-   menu.
+#.  Click the **Advanced Workflow** tab, and then open the **Analysis**
+    menu.
 
-2. Select **Group Test for RNASeq**.
+#.  Select **Group Test for RNASeq**.
 
     The Variable Selection section appears.
 
-1. Define the following variables:
+#.  Define the following variables:
 
-   -  **RNASeq**: A high-dimensional data node containing RNASeq-based
-      read count data.
+    -   **RNASeq**: A high-dimensional data node containing RNASeq-based
+        read count data.
 
-   -  **Group**: Categorical data nodes separating the samples into two
-      or more groups.
+    -   **Group**: Categorical data nodes separating the samples into two
+        or more groups.
 
-   -  **Analysis Type**: Select the type of analysis to perform:
+    -   **Analysis Type**: Select the type of analysis to perform:
 
-      -  two group unpaired
+        -   two group unpaired
 
-      -  multi-group
+        -   multi-group
 
-2. Click **Run Analysis**. As this may take a while, consider selecting
-   the option **Run Job in Background** in the popup window. The
-   analysis can be retrieved at a later time in the **Analysis Jobs**
-   tab.
+#.  Click **Run Analysis**. As this may take a while, consider selecting
+    the option **Run Job in Background** in the popup window. The
+    analysis can be retrieved at a later time in the **Analysis Jobs**
+    tab.
 
-**Results appear in two sections:**
+#.  Results appear in two sections:
 
--  An ordered table of the differentially expressed genes (or tags or
-   exons, etc.) including fault changes, abundances, p-values, and false
-   discovery rates.
+    -   An ordered table of the differentially expressed genes (or tags or
+        exons, etc.) including fault changes, abundances, p-values, and false
+        discovery rates.
 
--  An MDS plot visualizing the level of (dis)similarity of individual
-   samples, and an MA plot (fold change versus abundance) visualizing
-   the RNASeq data.
+    -   An MDS plot visualizing the level of (dis)similarity of individual
+        samples, and an MA plot (fold change versus abundance) visualizing
+        the RNASeq data.
 
-|image107|
+    |image107|
 
 **Reference**
+    Mark D. Robinson, Davis J. McCarthy and Gordon K. Smyth (2009) "edgeR: a
+    Bioconductor package for differential expression analysis of digital
+    gene expression data." *Bioinformatics* (2010) 26 (1): 139-140.
 
-Mark D. Robinson, Davis J. McCarthy and Gordon K. Smyth (2009) "edgeR: a
-Bioconductor package for differential expression analysis of digital
-gene expression data." *Bioinformatics* (2010) 26 (1): 139-140.
 
 Heatmaps
 ~~~~~~~~
@@ -512,13 +506,13 @@ http://www.r-project.org.
 
 You can generate the following types of heatmaps:
 
--  *Standard Heatmap* (page 60)
+-  `Standard Heatmap`_
 
--  *Hierarchical Clustering* (page 61)
+-  `Hierarchical Clustering`_
 
--  *K-Means Clustering* (page 63)
+-  `K-Means Clustering`_
 
--  *Marker Selection* (page 64)
+-  `Marker Selection`_
 
 Standard Heatmap
 ^^^^^^^^^^^^^^^^
@@ -527,47 +521,47 @@ A standard heatmap is a visualization of biomarker data points with no
 indication of patterns, groupings, or differentiation among the data
 points.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a standard heatmap analysis:
+To perform a standard heatmap analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   1. Select **Heatmap**.
+#.  Select **Heatmap**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   1. Drag a high-dimensional data node (|image109|), or several
-      high-dimensional nodes in the case of serial data, into the
-      Variable Selection box.
+#.  Drag a high-dimensional data node (|image109|), or several
+    high-dimensional nodes in the case of serial data, into the
+    Variable Selection box.
 
-   2. Click the **High Dimensional Data** button.
+#.  Click the **High Dimensional Data** button.
 
-      The Compare Subsets-Pathway Selection dialog box appears.
+    The Compare Subsets-Pathway Selection dialog box appears.
 
-   3. Specify the platform and other filters for the analysis.
+#.  Specify the platform and other filters for the analysis.
 
-      For information, see *High Dimensional Data* on page 83.
+    For information, see `High Dimensional Data`_.
 
-   4. Click **Apply Selections**.
+#.  Click **Apply Selections**.
 
-   5. In **Max rows to display**, type the maximum number or rows in the
-      heatmap.
+#.  In **Max rows to display**, type the maximum number or rows in the heatmap.
 
-   6. Optionally, select either or both of the following:
+#.  Optionally, select either or both of the following:
 
-|image110|
+    |image110|
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+#.  Your analysis appears below:
 
    |image111|
 
 .. note::
-	 With serial data, the heatmap will display the various conditions ordered by increasing associated value, such as in chronological order for a time series.   
+    With serial data, the heatmap will display the various conditions ordered by 
+    increasing associated value, such as in chronological order for a time series.   
 
 Hierarchical Clustering
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -575,43 +569,41 @@ Hierarchical Clustering
 Hierarchical clustering is a visualization of patterns of related data
 points in gene expression data.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a hierarchical clustering heatmap analysis:
+To perform a hierarchical clustering heatmap analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2. Select **Hierarchical Clustering**.
+#.  Select **Hierarchical Clustering**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Drag a high-dimensional data node (|image113|) into the Variable
-      Selection box.
+#.  Drag a high-dimensional data node (|image113|) into the Variable Selection box.
 
-   4. Click the **High Dimensional Data** button.
+#.  Click the **High Dimensional Data** button.
 
-      The Compare Subsets-Pathway Selection dialog box appears.
+    The Compare Subsets-Pathway Selection dialog box appears.
 
-   5. Specify the platform and other filters for the analysis.
+#.  Specify the platform and other filters for the analysis.
 
-      For information, see *High Dimensional Data* on page 83.
+    For information, see `High Dimensional Data`_.
 
-   6. Click **Apply Selections**.
+#.  Click **Apply Selections**.
 
-   7. In **Max rows to display**, type the maximum number or rows in the
-      heatmap.
+#.  In **Max rows to display**, type the maximum number or rows in the
+    heatmap.
 
-   8. Optionally, select one or more of the following:
+#.  Optionally, select one or more of the following:
 
-|image114|
+    |image114|
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+#.  Your analysis appears below:
 
-   |image115|
+    |image115|
 
 .. note::
 	 To read more about Hierarchical Clustering, visit: *http://www.ics.uci.edu/~eppstein/280/cluster.html*   
@@ -625,45 +617,43 @@ related data points, based on the number of groupings you specify.
 .. note::
 	 The K-Means analysis clusters columns only. Rows are not clustered.   
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a k-means clustering heatmap analysis:
+To perform a k-means clustering heatmap analysis:
 
-   1.  Click the **Advanced Workflow** tab, then open the **Analysis**
-       menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2.  Select **K-Means Clustering**.
+#.  Select **K-Means Clustering**.
 
-       The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3.  Drag a high-dimensional data node (|image118|) into the Variable
-       Selection box.
+#.  Drag a high-dimensional data node (|image118|) into the Variable Selection box.
 
-   4.  Click the **High Dimensional Data** button.
+#.  Click the **High Dimensional Data** button.
 
-       The Compare Subsets-Pathway Selection dialog box appears.
+    The Compare Subsets-Pathway Selection dialog box appears.
 
-   5.  Specify the platform and other filters for the analysis.
+#.  Specify the platform and other filters for the analysis.
 
-       For information, see *High Dimensional Data* on page 83.
+    For information, see `High Dimensional Data`_.
 
-   6.  Click **Apply Selections**.
+#.  Click **Apply Selections**.
 
-   7.  In **Number of clusters**, type the number of clusters to include
-       in the heatmap.
+#.  In **Number of clusters**, type the number of clusters to include
+    in the heatmap.
 
-   8.  In **Max rows to display**, type the maximum number or rows in
-       the heatmap.
+#.  In **Max rows to display**, type the maximum number or rows in
+    the heatmap.
 
-   9.  Optionally, select **Calculate z-score on the fly**.
+#.  Optionally, select **Calculate z-score on the fly**.
 
-   10. Click **Run**.
+#.  Click **Run**.
 
-       Your analysis appears below. Clusters are represented by the
-       colored bars at the top of the heatmap:
+#.  Your analysis appears below. Clusters are represented by the
+    colored bars at the top of the heatmap:
 
-       |image119|
+    |image119|
 
 .. note::
 	 To read more about K-Means Clustering, visit: *http://www.ics.uci.edu/~eppstein/280/cluster.html*   
@@ -681,61 +671,59 @@ statistics.
 Optionally, you can run a MetaCore Enrichment Analysis from a generated
 Marker Selection heatmap.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
 .. note::
 	 Two subsets must be specified when using a Marker Selection heatmap.   
 
-#. To perform a marker selection heatmap analysis:
+To perform a marker selection heatmap analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2. Select **Marker Selection**.
+#.  Select **Marker Selection**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Drag a high-dimensional data node (|image122|) into the Variable
-      Selection box.
+#.  Drag a high-dimensional data node (|image122|) into the Variable
+    Selection box.
 
-   4. Click the **High Dimensional Data** button.
+#.  Click the **High Dimensional Data** button.
 
-      The Compare Subsets-Pathway Selection dialog box appears.
+    The Compare Subsets-Pathway Selection dialog box appears.
 
-   5. Specify the platform and other filters for the analysis.
+#.  Specify the platform and other filters for the analysis.
 
-      For information, see *High Dimensional Data* on page 83.
+    For information, see `High Dimensional Data`_.
 
-   6. Click **Apply Selections**.
+#.  Click **Apply Selections**.
 
-   1. In the **Number of Markers** field, type a numeric value. This
-      will determine the number of differentially expressed genes that
-      are returned.
+#.  In the **Number of Markers** field, type a numeric value. This
+    will determine the number of differentially expressed genes that
+    are returned.
 
-   2. Optionally, select either or both of the following:
+#.  Optionally, select either or both of the following:
 
-|image123|
+    |image123|
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below. The subsets are represented by the
-   colored bars at the top of the heatmap:
+#.  Your analysis appears below. The subsets are represented by the
+    colored bars at the top of the heatmap:
 
-   |image124|
+    |image124|
 
-   A table of the top markers appears below the heatmap. You can sort
-   the table by clicking any of the column headings. Optionally, you can
-   view MetaCore settings and run a MetaCore Enrichment Analysis by
-   clicking the buttons above the table.
+A table of the top markers appears below the heatmap. You can sort
+the table by clicking any of the column headings. Optionally, you can
+view MetaCore settings and run a MetaCore Enrichment Analysis by
+clicking the buttons above the table.
 
-   For information about MetaCore Enrichment Analysis, see *MetaCore
-   Enrichment Analysis* on page 95.
+For information about MetaCore Enrichment Analysis, see :ref:`metacore-enrichtment-analysis-label`.
 
-   The following table represents a portion of the data from the Marker
-   Selection heatmap illustrated above:
+The following table represents a portion of the data from the Marker
+Selection heatmap illustrated above:
 
-   |image125|
+|image125|
 
 .. note::
 	 For more information on the analyses used in Marker Selection, visit: http://mathworld.wolfram.com/bonferronicorrection.html.   
@@ -746,33 +734,32 @@ IC50 Dose Response Curve
 IC50 dose response curve analyses measure the effectiveness of a
 compound in inhibiting certain biological processes.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform an IC50 dose response curve analysis:
+To perform an IC50 dose response curve analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   1. Select **IC50**.
+#.  Select **IC50**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   1. Define the following variables:
+#.  Define the following variables:
 
-+--------------------------+----------------------------------------------------------------------------------------------------+
-| Variable                 | Description                                                                                        |
-+==========================+====================================================================================================+
-| Cell Lines               | The categorical value that represents the cell lines to plot.                                      |
-+--------------------------+----------------------------------------------------------------------------------------------------+
-| Concentration Variable   | The continuous variable that represents the dosage of a compound at a given concentration level.   |
-+--------------------------+----------------------------------------------------------------------------------------------------+
+    **Cell Lines**
+        The categorical value that represents the cell lines to plot.
+        
+    **Concentration Variable**
+        The continuous variable that represents the dosage of a compound at a given concentration level.
+       
+#.  Click **Run**.
 
-1. Click **Run**.
+    Your analysis appears below:
 
-   Your analysis appears below:
+    |image127|
 
-|image127|
 
 Line Graph
 ~~~~~~~~~~
@@ -780,8 +767,7 @@ Line Graph
 A line graph is designed to plot serial numeric data (high or low
 dimensional); that is, a numeric variable that has been measured in a
 series of conditions for each subject (for example, several timepoints).
-For more information on serial data, see *Serial Numeric Data* on page
-20.
+For more information on serial data, see :ref:`serial-numeric-data-label`.
 
 In a line graph, the various conditions are plotted along the x-axis, at
 scale (unless you check the **Plot evenly spaced** option) when the
@@ -795,53 +781,57 @@ The measurement of interest can be plotted for one or several groups
 (for example, treatment groups) of the defined subsets.
 
 .. note::
-	 Each group will be plotted as a distinct line on the graph, unless you select **Plot individuals** as the graph type. In that case, each individual is plotted as a distinct line, using different colors for each group.   
+    Each group will be plotted as a distinct line on the graph, unless 
+    you select **Plot individuals** as the graph type. In that case,
+    each individual is plotted as a distinct line, using different colors for each group.   
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a line graph analysis:
+To perform a line graph analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   2. Select **Line Graph**.
+#.  Select **Line Graph**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Drag and drop several nodes of serial data into the
-      **Time/Measurement Concepts** selection box. To define the groups,
-      drag and drop nodes into the **Group Concepts** selection box.
+#.  Drag and drop several nodes of serial data into the
+    **Time/Measurement Concepts** selection box. To define the groups,
+    drag and drop nodes into the **Group Concepts** selection box.
 
-      If no group concept is defined, the defined subsets are used as
-      one group.
+    If no group concept is defined, the defined subsets are used as
+    one group.
 
-Note that the order of the data points along the x-axis is controlled by
-the value defining each condition, even with the **Plot evenly spaced**
-option selected; for example, in chronological order for time series.
+    .. note::
+        The order of the data points along the x-axis is controlled by
+        the value defining each condition, even with the **Plot evenly spaced**
+        option selected; for example, in chronological order for time series.
 
-1. If you included high dimensional data in either concept box, click
-   the **High Dimensional Data** button for that box.
+#.  If you included high dimensional data in either concept box, click
+    the **High Dimensional Data** button for that box.
 
-   The Compare Subsets-Pathway Selection dialog box appears.
+    The Compare Subsets-Pathway Selection dialog box appears.
 
-   a. Specify the platform and other filters for the analysis.
+    Specify the platform and other filters for the analysis.
 
-For information, see *High Dimensional Data* on page 83.
+    For information, see `High Dimensional Data`_.
 
-a. Click **Apply Selections**.
+#.  Click **Apply Selections**.
 
-1. Optionally, select one or both of the following:
+#.  Optionally, select one or both of the following:
 
-|image129|
+    |image129|
 
-1. In **Graph Type**, select the type of line graph you want to display.
+#.  In **Graph Type**, select the type of line graph you want to display.
 
-2. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+    Your analysis appears below:
 
-|image130|
+    |image130|
+
 
 Logistic Regression
 ~~~~~~~~~~~~~~~~~~~
@@ -851,30 +841,29 @@ outcome of a variable that can take on a limited number of categories
 based on one or more predictors. A logistic regression analysis displays
 a categorical value predictive of a numerical value.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a logistic regression analysis:
+To perform a logistic regression analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
 
-   2. Select **Logistic Regression**.
+#.  Select **Logistic Regression**.
 
-The Variable Selection section appears.
+#.  The Variable Selection section appears.
 
-1. Define the **Independent Variable** and the **Outcome** variables,
-   following the instructions above the entry boxes.
+#.  Define the **Independent Variable** and the **Outcome** variables,
+    following the instructions above the entry boxes.
 
-.. note::
-	 The categorical Outcome variable must use two — and *only two* — nodes.   
+    .. note::
+        The categorical Outcome variable must use two — and *only two* — nodes.   
 
-The top of the logistic regression plot is determined by the first entry
-in the **Outcome** variable box.
+        The top of the logistic regression plot is determined by the first entry
+        in the **Outcome** variable box.
 
-1. Optionally, select **Enable binning**.
+#.  Optionally, select **Enable binning**.
 
-2. Click **Run.**
+#.  Click **Run.**
 
 Your analysis appears below. Note that raw data (Event/Non-Event data)
 is plotted along the top and bottom of the analysis.
@@ -882,6 +871,7 @@ is plotted along the top and bottom of the analysis.
 |image132|
 
 |image133|
+
 
 PCA
 ~~~
@@ -895,41 +885,41 @@ in the total dataset. In other words, the principal component analysis
 is a workflow used to identify variance in a dataset. The analysis can
 be run on an entire microarray chip, or on a pathway.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
 .. note::
 	 Only one subset may be specified in this analysis. Information in Subset 2 will be ignored.   
 
-#. To perform a PCA analysis:
+To perform a PCA analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   2. Select **PCA**.
+#.  Select **PCA**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Drag a high-dimensional data node (|image135|) into the Variable
-      Selection box.
+#.  Drag a high-dimensional data node (|image135|) into the Variable
+    Selection box.
 
-   4. Click the **High Dimensional Data** button.
+#.  Click the **High Dimensional Data** button.
 
-      The Compare Subsets-Pathway Selection dialog appears.
+    The Compare Subsets-Pathway Selection dialog appears.
 
-   5. Specify the platform and other filters for the analysis.
+#.  Specify the platform and other filters for the analysis.
 
-      For information, see *High Dimensional Data* on page 83.
+    For information, see `High Dimensional Data`_.
 
-   6. Click **Apply Selections**.
+#.  Click **Apply Selections**.
 
-   1. Optionally, select either or both of the following:
+#.  Optionally, select either or both of the following:
 
-|image136|
+    |image136|
 
-Click **Run**. Your analysis appears below:
+#.  Click **Run**. Your analysis appears below:
 
-|image137|
+    |image137|
 
 .. note::
 	 For more information regarding PCAs, see: http://psb.stanford.edu/psb-online/proceedings/psb00/raychaudhuri.pdf.   
@@ -940,38 +930,38 @@ Scatter Plot with Linear Regression
 A scatter plot displays values for two variables within a dataset, with
 a line that best fits the slope of the data.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a scatter plot with linear regression analysis:
+To perform a scatter plot with linear regression analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   2. Select **Scatter Plot with Linear Regression**.
+#.  Select **Scatter Plot with Linear Regression**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define an independent variable and a dependent variable. Both
-      variables should be continuous (for example, Age) and can be high
-      dimensional data.
+#.  Define an independent variable and a dependent variable. Both
+    variables should be continuous (for example, Age) and can be high
+    dimensional data.
 
-   4. If you included high dimensional data in either variable box,
-      click the **High Dimensional Data** button for that box.
+#.  If you included high dimensional data in either variable box,
+    click the **High Dimensional Data** button for that box.
 
-      The Compare Subsets-Pathway Selection dialog box appears.
+    The Compare Subsets-Pathway Selection dialog box appears.
 
-      a. Specify the platform and other filters for the analysis.
+    Specify the platform and other filters for the analysis.
 
-For information, see *High Dimensional Data* on page 83.
+    For information, see `High Dimensional Data`_.
 
-a. Click **Apply Selections**.
+#.  Click **Apply Selections**.
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+#. Your analysis appears below:
 
-   |image139|
+    |image139|
 
 Log\ :sub:`10` Transformation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -980,74 +970,76 @@ Often there will be a large spread between values in the x-axis of a
 scatter plot analysis. You can use the **log\ :sub:`10`** option to
 transform the values in the x-axis, making the graph easier to analyze.
 
-#. To use the log\ :sub:`10` transformation:
+To use the log\ :sub:`10` transformation:
 
-   1. Select the study you want to use and drag it into a Subset
-      Definition box.
+#.  Select the study you want to use and drag it into a Subset
+    Definition box.
 
-   2. Select the **Scatter Plot with Linear Regression** analysis.
+#.  Select the **Scatter Plot with Linear Regression** analysis.
 
-   3. Enter the independent and dependent variables.
+#.  Enter the independent and dependent variables.
 
-   4. Check the box next to **Perform log10 transformation on
-      independent variable** (below the **Independent Variable** box):
+#.  Check the box next to **Perform log10 transformation on
+    independent variable** (below the **Independent Variable** box):
 
-|image140|
+    |image140|
 
-1. Click **Run.** Your analysis appears below:
+#.  Click **Run.** Your analysis appears below:
 
-|image141|
+    |image141|
 
-Note the difference between the x-axis on the scatter plot shown
-previously (no log\ :sub:`10` transformation) and the graph shown
-immediately above. On the first graph, the x-axis values are plotted by
-multiple of 50 — 50, 100, 150. When the log\ :sub:`10` transformation is
-applied, the x-axis values are plotted per much lower values — 3, 4, and
-5. The Linear Regression Result values reflect the recalculated data.
+    .. note::
+        The difference between the x-axis on the scatter plot shown
+        previously (no log\ :sub:`10` transformation) and the graph shown
+        immediately above. On the first graph, the x-axis values are plotted by
+        multiple of 50 — 50, 100, 150. When the log\ :sub:`10` transformation is
+        applied, the x-axis values are plotted per much lower values — 3, 4, and
+
+#.  The Linear Regression Result values reflect the recalculated data.
 
 Survival Analysis
 ~~~~~~~~~~~~~~~~~
 
 A survival analysis displays time-to-event data.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a survival analysis:
+To perform a survival analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   2. Select Survival Analysis.
+#.  Select Survival Analysis.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define the following variables:
+#.  Define the following variables:
 
-   -  **Time:** A numerical measure of duration; for example, Overall
-      Survival Time (Years).
+    -   **Time:** A numerical measure of duration; for example, Overall
+        Survival Time (Years).
 
-   -  **Category:** The groups into which the data will be split in
-      order to compare the time measured; for example, Cancer Stage.
-      This variable is optional. If you do use it, you must enter two
-      nodes for the comparison.
+    -   **Category:** The groups into which the data will be split in
+        order to compare the time measured; for example, Cancer Stage.
+        This variable is optional. If you do use it, you must enter two
+        nodes for the comparison.
 
-If this variable is continuous, it requires binning.
+    If this variable is continuous, it requires binning.
 
--  **Censoring Variable:** Specifies which patients had the event whose
-   time is being measured. For example, if the Time variable selected is
-   **Overall Survival Time (Years)**, an appropriate event variable is
-   **Patient Death**.
+    -   **Censoring Variable:** Specifies which patients had the event whose
+        time is being measured. For example, if the Time variable selected is
+        **Overall Survival Time (Years)**, an appropriate event variable is
+        **Patient Death**.
 
-1. Optionally, select **Enable binning**.
+#.  Optionally, select **Enable binning**.
 
-For details, see *Data Binning Using Survival Analysis* on page 87.
+    For details, see `Data Binning Using Survival Analysis`_.
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+    Your analysis appears below:
 
-   |image142|
+    |image142|
 
 Table with Fisher Test
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -1055,50 +1047,50 @@ Table with Fisher Test
 A Fisher Test analysis examines the significance of associated
 categorical variables.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a table with fisher test analysis:
+To perform a table with fisher test analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   2. Select **Table with Fisher Test**.
+#.  Select **Table with Fisher Test**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define independent and dependent variables, following the
-      instructions over the **Independent Variable** and **Dependent
-      Variable** boxes.
+#.  Define independent and dependent variables, following the
+    instructions over the **Independent Variable** and **Dependent
+    Variable** boxes.
 
-   4. If you included high dimensional data in either variable box,
-      click the **High Dimensional Data** button for that box.
+#.  If you included high dimensional data in either variable box,
+    click the **High Dimensional Data** button for that box.
 
-      The Compare Subsets-Pathway Selection dialog box appears.
+    The Compare Subsets-Pathway Selection dialog box appears.
 
-      a. Specify the platform and other filters for the analysis.
+    Specify the platform and other filters for the analysis.
 
-For information, see *High Dimensional Data* on page 83.
+    For information, see `High Dimensional Data`_.
 
-a. Click **Apply Selections**.
+#.  Click **Apply Selections**.
 
-1. Optionally, select **Enable binning**.
+#.  Optionally, select **Enable binning**.
 
-If you select this option, the first, or top, variable in the Dependent
-Variable box will be used as the conditional variable to calculate the
-binary outcome. Multiple variables can be categorized into two distinct
-groups by enabling the Data Binning option. The variable selected in Bin
-1 will be used as the conditional variable to calculate the binary
-outcome.
+    If you select this option, the first, or top, variable in the Dependent
+    Variable box will be used as the conditional variable to calculate the
+    binary outcome. Multiple variables can be categorized into two distinct
+    groups by enabling the Data Binning option. The variable selected in Bin
+    1 will be used as the conditional variable to calculate the binary
+    outcome.
 
-For information on binning with this type of analysis, see *Data Binning
-Using Table with Fisher Test* on page 88.
+    For information on binning with this type of analysis, see `Data Binning
+    Using Table with Fisher Test`_.
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+#.  Your analysis appears below:
 
-|image143|
+    |image143|
 
 Table with Fisher Test with Linked Events
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1124,40 +1116,41 @@ sample in a cohort. Bars are sorted by selected variables and displayed
 in ascending order. You can further refine the display by specifying
 ranges that will shade bars accordingly.
 
-To begin the analysis, see *Running the Analyses* on page 46, then
+To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To generate a waterfall plot:
+To generate a waterfall plot:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   2. Select **Waterfall**.
+#.  Select **Waterfall**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   3. Define the required variable by selecting a continuous data node
-      from the Dataset Explorer tree and dragging it into the Data Node
-      definition box:
+#.  Define the required variable by selecting a continuous data node
+    from the Dataset Explorer tree and dragging it into the Data Node
+    definition box:
 
-.. note::
-	 Continuous data nodes are indicated by the (**123**) icon to the left of study data.   
+    .. note::
+        Continuous data nodes are indicated by the (**123**) icon to the left of study data.   
 
-1. In **Low Range**, select the appropriate operator from the dropdown
-   menu, then type the value of the low range.
+#.  In **Low Range**, select the appropriate operator from the dropdown
+    menu, then type the value of the low range.
 
-2. In **High Range**, select the appropriate operator from the dropdown
-   menu, then type the value of the low range.
+#.  In **High Range**, select the appropriate operator from the dropdown
+    menu, then type the value of the low range.
 
-1. Optionally, if you would like the variable, as well as the specified
-   ranges, to appear within separate subsets in the **Comparison** tab,
-   click **Select inputs as Cohort**.
+#.  Optionally, if you would like the variable, as well as the specified
+    ranges, to appear within separate subsets in the **Comparison** tab,
+    click **Select inputs as Cohort**.
 
-1. Click **Run**.
+#.  Click **Run**.
 
-   Your analysis appears below:
+#.  Your analysis appears below:
 
-   |image146|
+    |image146|
+
 
 High Dimensional Data
 ---------------------
@@ -1172,7 +1165,6 @@ as platforms, samples, and genes or pathways).
     dimensional data (such as SNP, gene expression, RBM, etc.) symbolized by the DNA icon ( |image148| ). 
     Additionally, the High Dimensional Data feature cannot be used without high dimensional data.   
 
-
 When you click the **High Dimensional Data** button while setting up an
 analysis, the Compare Subsets-Pathway Selection dialog box appears.
 tranSMART will attempt to pre-populate default values in the associated
@@ -1181,29 +1173,36 @@ selection box.
 
 The dialog box has the following filters:
 
-+--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Filter                   | Description                                                                                                                                                                                                                                        |
-+==========================+====================================================================================================================================================================================================================================================+
-| Marker Type              | The platform type (for example, Gene Expression, SNP, mRNA, etc.) used to collect biomarker data in the study.                                                                                                                                     |
-+--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| GPL Platform             | The specific name of the platform used in the study.                                                                                                                                                                                               |
-+--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Sample                   | The type of sample tested in the study.                                                                                                                                                                                                            |
-+--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Tissue                   | The type of tissue tested in the study.                                                                                                                                                                                                            |
-+--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Select a Gene/Pathway/   | The gene or other item of interest. Separate multiple entries with a comma.                                                                                                                                                                        |
-| mirID/UniProtID          |                                                                                                                                                                                                                                                    |
-|                          | If you would like to run the analysis on the entire chip, leave this field blank.                                                                                                                                                                  |
-+--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Aggregate Probes?        | The checkbox can be selected if the variable chosen is either gene expression data or SNP copy number data.                                                                                                                                        |
-|                          |                                                                                                                                                                                                                                                    |
-|                          | If the checkbox is selected, the algorithm WGCNA (weighted correlation network analysis) is employed. For genes that are comprised of multiple probes, WGCNA selects the probe that best represents the overall expression level or copy number.   |
-|                          |                                                                                                                                                                                                                                                    |
-|                          | This checkbox does not apply to all advanced workflows.                                                                                                                                                                                            |
-|                          |                                                                                                                                                                                                                                                    |
-|                          | **Note:** WGCNA was developed by the Department of Human Genetics at UCLA. For more information, see http://www.genetics.ucla.edu/labs/horvath/CoexpressionNetwork/.                                                                               |
-+--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    **Marker Type**
+        The platform type (for example, Gene Expression, SNP, mRNA, etc.) used to collect biomarker data in the study. 
+
+    **GPL Platform**
+        The specific name of the platform used in the study.   
+
+    **Sample**
+        The type of sample tested in the study. 
+
+    **Tissue**
+        The type of tissue tested in the study. 
+
+    **Select a Gene/Pathway/mirID/UniProtID**
+        The gene or other item of interest. Separate multiple entries with a comma. 
+        
+        If you would like to run the analysis on the entire chip, leave this field blank.   
+
+    **Aggregate Probes?**
+        The checkbox can be selected if the variable chosen is either gene expression data or SNP copy number data. 
+
+        If the checkbox is selected, the algorithm WGCNA (weighted correlation network 
+        analysis) is employed. For genes that are comprised of multiple probes, WGCNA selects 
+        the probe that best represents the overall expression level or copy number.   
+    
+        This checkbox does not apply to all advanced workflows. 
+    
+        .. note::
+            WGCNA was developed by the Department of Human Genetics at
+            UCLA. For more information, see http://www.genetics.ucla.edu/labs/horvath/CoexpressionNetwork/.
+
 
 When finished defining the filters, click **Apply Selections**, then
 continue setting up the analysis in the Variable Selection section.
@@ -1236,42 +1235,68 @@ Moderately Well Defined,* and *Poorly Defined* are selected, you can
 group *Moderately Well Defined* with *Poorly Defined* and treat them as
 one group for the purposes of this analysis.
 
-#. To use the data binning feature with a box plot analysis:
+To use the data binning feature with a box plot analysis:
 
-   1. Begin to set up a Box Plot with ANOVA analysis by following the
-      instructions in section *Box Plot with ANOVA* on page 48.
+#.  Begin to set up a Box Plot with ANOVA analysis by following the
+    instructions in section *Box Plot with ANOVA* on page 48.
 
-   2. Enable binning by selecting **Enable** **binning**.
+#.  Enable binning by selecting **Enable** **binning**.
 
-   3. Define the following and then click **Run.**
+#.  Define the following and then click **Run.**
 
-+-------------------+-------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Field             | Description                                                                                                 | Comments                                                                                                                                                                 |
-+===================+=============================================================================================================+==========================================================================================================================================================================+
-| Variable          | Select which variable should define the groups (Independent or Dependent) from the dropdown menu.           | If the *independent variable* defines the groups, boxes will be plotted horizontally. If the *dependent variable* defines the groups, boxes will be plotted vertically   |
-+-------------------+-------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Variable Type     | Select whether the variable you have defined above is continuous or categorical from the dropdown menu.     | A continuous variable can be turned into a categorical variable when you use the binning feature.                                                                        |
-+-------------------+-------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Number of Bins    | Type the number of bins you would like data to be organized in.                                             | This step may require trial and error based on how you want to display data.                                                                                             |
-+-------------------+-------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Bin Assignments   | Select how you would like data to be binned from the dropdown menu.                                         | -  **Evenly Distribute Population:** Assigns bins based on the underlying data.                                                                                          |
-|                   |                                                                                                             |                                                                                                                                                                          |
-|                   | **Note:** This feature can only be used when the variable type selected above is continuous.                | For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].                 |
-|                   |                                                                                                             |                                                                                                                                                                          |
-|                   |                                                                                                             | -  **Evenly Spaced Bins:** Creates bins based on the overall range of the variable.                                                                                      |
-|                   |                                                                                                             |                                                                                                                                                                          |
-|                   |                                                                                                             | For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].                |
-+-------------------+-------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Manual Binning    | Select the checkbox if you want to bin manually.                                                            | Complete the binning form that populates as a result of checking the **Manual Binning** box.                                                                             |
-|                   |                                                                                                             |                                                                                                                                                                          |
-|                   | **Note:** This is the only binning method available if you are trying to bin a categorical variable type.   | -  For continuous data:                                                                                                                                                  |
-|                   |                                                                                                             |                                                                                                                                                                          |
-|                   |                                                                                                             | |image150|                                                                                                                                                               |
-|                   |                                                                                                             |                                                                                                                                                                          |
-|                   |                                                                                                             | -  For categorical data:                                                                                                                                                 |
-|                   |                                                                                                             |                                                                                                                                                                          |
-|                   |                                                                                                             | |image151|                                                                                                                                                               |
-+-------------------+-------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+    **Variable**    
+        Select which variable should define the groups (Independent or Dependent) from the dropdown menu. 
+        
+        If the *independent variable* defines the groups, boxes will be plotted horizontally. 
+        If the *dependent variable* defines the groups, boxes will be plotted vertically    
+
+
+    **Variable Type** 
+        Select whether the variable you have defined above is continuous or categorical from the dropdown menu.   
+        
+        A continuous variable can be turned into a categorical variable when you use the binning feature. 
+
+    **Number of Bins**
+        Type the number of bins you would like data to be organized in.   
+        
+        This step may require trial and error based on how you want to display data.  
+
+
+    **Bin Assignments** 
+        Select how you would like data to be binned from the dropdown menu.   
+        
+        .. note::
+            This feature can only be used when the variable type selected above is continuous.
+
+        What to use when:
+
+        -   **Evenly Distribute Population:** Assigns bins based on the underlying data.   
+    
+            For example, if the majority of the subjects in the study were elderly, bins based 
+            on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].  
+    
+        -   **Evenly Spaced Bins:** Creates bins based on the overall range of the variable.   
+        
+            For example, if the majority of the subjects in the study were elderly, bins 
+            based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)]. 
+
+
+    **Manual Binning**
+        Select the checkbox if you want to bin manually.  
+        
+        .. note::
+            This is the only binning method available if you are trying to bin a categorical variable type.  
+        
+        Complete the binning form that populates as a result of checking the **Manual Binning** box.  
+    
+        -   For continuous data:   
+        
+            |image150| 
+    
+        -   For categorical data:  
+
+            |image151|
 
 Data Binning Using Forest Plot
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1285,46 +1310,77 @@ Defined*, and *Poorly Defined* are selected, you can group *Moderately
 Well Defined* with *Poorly Defined* and treat them as one group for the
 purposes of this analysis.
 
-#. To use the data binning feature with a forest plot analysis:
+To use the data binning feature with a forest plot analysis:
 
-   1. Begin to set up a Forest Plot analysis by following the
-      instructions in section *Forest Plot* on page 51.
+#.  Begin to set up a Forest Plot analysis by following the
+    instructions in section `Forest Plot`_.
 
-   2. Enable binning by clicking the **Enable** button.
+#.  Enable binning by clicking the **Enable** button.
 
-   3. Define the following and then click **Run.**
+#.  Define the following and then click **Run.**
 
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Field             | Description                                                                                                                           | Comments                                                                                                                                                    |
-+===================+=======================================================================================================================================+=============================================================================================================================================================+
-| Variable          | Select the variable(s) you want to bin by checking the **Bin the [*variableType*] Variable** box next to the appropriate variables.   | Example for binning an independent variable:                                                                                                                |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   | You can bin from none to all four variables.                                                                                          | |image152|                                                                                                                                                  |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Variable Type     | Select whether the variable you have defined above is continuous or categorical from the dropdown menu.                               | A continuous variable can be turned into a categorical variable when you use the binning feature.                                                           |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Number of Bins    | Used with the Dependent and Stratification Variables only.                                                                            | Enter the number of bins into which you would like data to be organized.                                                                                    |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   |                                                                                                                                       | This step may require trial and error based on how you want to display data.                                                                                |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Bin Assignments   | Select how you would like data to be binned from the dropdown menu.                                                                   | -  **Evenly Distribute Population:** Assigns bins based on the underlying data.                                                                             |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   | Note: This is only an option when binning a continuous variable in the Dependent or Stratification input boxes.                       | For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].    |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   |                                                                                                                                       | -  **Evenly Spaced Bins:** Creates bins based on the overall range of the variable.                                                                         |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   |                                                                                                                                       | For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].   |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Manual Binning    | For Dependent and Stratification variables: Select the **Manual Binning** checkbox if you want to bin manually.                       | Complete the binning form that populates as a result of checking the **Manual Binning** box.                                                                |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   | **Note:** This is the only binning method available if you want to bin a categorical variable.                                        | -  For continuous data:                                                                                                                                     |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   |                                                                                                                                       | |image153|                                                                                                                                                  |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   |                                                                                                                                       | -  For categorical data:                                                                                                                                    |
-|                   |                                                                                                                                       |                                                                                                                                                             |
-|                   |                                                                                                                                       | |image154|                                                                                                                                                  |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    **Variable**
+        Select the variable(s) you want to bin by checking the **Bin the [*variableType*] Variable** 
+        box next to the appropriate variables.
+        
+        You can bin from none to all four variables.
+        
+        
+        Example for binning an independent variable:  
+        
+            |image152|    
+
+    **Variable Type**    
+        Select whether the variable you have defined above is continuous or categorical from the dropdown menu. 
+        
+        A continuous variable can be turned into a categorical variable when you use the binning feature.    
+
+
+    **Number of Bins**
+        Used with the Dependent and Stratification Variables only.  
+    
+        Enter the number of bins into which you would like data to be organized.
+
+        This step may require trial and error based on how you want to display data.
+    
+
+
+    **Bin Assignments**
+        Select how you would like data to be binned from the dropdown menu. 
+    
+        .. note::
+            This is only an option when binning a continuous variable in the Dependent or Stratification input boxes.
+        
+        When to use what:
+
+        -  **Evenly Distribute Population:** Assigns bins based on the underlying data.
+        
+            For example, if the majority of the subjects in the study were elderly, 
+            bins based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)]. 
+    
+        -  **Evenly Spaced Bins:** Creates bins based on the overall range of the variable.  
+    
+            For example, if the majority of the subjects in the study were elderly, bins 
+            based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].    
+
+
+    **Manual Binning**  
+        For Dependent and Stratification variables: Select the **Manual Binning** checkbox if you want to bin manually. 
+        
+        .. note::
+            This is the only binning method available if you want to bin a categorical variable.
+        
+        
+        Complete the binning form that populates as a result of checking the **Manual Binning** box. 
+        
+        -   For continuous data:  
+    
+            |image153|    
+    
+        -   For categorical data: 
+    
+            |image154|    
+
 
 Data Binning Using Survival Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1338,40 +1394,59 @@ Defined*, and *Poorly Defined* are selected, you can group *Moderately
 Well Defined* with *Poorly Defined* and treat them as one group for the
 purposes of this analysis.
 
-#. To use the data binning feature with a survival analysis:
+To use the data binning feature with a survival analysis:
 
-   1. Begin to set up a Survival Analysis by following the instructions
-      in section *Survival Analysis* on page 77.
+#.  Begin to set up a Survival Analysis by following the instructions
+    in section `Survival Analysis`_.
 
-   2. Enable binning by selecting **Enable binning**.
+#.  Enable binning by selecting **Enable binning**.
 
-   1. Define the following and then click **Run.**
+#.  Define the following and then click **Run.**. 
 
-+-------------------+-------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Field             | Description                                                                                                 | Comments                                                                                                                                                       |
-+===================+=============================================================================================================+================================================================================================================================================================+
-| Variable Type     | Select whether the variable you have defined above is continuous or categorical.                            | A continuous variable can be treated as a categorical variable when you use the binning feature.                                                               |
-+-------------------+-------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Number of Bins    | Type the number of bins you would like data to be organized in.                                             | This step may require trial and error based on how you want to display data.                                                                                   |
-+-------------------+-------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Bin Assignments   | Select how you would like data to be binned.                                                                | -  Evenly Distribute Population: Assigns bins based on the underlying data.                                                                                    |
-|                   |                                                                                                             |                                                                                                                                                                |
-|                   | **Note:** This feature can only be used when the variable type selected above is continuous.                |    For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].    |
-|                   |                                                                                                             |                                                                                                                                                                |
-|                   |                                                                                                             | -  Evenly Spaced Bins: Creates bins based on the overall range of the variable.                                                                                |
-|                   |                                                                                                             |                                                                                                                                                                |
-|                   |                                                                                                             |    For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].   |
-+-------------------+-------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Manual Binning    | Select the checkbox if you want to bin manually.                                                            | Complete the binning form that populates as a result of checking the **Manual Binning** box.                                                                   |
-|                   |                                                                                                             |                                                                                                                                                                |
-|                   | **Note:** This is the only binning method available if you are trying to bin a categorical variable type.   | -  For continuous data:                                                                                                                                        |
-|                   |                                                                                                             |                                                                                                                                                                |
-|                   |                                                                                                             | |image155|                                                                                                                                                     |
-|                   |                                                                                                             |                                                                                                                                                                |
-|                   |                                                                                                             | -  For categorical data:                                                                                                                                       |
-|                   |                                                                                                             |                                                                                                                                                                |
-|                   |                                                                                                             | |image156|                                                                                                                                                     |
-+-------------------+-------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    **Variable Type**
+        Select whether the variable you have defined above is continuous or categorical.
+
+        A continuous variable can be treated as a categorical variable when you use the binning feature.
+
+    **Number of Bins**
+        Type the number of bins you would like data to be organized in.
+
+        This step may require trial and error based on how you want to display data.
+
+
+    **Bin Assignments**
+        Select how you would like data to be binned.
+
+        .. note::
+            This feature can only be used when the variable type selected above is continuous.
+
+
+        -   Evenly Distribute Population: Assigns bins based on the underlying data.
+
+            For example, if the majority of the subjects in the study were elderly,
+            bins based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].
+
+        -   Evenly Spaced Bins: Creates bins based on the overall range of the variable.
+
+            For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].
+
+
+    **Manual Binning**
+        Select the checkbox if you want to bin manually.
+
+        .. note::
+            This is the only binning method available if you are trying to bin a categorical variable type.
+
+        Complete the binning form that populates as a result of checking the **Manual Binning** box.
+
+        -   For continuous data:
+
+            |image155|
+
+        -   For categorical data:
+
+            |image156|
+
 
 Data Binning Using Table with Fisher Test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1385,44 +1460,64 @@ Defined*, and *Poorly Defined* are selected, you can group *Moderately
 Well Defined* with *Poorly Defined* and treat them as one group for the
 purposes of the analysis.
 
-#. To use the data binning feature with a Fisher Test analysis:
+To use the data binning feature with a Fisher Test analysis:
 
-   1. Begin to set up a Table with Fisher Test analysis by following the
-      instructions in section *Table with Fisher Test* on page 78.
+#.  Begin to set up a Table with Fisher Test analysis by following the
+    instructions in section *Table with Fisher Test* on page 78.
 
-   2. Enable binning by selecting **Enable binning**.
+#.  Enable binning by selecting **Enable binning**.
 
-   3. Define the following and then click **Run.**
+#.  Define the following and then click **Run.**
 
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Field             | Description                                                                                                                           | Comments                                                                                                                                                       |
-+===================+=======================================================================================================================================+================================================================================================================================================================+
-| Variable          | Select the variable(s) you want to bin by checking the **Bin the [*variableType*] Variable** box next to the appropriate variables.   | Example for binning an independent variable:                                                                                                                   |
-|                   |                                                                                                                                       |                                                                                                                                                                |
-|                   | You can bin from none to both variables.                                                                                              | |image157|                                                                                                                                                     |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Variable Type     | Select whether the variable you have defined above is continuous or categorical.                                                      | A continuous variable can be treated as a categorical variable when you use the binning feature.                                                               |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Number of Bins    | Type the number of bins you would like data to be organized in.                                                                       | This step may require trial and error based on how you want to display data.                                                                                   |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Bin Assignments   | Select how you would like data to be binned.                                                                                          | -  Evenly Distribute Population: Assigns bins based on the underlying data.                                                                                    |
-|                   |                                                                                                                                       |                                                                                                                                                                |
-|                   | **Note:** This feature can only be used when the variable type selected above is continuous.                                          |    For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].    |
-|                   |                                                                                                                                       |                                                                                                                                                                |
-|                   |                                                                                                                                       | -  Evenly Spaced Bins: Creates bins based on the overall range of the variable.                                                                                |
-|                   |                                                                                                                                       |                                                                                                                                                                |
-|                   |                                                                                                                                       |    For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].   |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Manual Binning    | Select the checkbox if you want to bin manually.                                                                                      | Complete the binning form that populates as a result of checking the **Manual Binning** box.                                                                   |
-|                   |                                                                                                                                       |                                                                                                                                                                |
-|                   | **Note:** This is the only binning method available if you are trying to bin a categorical variable type.                             | -  For continuous data:                                                                                                                                        |
-|                   |                                                                                                                                       |                                                                                                                                                                |
-|                   |                                                                                                                                       | |image158|                                                                                                                                                     |
-|                   |                                                                                                                                       |                                                                                                                                                                |
-|                   |                                                                                                                                       | -  For categorical data:                                                                                                                                       |
-|                   |                                                                                                                                       |                                                                                                                                                                |
-|                   |                                                                                                                                       | |image159|                                                                                                                                                     |
-+-------------------+---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    **Variable**
+        Select the variable(s) you want to bin by checking the **Bin the [*variableType*] Variable** box next to the appropriate variables.    
+        You can bin from none to both variables.  
+
+        Example for binning an independent variable:                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                
+        |image157|                                                                                                                                                       
+
+    **Variable Type** 
+        Select whether the variable you have defined above is continuous or categorical.                                                       
+        
+        A continuous variable can be treated as a categorical variable when you use the binning feature.
+
+    **Number of Bins**      
+        Type the number of bins you would like data to be organized in.                                                                         
+        
+        This step may require trial and error based on how you want to display data.                                                                                    
+
+    **Bin Assignments**
+        Select how you would like data to be binned.
+        
+        .. note::
+            This feature can only be used when the variable type selected above is continuous.  
+
+        -   Evenly Distribute Population: Assigns bins based on the underlying data.                                                                                     
+            
+            For example, if the majority of the subjects in the study were elderly, bins
+            based on age could look like: [(1-40), (40-80), (81-85), (86-90), (90-92)].     
+                                                                                                                                                                                                                                                                                                                                
+        -   Evenly Spaced Bins: Creates bins based on the overall range of the variable.                                                                                 
+                                                                                                                                                                                                                                                                                                                                
+            For example, if the majority of the subjects in the study were elderly, bins based on age could look like: [(1-20), (21-40), (41-60), (61-80), (81-100)].    
+
+    **Manual Binning**      
+        Select the checkbox if you want to bin manually.
+        
+        .. note::
+            This is the only binning method available if you are trying to bin a categorical variable type.  
+                
+        Complete the binning form that populates as a result of checking the **Manual Binning** box.                                                                    
+        
+        -   For continuous data:                                                                                                                                         
+                                                                                                                                                                    
+            |image158|                                                                                                                                                       
+                                                                                                                                                                    
+        -   For categorical data:                                                                                                                                        
+                        
+            |image159|                                                                                                                                                       
+
 
 Running Across-Trial Analyses
 -----------------------------
@@ -1443,29 +1538,29 @@ logged in the Jobs tab in a spreadsheet format.
 
 The columns of information in the Analysis Jobs tab are described below:
 
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Column       | Description                                                                                                                                                  |
-+==============+==============================================================================================================================================================+
-| Name         | The name of the analysis run. The format of the name is as follows:                                                                                          |
-|              |                                                                                                                                                              |
-|              | |image160|                                                                                                                                                   |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Status       | The status of the analysis. Statuses are explained below:                                                                                                    |
-|              |                                                                                                                                                              |
-|              | -  **Completed** — The job has finished and a visualization is available.                                                                                    |
-|              |                                                                                                                                                              |
-|              | -  **Started** — The job has been started and is still processing.                                                                                           |
-|              |                                                                                                                                                              |
-|              | -  **Uploading File** — You have selected to load additional data into your visualization, and the data is still in the process of uploading to tranSMART.   |
-|              |                                                                                                                                                              |
-|              | -  **Error** — The job did not complete due to an error.                                                                                                     |
-|              |                                                                                                                                                              |
-|              | -  **Cancelled** — The job was cancelled and will not complete.                                                                                              |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Run Time     | The time the analysis took to process.                                                                                                                       |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Started On   | The date and time that the analysis was first started.                                                                                                       |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    **Name**
+        The name of the analysis run. The format of the name is as follows:
+        
+        |image160|
+
+    **Status**
+        The status of the analysis. Statuses are explained below:                                                                                                     
+                                                                                                                                                                                
+        -   **Completed** — The job has finished and a visualization is available.                                                                                     
+                                                                                                                                                                                
+        -   **Started** — The job has been started and is still processing.                                                                                            
+                                                                                                                                                                                
+        -   **Uploading File** — You have selected to load additional data into your visualization, and the data is still in the process of uploading to tranSMART.    
+                                                                                                                                                                                
+        -   **Error** — The job did not complete due to an error.                                                                                                      
+                                                                                                                                                                                
+        -   **Cancelled** — The job was cancelled and will not complete.                                                                                               
+
+    **Run Time**       
+        The time the analysis took to process.
+
+    **Started On**
+        The date and time that the analysis was first started.
 
 .. note::
 	 Click the **Refresh** button to view any changes that have been made since the Analysis Jobs tab initially populated:   
@@ -1479,18 +1574,17 @@ Each advanced analysis that you have run in the previous seven days will
 be logged in the **Analysis** **Jobs** tab. You may view the
 visualization again by selecting it from the list.
 
-#. To run a logged advanced workflow:
+To run a logged advanced workflow:
 
-   1. In Analyze, click the **Analysis Jobs** tab:
+#.  In Analyze, click the **Analysis Jobs** tab:
 
-   2. Click the hyperlink of the analysis you are interested in viewing:
+#.  Click the hyperlink of the analysis you are interested in viewing:
 
-      |image163|
+    |image163|
 
-      If you click on a job that has not been completed, the following
-      dialog box appears:
+    If you click on a job that has not been completed, the following dialog box appears:
 
-      |image164|
+    |image164|
 
 .. |image97| image:: media/image80.png
    :width: 4.41667in

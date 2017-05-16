@@ -1,11 +1,10 @@
-Chapter 6: Third-Party Analysis Tools
-=====================================
+Chapter 6: Third-Party Tools
+============================
 
 The following third-party tools are embedded into tranSMART Analyze:
 
--  *Dalliance Genome Browser* (page 93)
-
--  *MetaCore Enrichment Analysis* (page 95)
+-  `Dalliance Genome Browser`_
+-  `MetaCore Enrichment Analysis`_
 
 Dalliance Genome Browser
 ------------------------
@@ -15,21 +14,18 @@ compare genomic variants between different patient cohorts, compare
 different types of genomic information, and compare the data with public
 genomic information, such as COSMIC variations.
 
-#. To view tranSMART data in the Genome Browser:
+To view tranSMART data in the Genome Browser:
 
-   1. In **Analyze**, open the study of interest, or open the Advanced
-      Trials folder to run an analysis of data from multiple studies.
+#.  In **Analyze**, open the study of interest, or open the Advanced 
+    Trials folder to run an analysis of data from multiple studies.
 
-   2. Define your cohort(s) as described in *Defining the Cohorts* on
-      page 21.
+#.  Define your cohort(s) as described in *Defining the Cohorts* on page 21.
 
-   3. Click the **Genome Browser** tab to display the data in the Genome
-      Browser:
+#.  Click the **Genome Browser** tab to display the data in the Genome Browser: 
+    |image165|
 
-|image165|
-
-1. Optionally, to add additional data from the study data, drag the
-   concepts of interest from the study into the Genome Browser.
+#.  Optionally, to add additional data from the study data, drag the
+    concepts of interest from the study into the Genome Browser.
 
 Quick Tour
 ~~~~~~~~~~
@@ -69,6 +65,8 @@ Note that:
 
 |image169|
 
+.. _metacore-enrichtment-analysis-label:
+
 MetaCore Enrichment Analysis
 ----------------------------
 
@@ -88,34 +86,34 @@ interface.
 
 |image170|
 
-#. To perform a MetaCore Enrichment Analysis:
+To perform a MetaCore Enrichment Analysis:
 
-   1. Define a cohort as described in *Defining the Cohorts* on page 21.
+#.  Define a cohort as described in *Defining the Cohorts* on page 21.
 
-   2. Click the **MetaCore Enrichment Analysis** tab:
+#.  Click the **MetaCore Enrichment Analysis** tab:
 
-|image171|
+    |image171|
+ 
+#.  Drag a high-dimensional data node (|image172|) into the Variable
+    Selection box.
 
-1. Drag a high-dimensional data node (|image172|) into the Variable
-   Selection box.
+#.  Click the **High Dimensional Data** button.
 
-2. Click the **High Dimensional Data** button.
+    The Compare Subsets-Pathway Selection dialog appears.
 
-   The Compare Subsets-Pathway Selection dialog appears.
+#.  Specify the platform and other filters for the analysis.
 
-3. Specify the platform and other filters for the analysis.
+    For information, see *High Dimensional Data* on page 83.
 
-   For information, see *High Dimensional Data* on page 83.
+#.  Either click **Run Workflow** to run the analysis now, or click
+    **Apply Selections** to define more parameters for the analysis and
+    continue with the steps below.
 
-4. Either click **Run Workflow** to run the analysis now, or click
-   **Apply Selections** to define more parameters for the analysis and
-   continue with the steps below.
+#.  Optionally, specify the z-score threshold for the data.
 
-5. Optionally, specify the z-score threshold for the data.
+#.  Optionally, click **MetaCore Settings** to view your settings.
 
-6. Optionally, click **MetaCore Settings** to view your settings.
-
-7. Click **Run** to run the analysis.
+#.  Click **Run** to run the analysis.
 
 MetaCore Enrichment Analysis Based on Marker Selection Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,37 +128,33 @@ Configuration
 ~~~~~~~~~~~~~
 
 MetaCore Enrichment Analysis is an additional grails plugin. It is
-attached to a project in BuildConfig.groovy:
+attached to a project in *BuildConfig.groovy* :
 
-plugins {
+.. code:: java
 
-…
+    plugins {
+        ...
+        if (!dm) {
+            ...
+            runtime ':transmart-metacore-plugin:1.2.2-SNAPSHOT'
+            ...
+        } else {
+        ...
+        }
+    }
 
-if (!dm) {
-
-…
-
-runtime ':transmart-metacore-plugin:1.2.2-SNAPSHOT'
-
-…
-
-} else {
-
-…
-
-}
-
-}
 
 For both free and MetaCore enrichments, you need to specify the
-following line in your ~/.grails/transmartApp/Config.groovy:
+following line in your *~/.grails/transmartApp/Config.groovy*:
 
-com.thomsonreuters.transmart.metacoreAnalyticsEnable = true
+.. code::
+
+    com.thomsonreuters.transmart.metacoreAnalyticsEnable = true
 
 You don't need any extra settings in order for free enrichment to work.
 
 To use MetaCore’s account, create a special table that will store user
-preferences. Execute search\_user\_settings.sql under searchapp or
+preferences. Execute *search\_user\_settings.sql* under searchapp or
 system Oracle user or the appropriate script for PostgreSQL, otherwise
 you will not be able to use full enrichment functionality. You can find
 scripts for creating this table here:
@@ -169,18 +163,19 @@ https://github.com/transmart/transmart-data/tree/master/ddl/postgres/searchapp/s
 
 https://github.com/transmart/transmart-data/blob/master/ddl/oracle/searchapp/search_user_settings.sql
 
+.. todo::
+    fix links to user settings, or copy 
+
 If you want all users to use their personal MetaCore account, you don't
 need to do anything else. If you want an ability to use a common account
 for enrichments (users will have a choice), specify the default MetaCore
-credentials in ~/.grails/transmartApp/Config.groovy:
+credentials in *~/.grails/transmartApp/Config.groovy*:
 
-com.thomsonreuters.transmart.metacoreURL = 'https://portal.genego.com'
+.. code::
 
-com.thomsonreuters.transmart.metacoreDefaultLogin = 'metacore\_login'
-
-com.thomsonreuters.transmart.metacoreDefaultPassword =
-'metacore\_password'
-
+    com.thomsonreuters.transmart.metacoreURL = 'https://portal.genego.com'
+    com.thomsonreuters.transmart.metacoreDefaultLogin = 'metacore\_login'
+    com.thomsonreuters.transmart.metacoreDefaultPassword = 'metacore\_password'
 
 .. |image165| image:: media/image123.png
    :width: 6.00000in

@@ -6,19 +6,16 @@ so that you can learn more about the samples.
 
 The Sample Explorer window has two panes:
 
--  **Right pane**
+**Right pane**
+    Lets you initiate a search for samples using one or more pre-defined
+    filters. For information, see *Select a Primary Search Filter*, next.
 
-Lets you initiate a search for samples using one or more pre-defined
-filters. For information, see *Select a Primary Search Filter*, next.
+    After you initiate a search, the pre-defined filters are replaced by
+    search results. For information, see `View and Refine Sample Search Results`.
 
-After you initiate a search, the pre-defined filters are replaced by
-search results. For information, see *View and Refine Sample Search
-Results* on page 100.
-
--  **Left pane**
-
-Reflects the currently selected filters and the number of a filter’s
-samples that appear in the search results.
+**Left pane**
+    Reflects the currently selected filters and the number of a filter’s
+    samples that appear in the search results.
 
 Select a Primary Search Filter
 ------------------------------
@@ -39,7 +36,7 @@ in parentheses after the filter name.
 View and Refine Sample Search Results
 -------------------------------------
 
-After you select a `*primary search filter* <#_Select_a_Primary>`__:
+After you select a `Select a Primary Search Filter`_:
 
 -  The right pane displays the search results.
 
@@ -53,10 +50,10 @@ after a primary search filter has been selected:
 
 Tasks you can perform in the Sample Explorer window include:
 
--  `*Select and remove search filters* <#_Select_and_Remove>`__
+-  `Select and remove search filters* <#_Select_and_Remove>`_
 
--  `*Sort and group the search results, and add/remove search result
-   columns* <#_Manage_the_Search>`__
+-  `Sort and group the search results, and add/remove search result
+   columns <#_Manage_the_Search>`_
 
 Select and Remove Search Filters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,28 +91,28 @@ You can make the following adjustments to the search result list:
 Sort by Column
 ^^^^^^^^^^^^^^
 
-#. To sort the result list by the contents of a column:
+To sort the result list by the contents of a column:
 
-   1. Click the right side of the column heading to pull down the menu:
+#.  Click the right side of the column heading to pull down the menu:
 
-|image177|
+    |image177|
 
-1. Click **Sort Ascending** or **Sort Descending**.
+#.  Click **Sort Ascending** or **Sort Descending**.
 
 Add and Remove Columns
 ^^^^^^^^^^^^^^^^^^^^^^
 
-#. To add and remove columns:
+To add and remove columns:
 
-   1. Click the right side of the column header to pull down the menu.
+#.  Click the right side of the column header to pull down the menu.
 
-   2. Hover the mouse pointer over **Columns** to display the submenu of
-      column headings:
+#.  Hover the mouse pointer over **Columns** to display the submenu of
+    column headings:
 
-|image178|
+    |image178|
 
-1. Check or clear the check boxes to add or remove columns from the
-   search result.
+#.  Check or clear the check boxes to add or remove columns from the
+    search result.
 
 .. note::
 	 If the columns bunch together, slightly drag the right edge of the frame around one of the column headings.   
@@ -123,31 +120,25 @@ Add and Remove Columns
 Group and Ungroup Search Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. To group search results by the contents of a particular column:
+To group search results by the contents of a particular column:
 
-   1. Click the right side of the column header to pull down the menu.
+#.  Click the right side of the column header to pull down the menu.
 
-   2. Click **Group by This Field**.
+#.  Click **Group by This Field**.
 
-|image180|
+    |image180|
 
-#. To view the samples in all groups:
+#.  To view the samples in all groups click **Expand All** in the upper-right corner of the search result.
 
--  Click **Expand All** in the upper-right corner of the search result.
+    |image181|
 
-|image181|
+#.  To view the samples in a particular group click the plus-sign icon next to the group name:
 
-#. To view the samples in a particular group:
+    |image182|
 
--  Click the plus-sign icon next to the group name:
+#.  To ungroup the search result pull down the menu and click the Show in Groups menu item:
 
-|image182|
-
-#. To ungroup the search result:
-
--  Pull down the menu and click the Show in Groups menu item:
-
-|image183|
+    |image183|
 
 
 .. |image173| image:: media/image130.png

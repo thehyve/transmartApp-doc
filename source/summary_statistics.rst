@@ -1,8 +1,10 @@
-Chapter 4: Summary Statistics for Analysis
-==========================================
+Chapter 4: Summary Statistics
+=============================
 
 This chapter explains how to review study information and populate the
 cohorts you use for analyses.
+
+.. _generating-summary-statistics-label:
 
 Generating Summary Statistics
 -----------------------------
@@ -11,57 +13,60 @@ When you finish defining criteria for the cohorts to compare — the
 subsets — click the **Summary Statistics** button.
 
 .. note::
-	 As an alternative to generating summary statistics, you can view a breakdown of a particular subset by a selected concept (see *View Subset Breakdown by Concept* on page 39).   
+    As an alternative to generating summary statistics, you can view a breakdown 
+    of a particular subset by a selected concept (see `View Subset Breakdown by Concept`_).   
 
 tranSMART displays tables and charts of information that describe the
 subsets. The information is displayed in Summary Statistics view in the
 following sections:
 
--  A summary of the criteria used to define subsets to compare.
+    A summary of the criteria used to define subsets to compare.
 
-For example:
+    For example:
 
-|image76|
+    |image76|
 
--  A table showing the number of subjects in each subset that match the
-   subset criteria.
+    A table showing the number of subjects in each subset that match the subset criteria.
 
-For example:
+    For example:
 
     |image77|
 
     In this example, 58 subjects matched the criteria for Subset 1 and
     63 matched the criteria for Subset 2. No (0) subjects matched the
     criteria for both subsets.
+   
+    Tables and charts that show how the subjects who match the criteria
+    fit into age, sex, and race demographics.
 
--  Tables and charts that show how the subjects who match the criteria
-   fit into age, sex, and race demographics.
+    This example shows the age portion of the demographics data only:
 
-This example shows the age portion of the demographics data only:
+    |image78|
 
-|image78|
-
--  Analyses of the concepts you added to the subsets from the navigation
-   tree. The data displayed reflects the data used to generate the
-   summary statistics.
+    Analyses of the concepts you added to the subsets from the navigation
+    tree. The data displayed reflects the data used to generate the
+    summary statistics.
 
 The next examples show analysis of concepts for a non-linked event, a
 linked event, and NGS data.
 
-**Example 1: Non-linked event.** This example shows the analysis of the
-chemotherapy concept:
+    |image79|
 
-|image79|
+    **Example 1: Non-linked event.** 
+    
+    This example shows the analysis of the chemotherapy concept:
 
-**Example 2: Linked event.** This example shows the analysis of concepts
-for adverse events:
+    |image80|
 
-|image80|
+    **Example 2: Linked event.** 
+    
+    This example shows the analysis of concepts for adverse events:
 
-**Example 3: NGS data.** This example shows the analysis of concepts for
-description of planned arm:
+    |image81|
 
-|image81|
+    **Example 3: NGS data.** 
+    
+    This example shows the analysis of concepts for description of planned arm:
 
 Significance Tests
 ~~~~~~~~~~~~~~~~~~
@@ -77,41 +82,37 @@ the statistics is 95% or greater, based on p-value.
 Analyze calculates the significance result using either t-test or
 chi-squared statistics to determine the p-value:
 
--  For continuous variables (for example, subject weight or age), a
-   t-test compares the observed values in the two subsets.
+-   For continuous variables (for example, subject weight or age), a
+    t-test compares the observed values in the two subsets.
+    
+    See `this <http://commons.apache.org/math/apidocs/org/apache/commons/math3/stat/inference/TTest.html#tTest(double[],%20double[])>`__ if you're interested in the Java method used to calculate the t-test statistic:
 
-tranSMART uses the following Java method to calculate the t-test
-statistic:
+-   For categorical values (for example, diagnoses), a chi-squared test
+    compares the counts in the two subsets.
 
-    `http://commons.apache.org/math/apidocs/org/apache/commons/math3/stat/inference/TTest.html#tTest(double[],%20double[]) <http://commons.apache.org/math/apidocs/org/apache/commons/math3/stat/inference/TTest.html#tTest(double[],%20double[])>`__
+    See `this <http://commons.apache.org/math/apidocs/org/apache/commons/math4/stat/inference/ChiSquareTest.html#chiSquareTest(long[][])>`__ for the Java method that calculates the chi-squared statistic:
 
--  For categorical values (for example, diagnoses), a chi-squared test
-   compares the counts in the two subsets.
-
-tranSMART uses the following Java method to calculate the chi-squared
-statistic:
-
-    `http://commons.apache.org/math/apidocs/org/apache/commons/math3/stat/inference/ChiSquareTest.html#chiSquareTest(long[][]) <http://commons.apache.org/math/apidocs/org/apache/commons/math3/stat/inference/ChiSquareTest.html#chiSquareTest(long[][])>`__
 
 If there is not enough data to calculate a test, Analyze displays a
 message indicating the insufficient quantity of data. In addition,
 significance test results are not displayed in the following
 circumstances:
 
--  If two identical subsets are defined. In this case, the significance
-   test results are not meaningful.
+-   If two identical subsets are defined. In this case, the significance
+    test results are not meaningful.
 
--  If all subjects in the first subset have one set of values for the
-   categorical value and all subjects in the second subset have other
-   categorical values. For example, suppose you set Subset 1 to contain
-   only males and Subset 2 to contain only females. If you then try to
-   show statistics by gender, tables similar to the following would
-   result:
+-   If all subjects in the first subset have one set of values for the
+    categorical value and all subjects in the second subset have other
+    categorical values. For example, suppose you set Subset 1 to contain
+    only males and Subset 2 to contain only females. If you then try to
+    show statistics by gender, tables similar to the following would
+    result:
 
-|image83|
+    |image83|
 
-In this case, the chi-squared function doesn’t return meaningful
-results.
+    In this case, the chi-squared function doesn’t return meaningful
+    results.
+
 
 View Subset Breakdown by Concept
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -120,24 +121,21 @@ Generating summary statistics provides data for all subsets defined by
 study cohorts. You can view data for a particular subset, however, as
 follows:
 
-#. 
+#.  Select a cohort from the navigation tree and drag it into a subset; for example:
 
-   1. Select a cohort from the navigation tree and drag it into a
-      subset; for example:
+    |image84|
 
-|image84|
+#.  Click the **Summary Statistics** tab.
 
-1. Click the **Summary Statistics** tab.
+#.  Drag and drop a folder from the navigation tree into the empty page;
+    for example:
 
-2. Drag and drop a folder from the navigation tree into the empty page;
-   for example:
+    |image85|
 
-|image85|
+#.  tranSMART calculates the results and displays the data for the given subset and concept:
 
-tranSMART calculates the results and displays the data for the given
-subset and concept:
+    |image86|
 
-|image86|
 
 Defining Points of Comparison
 -----------------------------
@@ -146,15 +144,14 @@ Once you establish the subsets of subjects that you want to compare, you
 can apply one or more points of comparison to the subsets. A *point of
 comparison* is a concept in the navigation tree.
 
-#. To apply a point of comparison to the subsets:
+To apply a point of comparison to the subsets:
 
-   1. You must already have defined the subsets and have generated
-      summary statistics for the subsets, as described in the previous
-      section.
+#.  You must already have defined the subsets and have generated summary 
+    statistics for the subsets, as described in the previous section.
 
-   2. Drag the concept that you want to introduce as the point of
-      comparison from the navigation tree and drop it anywhere inside
-      the Summary Statistics view.
+#.  Drag the concept that you want to introduce as the point of
+    comparison from the navigation tree and drop it anywhere inside
+    the Summary Statistics view.
 
 As soon as you drop the point of comparison into the Summary Statistics
 view, tranSMART begins to compare the subsets based on that point of
@@ -195,16 +192,14 @@ Printing the Contents of Summary Statistics View
 
 You can print the contents of Summary Statistics view as shown below.
 
-#. 
+#.  In Summary Statistics view, click the **Print** button:
 
-   1. In Summary Statistics view, click the **Print** button:
+    |image90|
 
-|image90|
+    The entire contents of Summary Statistics view appear in a separate browser window.
 
-The entire contents of Summary Statistics view appear in a separate
-browser window.
+#.  Click **Print this page**.
 
-1. Click **Print this page**.
 
 Copying Individual Charts in Summary Statistics View
 ----------------------------------------------------
@@ -212,21 +207,20 @@ Copying Individual Charts in Summary Statistics View
 If you are interested in a particular chart in the Summary Statistics
 view, you can copy the chart to a file, as follows:
 
-#. 
+#.  With the Summary Statistics view displayed, click **Print**.
 
-   1. With the Summary Statistics view displayed, click **Print**.
+    The entire contents of the Summary Statistics view appear in a separate
+    browser window.
 
-The entire contents of the Summary Statistics view appear in a separate
-browser window.
+#.  Right-click the chart you want to copy.
 
-1. Right-click the chart you want to copy.
+#.  In the Internet Explorer popup menu, click **Save Image As**.
 
-2. In the Internet Explorer popup menu, click **Save Image As**.
+#.  In the Save Image dialog, specify the name, location, and the file
+    type for the chart.
 
-3. In the Save Image dialog, specify the name, location, and the file
-   type for the chart.
+#.  Click **Save**.
 
-4. Click **Save**.
 
 Viewing Analysis Data in Grid View
 ----------------------------------
@@ -235,21 +229,20 @@ If you are displaying analysis data in the various tables and charts of
 Summary Statistics view, and want to view the data in a single table,
 use the **Grid View** option.
 
-#. Access Grid View as follows:
+Access Grid View as follows:
 
-   1. Click the **Analyze** tool and define your cohorts as described
-      earlier in this chapter.
+#.  Click the **Analyze** tool and define your cohorts as described earlier in this chapter.
 
-   2. Click **Summary Statistics**.
+#.  Click **Summary Statistics**.
 
-   3. Click **Grid View**.
+#.  Click **Grid View**.
 
-|image91|
+    |image91|
 
-1. Optionally, you can drag and drop additional points of comparison
-   into the grid, and new columns will appear for that data.
+#.  Optionally, you can drag and drop additional points of comparison
+    into the grid, and new columns will appear for that data.
 
-You can drag a node from any level of the tree into the grid.
+#.  You can drag a node from any level of the tree into the grid.
 
 Sample of Grid View for a public study:
 
@@ -261,15 +254,15 @@ Sample of Grid View for a public study:
 Grid View Display Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  **Sort the grid by a specific column.** Click the down-arrow icon
-   (|image94|) next to the column heading you want to sort by, then
-   select **Sort Ascending** or **Sort Descending**.
+-   **Sort the grid by a specific column.** Click the down-arrow icon
+    (|image94|) next to the column heading you want to sort by, then
+    select **Sort Ascending** or **Sort Descending**.
 
--  **Hide or redisplay columns.** Click the down-arrow icon next to any
-   column heading, click **Columns** as shown below, then select or
-   deselect columns to hide or redisplay:
+-   **Hide or redisplay columns.** Click the down-arrow icon next to any
+    column heading, click **Columns** as shown below, then select or
+    deselect columns to hide or redisplay:
 
-|image95|
+    |image95|
 
 If a column name does not appear in the menu, you have not included the
 associated concept in the analysis. For example, Diagnosis has not been

@@ -49,55 +49,54 @@ Resource Browsers
 The resource browsers (studies, analyses, data types) all operate the
 same way.
 
-#. To select a filter from a resource browser:
+To select a filter from a resource browser:
 
-   1. Click the name of the filter browser category to open; for
-      example, Study as shown below:
+#.  Click the name of the filter browser category to open; for
+    example, Study as shown below:
 
-|image202|
+    |image202|
 
-1. In the browser popup window, filter options are listed on the left.
-   Select a filter by clicking the plus sign (**+**) to the right of the
-   filter name. The selected filter is added to the right part of the
-   browser.
+#.  In the browser popup window, filter options are listed on the left.
+    Select a filter by clicking the plus sign (**+**) to the right of the
+    filter name. The selected filter is added to the right part of the
+    browser.
 
-|image203|
+    |image203|
 
-With filters that have long names, note that:
+    With filters that have long names, note that:
 
--  Even if the plus sign (**+**) is partially obscured by the name, you
-   can still click it.
+    -   Even if the plus sign (**+**) is partially obscured by the name, you
+        can still click it.
 
--  Hovering the mouse pointer over the name displays the full name.
+    -   Hovering the mouse pointer over the name displays the full name.
 
-1. Optionally:
+#.  Optionally:
 
--  Add additional filters within this browser by repeating the previous
-   step.
+    -   Add additional filters within this browser by repeating the previous step.
 
--  Narrow the list of filter options by typing characters into the text
-   box at the top left of the browser. tranSMART lists all those filters
-   whose names include the characters, in a contiguous string, anywhere
-   in the name (not case-sensitive):
+    -   Narrow the list of filter options by typing characters into the text
+        box at the top left of the browser. tranSMART lists all those filters
+        whose names include the characters, in a contiguous string, anywhere
+        in the name (not case-sensitive):
 
-|image204|
+        |image204|
 
--  Select all the filters in the list by clicking **Add all**:
+    -   Select all the filters in the list by clicking **Add all**:
 
-|image205|
+        |image205|
 
--  Remove a selected filter by clicking the minus sign (**–**) to the
-   right of the selected filter name, or remove all selected filters by
-   clicking **Remove all**:
+    -   Remove a selected filter by clicking the minus sign (**–**) to the
+        right of the selected filter name, or remove all selected filters by
+        clicking **Remove all**:
 
-|image206|
+        |image206|
 
-1. When finished selecting filters from this browser, click **Select**
-   at the bottom right of the browser. Your selections will be added to
-   the Active Filters area.
+#.  When finished selecting filters from this browser, click **Select**
+    at the bottom right of the browser. Your selections will be added to
+    the Active Filters area.
 
-2. Optionally, select filters from a different browser by repeating the
-   above steps.
+#.  Optionally, select filters from a different browser by repeating the
+    above steps.
 
 All of the selected filters will become part of the same search query
 and be included in the Active Filters area.
@@ -115,80 +114,80 @@ human genome as a search filter.
     of interest. If an analysis does not reference the region of 
     interest, no records are returned for that analysis.
 
-#. To specify a region of interest:
+To specify a region of interest:
 
-   1. In the Filter Browser pane, click **Region of Interest**.
+#.  In the Filter Browser pane, click **Region of Interest**.
 
-The Region of Interest browser appears:
+    The Region of Interest browser appears:
 
-|image208|
+    |image208|
 
-1. Define the filter as described in the following table:
+#.  Define the filter as described in the following table:
 
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Filter by       | Description                                                                                                                                                                                                                                |
-+=================+============================================================================================================================================================================================================================================+
-| Gene            | 1. Select the **Gene/RSID** radio button.                                                                                                                                                                                                  |
-|                 |                                                                                                                                                                                                                                            |
-|                 | 2. Type one or more characters in the **Add new** (not case sensitive).                                                                                                                                                                    |
-|                 |                                                                                                                                                                                                                                            |
-|                 | tranSMART begins to search for gene names or synonyms that begin with the characters you typed.                                                                                                                                            |
-|                 |                                                                                                                                                                                                                                            |
-|                 | Up to 15 keywords are displayed. If you don’t see the one you want, type more characters into the field.                                                                                                                                   |
-|                 |                                                                                                                                                                                                                                            |
-|                 | 1. Click the gene of interest once it has been auto-suggested.                                                                                                                                                                             |
-|                 |                                                                                                                                                                                                                                            |
-|                 | -  To select a another gene, repeat the above steps.                                                                                                                                                                                       |
-|                 |                                                                                                                                                                                                                                            |
-|                 | -  To remove a selected gene, click the gene name.                                                                                                                                                                                         |
-|                 |                                                                                                                                                                                                                                            |
-|                 |    1. Optionally, in the **Use** field, select the Human Genome version to use as the basis of this search. The default is the current version.                                                                                            |
-|                 |                                                                                                                                                                                                                                            |
-|                 |    2. Optionally, in **Location**, specify the number of base pairs above, below, or both above and below the specified genes to include in the region of interest.                                                                        |
-|                 |                                                                                                                                                                                                                                            |
-|                 | If you do not specify a location, the region of interest will be the specified genes only.                                                                                                                                                 |
-|                 |                                                                                                                                                                                                                                            |
-|                 | For example, the following selects a region that spans 50 base pairs above and below the gene IL7, based on Human Genome version 19:                                                                                                       |
-|                 |                                                                                                                                                                                                                                            |
-|                 | |image209|                                                                                                                                                                                                                                 |
-|                 |                                                                                                                                                                                                                                            |
-|                 | 1. Optionally, specify a p-value cutoff in the **p-value** field. Only those results with a p-value at or below the cutoff are returned. If you do not specify a p-value cutoff, all matches within the region of interest are returned.   |
-|                 |                                                                                                                                                                                                                                            |
-|                 | 2. When finished defining the region of interest, click **Select**.                                                                                                                                                                        |
-|                 |                                                                                                                                                                                                                                            |
-|                 | The filter is added to the search query in the Active Filters area.                                                                                                                                                                        |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| RS Identifier   | Define the region of interest based on an RS identifier the same way you would define one for a gene. In step 2, type the RSID, which consists of the letters **rs** followed by at least one numeric character.                           |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Chromosome      | #.                                                                                                                                                                                                                                         |
-|                 |                                                                                                                                                                                                                                            |
-|                 |    1. Select the **Chromosome** radio button.                                                                                                                                                                                              |
-|                 |                                                                                                                                                                                                                                            |
-|                 |    2. Select the number of the chromosome of interest from the dropdown list.                                                                                                                                                              |
-|                 |                                                                                                                                                                                                                                            |
-|                 |    3. Optionally, in the **Use** field, select the Human Genome version to use as the basis of this search. The default is the current version.                                                                                            |
-|                 |                                                                                                                                                                                                                                            |
-|                 |    4. Optionally, in the **Position** text box, type the *exact* position number of interest.                                                                                                                                              |
-|                 |                                                                                                                                                                                                                                            |
-|                 | If you do not specify a position, the region of interest will be the entire chromosome.                                                                                                                                                    |
-|                 |                                                                                                                                                                                                                                            |
-|                 | 1. Optionally, in the two fields after the **Position** text box, specify the number of base pairs above, below, or both above and below the specified chromosomal position to include in the region of interest.                          |
-|                 |                                                                                                                                                                                                                                            |
-|                 | If you specify a position but not a range of base pairs, the region of interest will be the specified position within the chromosome.                                                                                                      |
-|                 |                                                                                                                                                                                                                                            |
-|                 | For example, the following selects a region of interest that spans the base pair at position 57694854 and the 500 base pairs above it within chromosome 12, based on Human Genome version 19:                                              |
-|                 |                                                                                                                                                                                                                                            |
-|                 | |image210|                                                                                                                                                                                                                                 |
-|                 |                                                                                                                                                                                                                                            |
-|                 | 1. Optionally, specify a p-value cutoff in the **p-value** field. Only those results with a p-value at or below the cutoff are returned. If you do not specify a p-value cutoff, all matches within the region of interest are returned.   |
-|                 |                                                                                                                                                                                                                                            |
-|                 | 2. When finished defining the region of interest, click **Select**.                                                                                                                                                                        |
-|                 |                                                                                                                                                                                                                                            |
-|                 | The filter is added to the search query in the Active Filters area.                                                                                                                                                                        |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Filter by       | Description                                                                                                                                                                                                                                |
+    +=================+============================================================================================================================================================================================================================================+
+    | Gene            | 1. Select the **Gene/RSID** radio button.                                                                                                                                                                                                  |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | 2. Type one or more characters in the **Add new** (not case sensitive).                                                                                                                                                                    |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 |    tranSMART begins to search for gene names or synonyms that begin with the characters you typed.                                                                                                                                         |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 |    Up to 15 keywords are displayed. If you don’t see the one you want, type more characters into the field.                                                                                                                                |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | 1. Click the gene of interest once it has been auto-suggested.                                                                                                                                                                             |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | -  To select a another gene, repeat the above steps.                                                                                                                                                                                       |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | -  To remove a selected gene, click the gene name.                                                                                                                                                                                         |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 |    1. Optionally, in the **Use** field, select the Human Genome version to use as the basis of this search. The default is the current version.                                                                                            |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 |    2. Optionally, in **Location**, specify the number of base pairs above, below, or both above and below the specified genes to include in the region of interest.                                                                        |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | If you do not specify a location, the region of interest will be the specified genes only.                                                                                                                                                 |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | For example, the following selects a region that spans 50 base pairs above and below the gene IL7, based on Human Genome version 19:                                                                                                       |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | |image209|                                                                                                                                                                                                                                 |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | 1. Optionally, specify a p-value cutoff in the **p-value** field. Only those results with a p-value at or below the cutoff are returned. If you do not specify a p-value cutoff, all matches within the region of interest are returned.   |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | 2. When finished defining the region of interest, click **Select**.                                                                                                                                                                        |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | The filter is added to the search query in the Active Filters area.                                                                                                                                                                        |
+    +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | RS Identifier   | Define the region of interest based on an RS identifier the same way you would define one for a gene. In step 2, type the RSID, which consists of the letters **rs** followed by at least one numeric character.                           |
+    +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Chromosome      |                                                                                                                                                                                                                                            |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | #. Select the **Chromosome** radio button.                                                                                                                                                                                                 |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | #. Select the number of the chromosome of interest from the dropdown list.                                                                                                                                                                 |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | #. Optionally, in the **Use** field, select the Human Genome version to use as the basis of this search. The default is the current version.                                                                                               |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | #. Optionally, in the **Position** text box, type the *exact* position number of interest.                                                                                                                                                 |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | If you do not specify a position, the region of interest will be the entire chromosome.                                                                                                                                                    |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | 1. Optionally, in the two fields after the **Position** text box, specify the number of base pairs above, below, or both above and below the specified chromosomal position to include in the region of interest.                          |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | If you specify a position but not a range of base pairs, the region of interest will be the specified position within the chromosome.                                                                                                      |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | For example, the following selects a region of interest that spans the base pair at position 57694854 and the 500 base pairs above it within chromosome 12, based on Human Genome version 19:                                              |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | |image210|                                                                                                                                                                                                                                 |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | #. Optionally, specify a p-value cutoff in the **p-value** field. Only those results with a p-value at or below the cutoff are returned. If you do not specify a p-value cutoff, all matches within the region of interest are returned.   |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | #. When finished defining the region of interest, click **Select**.                                                                                                                                                                        |
+    |                 |                                                                                                                                                                                                                                            |
+    |                 | The filter is added to the search query in the Active Filters area.                                                                                                                                                                        |
+    +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-1. Optionally, repeat the above steps to add an additional region of
-   interest to the search query.
+#.  Optionally, repeat the above steps to add an additional region of
+    interest to the search query.
 
 Viewing Search Results
 ----------------------
@@ -197,11 +196,11 @@ Search results appear in the right pane of the GWAS page.
 
 You can view search results in the following forms:
 
--  *Analysis View* (page 121)
+-  `Analysis View`_
 
--  *Table View* (page 125)
+-  `Table View`_
 
--  *Manhattan Plot* (page 126)
+-  `Manhattan Plot`_
 
 You can also export Analysis View and Table View data and
 visualizations.
@@ -242,20 +241,20 @@ view, click the **Analysis View** button:
 
 You can perform the following tasks in Analysis View:
 
--  Browse the list of studies, view information about a study, and
-   expand the list of the analyses of a study.
+-   Browse the list of studies, view information about a study, and
+    expand the list of the analyses of a study.
 
-See *Browse the Study List* on page 122.
+    See `Browse the Study List`_.
 
--  View metadata for a particular analysis.
+-   View metadata for a particular analysis.
 
-See *View Metadata for an Analysis* on page 123.
+    See `View Metadata for an Analysis`_.
 
--  View the data in a particular analysis, filter the data, export the
-   data to a comma-separated text file, and display the data in a QQ
-   Plot (GWAS data only).
+-   View the data in a particular analysis, filter the data, export the
+    data to a comma-separated text file, and display the data in a QQ
+    Plot (GWAS data only).
 
-See *View, Filter, and Export Analysis Data* on page 123.
+    See `View, Filter, and Export Analysis Data`_.
 
 Browse the Study List
 ^^^^^^^^^^^^^^^^^^^^^
@@ -270,24 +269,24 @@ defined.
 
 You can perform the following tasks for a study:
 
--  View metadata for the study.
+-   View metadata for the study.
 
-To do so, click the icon to the left of the study name:
+    To do so, click the icon to the left of the study name:
 
-|image213|
+    |image213|
 
-Information about the study is displayed, such as the description of the
-study, the institution that conducted the study, and data availability.
+    Information about the study is displayed, such as the description of the
+    study, the institution that conducted the study, and data availability.
 
--  Expand the study by pulling down a list of the study’s analyses that
-   satisfy the current search query in Active Filters.
+-   Expand the study by pulling down a list of the study’s analyses that
+    satisfy the current search query in Active Filters.
 
-To do so, click the **Analyses** button under the study name:
+    To do so, click the **Analyses** button under the study name:
 
-|image214|
+    |image214|
 
-Optionally, pull down the analyses for all listed studies by clicking
-the **Expand All Studies** tab at the top of the Faceted Browser page.
+-   Optionally, pull down the analyses for all listed studies by clicking
+    the **Expand All Studies** tab at the top of the Faceted Browser page.
 
 View Metadata for an Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -320,89 +319,92 @@ View.
 .. note::
 	 To upload analysis data for a study, see Chapter 10: *Data Upload*.   
 
-#. To view analysis data, and optionally filter and export the data:
+To view analysis data, and optionally filter and export the data:
 
-   1. In Analysis View, navigate to the study that contains the
-      analysis.
+#.  In Analysis View, navigate to the study that contains the
+    analysis.
 
-   2. Click the **Analyses** button under the study name to expand the
-      list of analyses for the study.
+#.  Click the **Analyses** button under the study name to expand the
+    list of analyses for the study.
 
-A list appears containing the study’s analyses:
+    A list appears containing the study’s analyses:
 
-|image217|
+    |image217|
 
-1. Click the name of the analysis of interest.
+#.  Click the name of the analysis of interest.
 
-The rows of analysis data appear below the analysis name:
+    The rows of analysis data appear below the analysis name:
 
-|image218|
+    |image218|
 
-1. Optionally, filter the data results through one or both of the
-   following methods and then click \ **OK** (do not press Enter or
-   Return):
+#.  Optionally, filter the data results through one or both of the
+    following methods and then click \ **OK** (do not press Enter or
+    Return):
 
--  Specify a p-value in the **P-value cutoff** field.
+    -   Specify a p-value in the **P-value cutoff** field.
 
-Only those rows whose **p-value** column contains a p-value at or below
-the specified p-value are returned.
+        Only those rows whose **p-value** column contains a p-value at or below
+        the specified p-value are returned.
 
-Setting **P-value-cutoff** to **0.0** disables the p-value filter.
+        Setting **P-value-cutoff** to **0.0** disables the p-value filter.
 
--  Specify a search keyword in the **Search** field. All data columns
-   are searchable.
+    -   Specify a search keyword in the **Search** field. All data columns
+        are searchable.
 
-1. Optionally, click **Export as CSV** to export the filtered data to a
-   comma-separated text file.
+#.  Optionally, click **Export as CSV** to export the filtered data to a
+    comma-separated text file.
 
-2. Optionally, click **QQ Plot** to display the filtered data in a QQ
-   Plot. To export the image, click **Export as PNG**.
+#.  Optionally, click **QQ Plot** to display the filtered data in a QQ
+    Plot. To export the image, click **Export as PNG**.
 
 Table View
 ~~~~~~~~~~
 
 Table View lets you perform the following tasks:
 
--  View analysis data from multiple analyses in a single table.
+-   View analysis data from multiple analyses in a single table.
 
--  Filter the rows of analysis data by p-value and/or a search keyword.
+-   Filter the rows of analysis data by p-value and/or a search keyword.
 
--  Export the analysis data to a comma-separated text file.
-
-.. note::
-	 The contents of Table View are determined by the filters in the Active Filters area. Selecting an individual analysis by checking the check box next to the analysis name in Analysis View will not cause the analysis to be included in Table View.   
-
-#. To view analysis data in Table View:
-
-   1. Define search filters that will retrieve the records you want to
-      view.
+-   Export the analysis data to a comma-separated text file.
 
 .. note::
-	 Be sure to filter your search as narrowly as possible. Not only will this result in a table that contains only the most pertinent data, but it will reduce the time required to retrieve and display the data.   
+    The contents of Table View are determined by the filters in the Active Filters area. 
+    Selecting an individual analysis by checking the check box next to the analysis name in 
+    Analysis View will not cause the analysis to be included in Table View. 
 
-1. Click the **Table View** button:
+To view analysis data in Table View:
 
-|image221|
+#.  Define search filters that will retrieve the records you want to view.
 
-1. Optionally, filter the data results through one or both of the
-   following methods and then click \ **OK** (do not press Enter or
-   Return):
+    .. note::
+        Be sure to filter your search as narrowly as possible. Not only will this result in a table that contains only the most pertinent data, but it will reduce the time required to retrieve and display the data.   
 
--  Specify a p-value in the **P-value cutoff** field.
+#.  Click the **Table View** button:
 
-Only those rows whose **p-value** column contains a p-value at or below
-the specified p-value are returned.
+    |image221|
 
-Setting **P-value-cutoff** to **0.0** disables the p-value filter.
+#.  Optionally, filter the data results through one or both of the
+    following methods and then click \ **OK** (do not press Enter or
+    Return):
 
--  Specify a search keyword in the **Search** field. All data columns
-   are searchable.
+    -   Specify a p-value in the **P-value cutoff** field.
 
-.. note::
-	 Setting a p-value or search keyword in Analysis View for a particular analysis will not filter the data that appears in Table View. To filter Table View records by these parameters, you must define the filters in Table View itself.   
+        Only those rows whose **p-value** column contains a p-value at or below
+        the specified p-value are returned.
 
-1. Optionally, click **Export as CSV** to export the filtered data to a
-   comma-separated text file.
+        Setting **P-value-cutoff** to **0.0** disables the p-value filter.
+
+    -   Specify a search keyword in the **Search** field. All data columns
+        are searchable.
+
+    .. note::
+        Setting a p-value or search keyword in Analysis View for a particular analysis 
+        will not filter the data that appears in Table View. To filter Table View records by 
+        these parameters, you must define the filters in Table View itself.   
+
+#.  Optionally, click **Export as CSV** to export the filtered data to a
+    comma-separated text file.
 
 |image223|
 
@@ -423,86 +425,85 @@ not supported.
 Alternatively, GWAVA can be launched and used as a separate application
 independent of the tranSMART user interface
 
-#. To display analysis data in a Manhattan Plot:
+To display analysis data in a Manhattan Plot:
 
-   1. Optionally, define search filters using the keyword search and
-      Filter Browser features.
+#.  Optionally, define search filters using the keyword search and
+    Filter Browser features.
 
-Doing so will reduce the number of studies and analyses that you will
-need to browse through in Analysis View when selecting the analyses to
-include in the Manhattan Plot.
+    Doing so will reduce the number of studies and analyses that you will
+    need to browse through in Analysis View when selecting the analyses to
+    include in the Manhattan Plot.
 
-.. note::
-	 If you define any gene or gene signature filters, those genes will appear in the GWAVA Gene Model Selection window.   
+    .. note::
+        If you define any gene or gene signature filters, those genes will appear in the GWAVA Gene Model Selection window.   
 
-1. In Analysis View, do one of the following:
+#.  In Analysis View, do one of the following:
 
--  Select the check box next to each analysis whose data will be
-   included in the Manhattan Plot:
+    -   Select the check box next to each analysis whose data will be
+        included in the Manhattan Plot:
 
-|image225|
+        |image225|
 
-At least one analysis must be selected.
+    At least one analysis must be selected.
 
--  Click the **Select All Visible Analyses** tab to select all analyses
-   for all listed studies.
+    -   Click the **Select All Visible Analyses** tab to select all analyses
+        for all listed studies.
 
-|image226|
+        |image226|
 
-1. Click the **Manhattan Plot** tab.
+#.  Click the **Manhattan Plot** tab.
 
-2. In the Manhattan Plot Options dialog box, select the human genome
-   version to use as the basis for the selected data, and optionally,
-   specify a p-value cutoff:
+#.  In the Manhattan Plot Options dialog box, select the human genome
+    version to use as the basis for the selected data, and optionally,
+    specify a p-value cutoff:
 
-|image227|
+    |image227|
 
-If you specify a p-value cutoff, the only data included in the Manhattan
-Plot will be from records containing the specified p-value or below.
+    If you specify a p-value cutoff, the only data included in the Manhattan
+    Plot will be from records containing the specified p-value or below.
 
-1. Click **Plot**.
+#.  Click **Plot**.
 
-The GWAVA application opens.
+    The GWAVA application opens.
 
-1. In the GWAVA window, select the analysis or analyses of interest from
-   the left and click the **Include** button. The selected items are
-   moved into the panel on the right:
+#.  In the GWAVA window, select the analysis or analyses of interest from
+    the left and click the **Include** button. The selected items are
+    moved into the panel on the right:
 
-   |image228|
+    |image228|
 
-2. Enter a list of genes or RSIDs (one or more):
+#.  Enter a list of genes or RSIDs (one or more):
 
-|image229|
+    |image229|
 
-1. Click the **Retrieve Data** button at the bottom to begin running the
-   analysis/analyses.
+#.  Click the **Retrieve Data** button at the bottom to begin running the
+    analysis/analyses.
 
-   |image230|
+    |image230|
 
-2. Once the job status moves from Working to Success, the job is
-   complete.
+#.  Once the job status moves from Working to Success, the job is
+    complete.
 
-   |image231|
+    |image231|
 
-3. From the GWAVA Gene Model Selection window, select the completed
-   analysis/analyses and click the **Colored Plot** button.
+#.  From the GWAVA Gene Model Selection window, select the completed
+    analysis/analyses and click the **Colored Plot** button.
 
-   |image232|
+    |image232|
 
-4. The Manhattan Plot is displayed in the Results tab of the GWAVA
-   window:
+#.  The Manhattan Plot is displayed in the Results tab of the GWAVA window:
 
-|image233|
+    |image233|
 
-1. Optionally, manipulate the image using the features on the bottom of
-   the window or by directly highlighting the plot itself. For example,
-   the recombination rate can optionally be displayed, the plot can be
-   zoomed in and out on the chromosomal range, and horizontal lines can
-   be added to the plot as needed.
+#.  Optionally, manipulate the image using the features on the bottom of
+    the window or by directly highlighting the plot itself. For example,
+    the recombination rate can optionally be displayed, the plot can be
+    zoomed in and out on the chromosomal range, and horizontal lines can
+    be added to the plot as needed.
 
-   |image234|
+    |image234|
 
-2. To export, click the **Capture > Save plot to file** menu option.
+#.  To export, click the **Capture > Save plot to file** menu option.
 
 .. |image200| image:: media/image151.png
    :width: 6.89744in

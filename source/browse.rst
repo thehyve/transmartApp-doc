@@ -24,7 +24,11 @@ following kinds of information:
 -  Diseases and observations
 
 .. note::
-    Administrators only: For information on creating and editing Browse objects, see *Browse Tool Administration* on page 157.   
+    Administrators only: For information on creating and editing Browse 
+    objects, see *Browse Tool Administration* on page 157.   
+
+.. todo::
+    fix link
 
 Overview of the Browse UI
 -------------------------
@@ -55,6 +59,8 @@ Features of the Browse page are shown below:
 
 |image7|
 
+.. _defining-search-filters-label:
+
 Defining Search Filters
 -----------------------
 
@@ -66,12 +72,10 @@ define a filter, it will be applied in Browse and in Analyze.
 
 This section describes how to use keywords as search filters, using the
 boxes above the Active Filters area, and how to select pre-defined
-search filters from the `*Filter Browser* <#UsingTheFilterBrowser>`__
-(page 6).
+search filters from the `Filter Browser <#using-the-filter-browser>`__.
 
 The search filters you type and that you select from the Filter Browser
-are displayed in the `*Active Filters* <#ManagingActiveFilters>`__ area
-(page 7).
+are displayed in the `Active Filters <#managing-active-filters>`__.
 
 Keyword Search
 ~~~~~~~~~~~~~~
@@ -90,16 +94,15 @@ There are two types of keyword searches:
    In Analyze, free-text searches apply to all tree nodes in the
    Navigate Terms pane.
 
-#. To define a keyword search (any category except Free Text):
+To define a keyword search (any category except Free Text):
 
-   1. Select one of the categories in the category dropdown control, or
-      select **All** to search across all categories.
+#.  Select one of the categories in the category dropdown control, or 
+    select **All** to search across all categories.
+#.  Specify part or all of a search keyword in the text field to the 
+    right of the category dropdown.
 
 .. note::
-	 Gene searches return all matches of the gene, not just results that are statistically significant.   
-
-1. Specify part or all of a search keyword in the text field to the
-   right of the category dropdown.
+    Gene searches return all matches of the gene, not just results that are statistically significant.
 
 When you type at least two characters in the field, tranSMART begins to
 search within the specified category and lists keywords that begin with
@@ -119,9 +122,7 @@ a keyword synonym (in parentheses).
 
 |image11|
 
-1. Click the keyword you want, but do not press Enter or Return.
-
-When you click the keyword, the following actions occur:
+Click the keyword you want, but do not press Enter or Return. When you click the keyword, the following actions occur:
 
 -  The search begins immediately. The contents of the Program Explorer
    are updated, and a result is displayed in the right pane.
@@ -139,16 +140,16 @@ filters from the Filter Browser, or by a combination of these actions.
     are those that contain the specified SNP or gene. If an analysis contains no references 
     to the SNP or gene, no records are returned for that analysis.   
 
-#. To define a Free Text keyword search:
+To define a Free Text keyword search:
 
-   1. Select **Free Text** in the category dropdown control.
+#.  Select **Free Text** in the category dropdown control.
 
-   2. Type the entire keyword (consisting of one or more words) and
-      press **Enter**.
+#.  Type the entire keyword (consisting of one or more words) and
+    press **Enter**.
 
 For example, after you type the following Free Text keyword and press
-Enter, tranSMART searches for data sources containing "primary breast
-tumor" but not those containing just "breast tumor":
+Enter, tranSMART searches for data sources containing *primary breast tumor* 
+but not those containing just *breast tumor*:
 
 |image14|
 
@@ -159,23 +160,23 @@ The Filter Browser lets you select one or more search filters to include
 in your search query.
 
 tranSMART adds all of your search filters, including those you type into
-the `*keyword search* <#KeywordSearch>`__ field (page 5), into the
-`*Active Filters* <#ManagingActiveFilters>`__ area (page 7).
+the `keyword search <#keyword-search>`__ field, into the
+`Active Filters <#managing-active-filters>`__ area.
 
-#. To work with the Filter Browser:
-
-   1. Click the filter icon in the **Active Filters** box:
+To work with the Filter Browser:
 
 |image15|
 
-A list of all filters from which you can select appears.
+#.  Click the filter icon in the **Active Filters** box
 
-1. Click the down arrow next to a filter type to see all available
-   entries for that type.
+#.  A list of all filters from which you can select appears.
 
-2. Select the filter(s) you want to use from the list. You can select
-   more than one filter from the same filter type or filters from
-   different types.
+#.  Click the down arrow next to a filter type to see all available
+    entries for that type.
+
+#.  Select the filter(s) you want to use from the list. You can select
+    more than one filter from the same filter type or filters from
+    different types.
 
 All selections appear in the **Active Filters** pane, along with any
 search keywords you might have specified.
@@ -184,8 +185,8 @@ Managing Active Filters
 -----------------------
 
 The Active Filters area displays the entire search query that you build
-using the `*keyword search* <#KeywordSearch>`__ feature (page 5) and/or
-`*filter browser* <#UsingTheFilterBrowser>`__ feature (page 6).
+using the `keyword search <#keyword-search>`__ feature and/or
+`filter browser <#using-the-filter-browser>`__ feature.
 
 Each filter that you define is added to the search query. Each time you
 add a filter to the search query, the result set in the right side of
@@ -199,6 +200,8 @@ involving melanoma and the human protein MAGA4 or MAGB2:
 Note the following controls in the Active Filters pane:
 
 |image17|
+
+.. _viewing-studies-in-the-program-explorer-tree-label:
 
 Viewing Studies in the Program Explorer Tree
 --------------------------------------------
@@ -247,51 +250,48 @@ Viewing and Exporting Files in Browse Folders
 Folders are used to store any type of files. You can view and download
 files.
 
-#. To view a file in a folder:
+To view a file in a folder:
 
-   1. Click the folder name in the Program Explorer tree.
+#.  Click the folder name in the Program Explorer tree.
 
-Information about the folder appears in the right panel, including a
-list of files in the folder.
+    Information about the folder appears in the right panel, including a
+    list of files in the folder.
 
-1. Click the name of the file to view.
+#.  Click the name of the file to view.
 
-Files of common formats (such as .doc and .pdf) will be displayed in the
-corresponding application.
+    Files of common formats (such as *.doc* and *.pdf*) will be displayed in the
+    corresponding application.
 
-#. To export files:
-
-   1. Click the **Add to Export** button at the far right of a file to
-      export, or click **Export all** to export all files in the folder:
+#.  To export files click the **Add to Export** button at the far right of a file to
+    export, or click **Export all** to export all files in the folder:
 
 |image22|
 
 The files are not exported immediately. Instead, they are added to the
 Export Cart.
 
-1. Optionally, as you continue to work in the Browse window, add files
-   from other folders to the Export Cart.
+#.  Optionally, as you continue to work in the Browse window, add files
+    from other folders to the Export Cart.
 
-2. When finished adding files to the Export Cart and ready to export the
-   files, click the **Export Cart** button at the top of the Browse
-   window:
+#.  When finished adding files to the Export Cart and ready to export the
+    files, click the **Export Cart** button at the top of the Browse
+    window:
 
-|image23|
+    |image23|
 
-1. In the Export Files dialog box, click **Export Selected Files**.
+#.  In the Export Files dialog box, click **Export Selected Files**.
 
-Note the following:
+.. important::
+    tranSMART formats the file to export as a zip file, assigns it the
+    name *export.zip*, and downloads the file to the Downloads directory on
+    your computer.
 
--  tranSMART formats the file to export as a zip file, assigns it the
-   name export.zip, and downloads the file to the Downloads directory on
-   your computer.
+    If a file named export.zip already exists in the directory, tranSMART
+    changes the name to *export-1.zip* (or *export-2.zip*, *export-3.zip*, und
+    so weiter, depending on how many files have been exported previously).
 
--  If a file named export.zip already exists in the directory, tranSMART
-   changes the name to export-1.zip (or export-2.zip, export-3.zip, and
-   so forth, depending on how many files have been exported previously).
-
--  If multiple files are selected for export on the Export Files dialog
-   box, all are downloaded in one zip file.
+    If multiple files are selected for export on the Export Files dialog
+    box, all are downloaded in one zip file.
 
 Opening a Study in Analyze View
 -------------------------------

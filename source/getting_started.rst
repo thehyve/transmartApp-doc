@@ -1,5 +1,5 @@
-Chapter 1: Getting Started with tranSMART
-=========================================
+Chapter 1: Getting Started
+==========================
 
 The tranSMART application reflects the efforts of various informatics
 groups to integrate data from internal and external data sources within
@@ -59,19 +59,15 @@ The following tools appear on the menu bar:
 -  **Utilities** — Contains submenus providing supplementary information
    or actions.
 
-**Logging In**
---------------
+Logging In
+----------
 
-#. To log into tranSMART:
+To log into tranSMART:
 
-   1. Type the address of the tranSMART software into your browser’s URL
-      field.
+#. Type the address of the tranSMART software into your browser’s URL field. The login screen appears:
+   |image5|
 
-The login screen appears:
-
-|image5|
-
-1. Type your tranSMART login credentials and click **Login**.
+#. Type your tranSMART login credentials and click **Login**.
 
 
 .. |image4| image:: media/image5.png

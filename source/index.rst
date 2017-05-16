@@ -7,7 +7,7 @@ The transmartApp documentation
 ==============================
 
 |image1|
-
+ 
 This version 16.2 of the tranSMART documentation was created by The Hyve
 and TraIT and adapted from an earlier version created by the tranSMART Foundation.
 

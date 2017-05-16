@@ -2,3 +2,17 @@
 ^\+-+\+-+\+\n\| \|image[0-9]+\|[^\|]*\|([^\|]*)\|\n*.*\n.*
 # vervangen voor 
 .. note::\n\t$1
+
+# links op lange manier met teveel sterretjes
+`\*([\w ]*).*`__
+# naar korte manier
+`$1`_
+
+# ROLE\_* naar literal 
+[^`](ROLE\\_[A-Z_\\]*)
+# naar literal
+``$1``
+# strippen van \_ naar _ (paar keer runnen)
+(ROLE[A-Z_^`]*)\\
+#naar
+$1

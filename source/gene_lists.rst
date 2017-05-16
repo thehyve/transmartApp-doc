@@ -1,5 +1,5 @@
-Chapter 8: Gene Signatures and Gene Lists
-=========================================
+Chapter 8: Gene Signatures & Lists
+==================================
 
 The tranSMART gene signature wizard guides you through the process of
 creating a gene signature or gene list. You specify whether the gene
@@ -21,17 +21,14 @@ Creating a Gene Signature
 
 There are two basic tasks involved in creating a gene signature:
 
-#. 
+#.  Add the list of genes for the gene signature to a text file.
 
-   1. Add the list of genes for the gene signature to a text file.
+    Genes can be indicated by gene symbol or by their associated probe set ID.
 
-Genes can be indicated by gene symbol or by their associated probe set
-ID.
-
-1. Use the gene signature wizard to define the information on which the
-   gene signature is based, such as species, source of data, and test
-   type, and also to import into the gene signature definition the text
-   file containing the genes.
+#.  Use the gene signature wizard to define the information on which the
+    gene signature is based, such as species, source of data, and test
+    type, and also to import into the gene signature definition the text
+    file containing the genes.
 
 Step 1. Adding the Genes to a Text File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,14 +45,14 @@ possibly two, columns of information:
 The fold change ratios can be either **actual values** (for example,
 12.8 or -12.8) or one of the following **composite values:**
 
--  **-1**. All down-regulated gene expressions.
+    **-1**  All down-regulated gene expressions.
 
--  **1**. All up-regulated gene expressions.
+    **1**   All up-regulated gene expressions.
 
--  **0**. No change.
+    **0**   No change.
 
 The following table shows the different ways you can specify the genes
-for your gene signature:
+for your gene signature :
 
 +----------------------------------------+------------------------------------+--------------------------------+
 | Contents of File                       | Format                             | Examples                       |
@@ -112,70 +109,68 @@ for your gene signature:
 Step 2. Creating the Gene Signature
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. 
+To create a gene signature:
 
-   1. In tranSMART, click the **Gene Signature/Lists** menu.
+#.  In tranSMART, click the **Gene Signature/Lists** menu.
 
-   2. Click the **New Signature** button.
+#.  Click the **New Signature** button.
 
-The first page of the gene signature wizard appears:
+    The first page of the gene signature wizard appears:
 
-|image185|
+    |image185|
 
-.. note::
-	 Required fields on gene signature wizard pages are marked with a red asterisk (\*).   
+    .. note::
+        Required fields on gene signature wizard pages are marked with a red asterisk (\*).   
 
-You can find additional information about the gene signature wizard by
-clicking **Information** on any wizard page.
+    You can find additional information about the gene signature wizard by
+    clicking **Information** on any wizard page.
 
-1. Specify a name (required) and an optional description for your gene
-   signature, then click Meta-Data to proceed to the next gene wizard
-   page.
+#.  Specify a name (required) and an optional description for your gene
+    signature, then click Meta-Data to proceed to the next gene wizard
+    page.
 
-Gene Sig Pg.
+#.  The second page of the gene signature wizard appears:
 
-The second page of the gene signature wizard appears:
+    |image187|
 
-|image187|
-
-1. Specify values in the required fields **Species** and **Technology**
+#. Specify values in the required fields **Species** and **Technology**
    **Platform**, and also in any other relevant fields, then click
    **Next** to proceed to the final gene signature wizard page:
 
-|image188|
+   |image188|
 
-Gene Sig Pg 3
+#.  The third page appears.
 
-1. Specify values in the required field **P-value Cutoff**.
+#.  Specify values in the required field **P-value Cutoff**.
 
-2. In the section **File Upload Information**, describe the text file
-   you created in the section *Step 1. Adding the Genes to a Text File*
-   on page 105, using the required fields **File Information** and
-   **Upload File**:
+#.  In the section **File Upload Information**, describe the text file
+    you created in the section *Step 1. Adding the Genes to a Text File*
+    on page 105, using the required fields **File Information** and
+    **Upload File**:
 
--  In the **File schema** section of **File Information**, select **Gene
-   Symbol <tab> Metric Indicator** or **Probe Set Symbol <tab> Metric
-   Indicator**, depending on the method you chose to specify the genes.
+    -   In the **File schema** section of **File Information**, select **Gene
+        Symbol <tab> Metric Indicator** or **Probe Set Symbol <tab> Metric
+        Indicator**, depending on the method you chose to specify the genes.
 
--  In the **Fold change metric** section of **File Information**, select
-   one of the following choices from the dropdown:
+    -   In the **Fold change metric** section of **File Information**, select
+        one of the following choices from the dropdown:
+    
+        +-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+        | Fold Change Metric Indicator                    | Description                                                                                                                                                    |
+        +=================================================+================================================================================================================================================================+
+        | Actual fold change                              | The text file contains actual fold change values for each gene symbol or probe set ID.                                                                         |
+        +-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+        | Not used                                        | The text file contains gene symbols or probe set ID only. There are no associated fold change values.                                                          |
+        +-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+        | -1 (down), 1 (up), 0 (optional for unchanged)   | The fold change values are not actual values. They simply represent whether the gene expression was down-regulated (-1), up-regulated (1), or unchanged (0).   |
+        +-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Fold Change Metric Indicator                    | Description                                                                                                                                                    |
-+=================================================+================================================================================================================================================================+
-| Actual fold change                              | The text file contains actual fold change values for each gene symbol or probe set ID.                                                                         |
-+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Not used                                        | The text file contains gene symbols or probe set ID only. There are no associated fold change values.                                                          |
-+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| -1 (down), 1 (up), 0 (optional for unchanged)   | The fold change values are not actual values. They simply represent whether the gene expression was down-regulated (-1), up-regulated (1), or unchanged (0).   |
-+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    -  In **Upload File**, specify the path and name of the file that
+       contains the genes to import. Use the **Browse** button to select the
+       file from the navigation tree.
 
--  In **Upload File**, specify the path and name of the file that
-   contains the genes to import. Use the **Browse** button to select the
-   file from the navigation tree.
-
-1. Specify values in any other relevant fields on this gene wizard page,
-   then click **Save** to save the gene signature.
+#.  Specify values in any other relevant fields on this gene wizard page,
+    then click **Save** to save the gene signature.
 
 The new gene signature appears in the **Gene Signature List** at the top
 of the Gene Signature/List view:
@@ -187,19 +182,19 @@ Making a New Gene Signature Public
 
 By default, a newly created gene signature is private.
 
-#. To make a gene signature public:
+To make a gene signature public:
 
-   1. In the **Gene Signature List**, click the **Select** **Action**
-      dropdown to the right of the gene signature you just created.
+#.  In the **Gene Signature List**, click the **Select** **Action**
+    dropdown to the right of the gene signature you just created.
 
-   2. Click **Make Public** in the dropdown list:
+#.  Click **Make Public** in the dropdown list:
 
-|image190|
+    |image190|
 
-After you click **Make Public**, the value in the **Public** column for
-the gene signature changes from **No** to **Yes**:
+#.  After you click **Make Public**, the value in the **Public** column for
+    the gene signature changes from **No** to **Yes**:
 
-|image191|
+    |image191|
 
 .. note::
 	 tranSMART users assigned the role ROLE\_ADMIN have access to both public and private gene signatures.   
@@ -207,49 +202,47 @@ the gene signature changes from **No** to **Yes**:
 Performing Actions on Your Gene Signatures
 ------------------------------------------
 
-#. To edit or perform other actions on a gene signature in your gene
-   signature list:
+To edit or perform other actions on a gene signature in your gene signature list:
 
-   1. In tranSMART, click the **Gene Signature/Lists** menu.
+#.  In tranSMART, click the **Gene Signature/Lists** menu.
 
-The **Gene Signature List** appears, containing all the genes you have
-created:
+#.  The **Gene Signature List** appears, containing all the genes you have created:
 
-|image193|
+    |image193|
 
-1. Click the **Select Action** dropdown for the gene signature you are
-   acting on. The dropdown contains all the actions you can perform on
-   the gene signature:
-
-+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Action           | Description                                                                                                                                                                                                                                           |
-+==================+=======================================================================================================================================================================================================================================================+
-| Clone            | Create an exact duplicate of the gene signature definition (*except* for the text file containing the gene symbols and fold change values), and display the definition in the gene signature wizard.                                                  |
-|                  |                                                                                                                                                                                                                                                       |
-|                  | Cloning a gene signature helps you create a new gene signature with a similar definition to an existing one. However, it is expected you will import a different set of genes into the gene signature.                                                |
-+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Delete           | Delete the gene signature.                                                                                                                                                                                                                            |
-+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Edit             | Open the gene signature in the gene signature wizard for editing.                                                                                                                                                                                     |
-|                  |                                                                                                                                                                                                                                                       |
-|                  | The gene signature wizard displays all the information in the gene signature, including the reference to the text file containing the list of genes and fold change values. If you want to choose a different text file, click the following label:   |
-|                  |                                                                                                                                                                                                                                                       |
-|                  | |image194|                                                                                                                                                                                                                                            |
-|                  |                                                                                                                                                                                                                                                       |
-|                  | To save any changes you make during editing, you must click the **Save** button on the third page of the wizard.                                                                                                                                      |
-+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Edit Items       | Add, delete, or modify one or more genes in the text file containing the gene symbols and fold change values.                                                                                                                                         |
-+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Excel Download   | Generate the entire contents of the gene signature, including the information in the text file containing the gene symbols and fold change values, to a Microsoft Excel spreadsheet.                                                                  |
-|                  |                                                                                                                                                                                                                                                       |
-|                  | The gene signature definition and gene symbols/fold change values are written to separate spreadsheets.                                                                                                                                               |
-+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Make Public      | Make a private gene signature public.                                                                                                                                                                                                                 |
-|                  |                                                                                                                                                                                                                                                       |
-|                  | **Note:** To make a public gene signature private, edit the gene signature and set the **Public?** field to **No** on the first page of the gene signature wizard:                                                                                    |
-|                  |                                                                                                                                                                                                                                                       |
-|                  | |image195|                                                                                                                                                                                                                                            |
-+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+#.  Click the **Select Action** dropdown for the gene signature you are
+    acting on. The dropdown contains all the actions you can perform on
+    the gene signature:
+ 
+    +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Action           | Description                                                                                                                                                                                                                                           |
+    +==================+=======================================================================================================================================================================================================================================================+
+    | Clone            | Create an exact duplicate of the gene signature definition (*except* for the text file containing the gene symbols and fold change values), and display the definition in the gene signature wizard.                                                  |
+    |                  |                                                                                                                                                                                                                                                       |
+    |                  | Cloning a gene signature helps you create a new gene signature with a similar definition to an existing one. However, it is expected you will import a different set of genes into the gene signature.                                                |
+    +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Delete           | Delete the gene signature.                                                                                                                                                                                                                            |
+    +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Edit             | Open the gene signature in the gene signature wizard for editing.                                                                                                                                                                                     |
+    |                  |                                                                                                                                                                                                                                                       |
+    |                  | The gene signature wizard displays all the information in the gene signature, including the reference to the text file containing the list of genes and fold change values. If you want to choose a different text file, click the following label:   |
+    |                  |                                                                                                                                                                                                                                                       |
+    |                  | |image194|                                                                                                                                                                                                                                            |
+    |                  |                                                                                                                                                                                                                                                       |
+    |                  | To save any changes you make during editing, you must click the **Save** button on the third page of the wizard.                                                                                                                                      |
+    +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Edit Items       | Add, delete, or modify one or more genes in the text file containing the gene symbols and fold change values.                                                                                                                                         |
+    +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Excel Download   | Generate the entire contents of the gene signature, including the information in the text file containing the gene symbols and fold change values, to a Microsoft Excel spreadsheet.                                                                  |
+    |                  |                                                                                                                                                                                                                                                       |
+    |                  | The gene signature definition and gene symbols/fold change values are written to separate spreadsheets.                                                                                                                                               |
+    +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Make Public      | Make a private gene signature public.                                                                                                                                                                                                                 |
+    |                  |                                                                                                                                                                                                                                                       |
+    |                  | **Note:** To make a public gene signature private, edit the gene signature and set the **Public?** field to **No** on the first page of the gene signature wizard:                                                                                    |
+    |                  |                                                                                                                                                                                                                                                       |
+    |                  | |image195|                                                                                                                                                                                                                                            |
+    +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Performing Actions on Other Users’ Signatures 
 ----------------------------------------------
@@ -269,22 +262,22 @@ as follows:
 | ROLE\_DATASET\_EXPLORER\_ADMIN   |                                                                                  |
 +----------------------------------+----------------------------------------------------------------------------------+
 
-#. To edit or perform actions on a gene signature other than your own:
+To edit or perform actions on a gene signature other than your own:
 
-   1. In tranSMART, click the **Gene Signature/Lists** menu.
+#.  In tranSMART, click the **Gene Signature/Lists** menu.
 
-   2. Click **Public Signatures** to open the list of public gene
-      signatures:
+#.  Click **Public Signatures** to open the list of public gene
+    signatures:
 
-|image196|
+    |image196|
 
-.. note::
-	 tranSMART users assigned the role ROLE\_ADMIN will see **Other Signatures** instead of **Public Signatures**.   
+    .. note::
+        tranSMART users assigned the role ROLE\_ADMIN will see **Other Signatures** instead of **Public Signatures**.   
 
-1. Click the **Select Action** dropdown for the gene signature you want
-   to act on.
+#.  Click the **Select Action** dropdown for the gene signature you want
+    to act on.
 
-2. Select the action you want to perform on the gene signature.
+#.  Select the action you want to perform on the gene signature.
 
 Viewing a Gene Signature Definition
 -----------------------------------
