@@ -298,7 +298,7 @@ groups. This analysis is performed on high-dimensional data nodes
 containing chromosomal region information.
 
 .. note::
-	 This analysis represents a quick way to investigate alteration frequencies of the selected groups and is very similar to the advanced workflow analysis *Group Test for aCGH* (page 56), in which statistical testing is performed. It is advisable to use the Frequency Plot for aCGH analysis for exploratory purposes before performing statistical testing (which requires a significant amount of time).   
+	 This analysis represents a quick way to investigate alteration frequencies of the selected groups and is very similar to the advanced workflow analysis `Group Test for aCGH`_, in which statistical testing is performed. It is advisable to use the Frequency Plot for aCGH analysis for exploratory purposes before performing statistical testing (which requires a significant amount of time).   
 
 To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
