@@ -60,10 +60,10 @@ Logging In
 To log into tranSMART:
 
 #. Type the address of the tranSMART software into your browser’s URL field. The login screen appears:
-   |image5|
+   |image6|
 
 #. Type your tranSMART login credentials and click **Login**.
 
-.. |image5| image:: media/image6.png
+.. |image6| image:: media/image6.png
    :width: 4.10000in
    :height: 2.21000in
