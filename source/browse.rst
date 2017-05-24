@@ -9,9 +9,9 @@ The tranSMART Browse feature provides a fine-grained search capability
 from a single user interface into studies and other data sources of
 interest.
 
-You define a search query by typing search keywords into the text box,
-by selecting pre-defined search filters from one or more filter
-browsers, or by any combination of these methods. tranSMART conducts the
+You define a search query by: typing search keywords into the text box,
+selecting pre-defined search filters from one or more filter
+browsers, or any combination of these methods. tranSMART conducts the
 search across multiple data sources.
 
 The Browse feature supports filters based on one or more of the
@@ -42,21 +42,20 @@ panes:
 
 **Left pane**
 
-Use this pane to define search filters to retrieve the studies of
+Here the search filters are defined to retrieve the studies of
 interest.
 
-The Active Filters area displays any pre-defined filters that you have
-selected and free-text search keywords that you have typed; for example,
-the title of a study. The Program Explorer area displays the matching
-studies.
+The "Active Filters" area displays any selected, pre-defined filters and 
+free-text search keywords that you have typed; for example, the title of a study. 
+The "Program Explorer" area displays the matching studies.
 
 **Right pane**
 
-Use this pane to view information about the studies and any associated
+Here information is shown on the studies and any associated
 objects (analyses, assays, folders) listed in the Program Explorer.
 
-Some studies that you display in this pane can be opened in Analyze
-view, where you define cohorts within the study and perform a variety of
+Some studies displayed in this pane can be opened in the "Analyze" feature,
+where you define cohorts within the study and perform a variety of
 analyses of the cohort data.
 
 Features of the Browse page are shown below:
