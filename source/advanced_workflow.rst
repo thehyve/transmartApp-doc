@@ -1029,7 +1029,7 @@ To perform a survival analysis:
     -   **Censoring Variable:** Specifies which patients had the event whose
         time is being measured. For example, if the Time variable selected is
         **Overall Survival Time (Years)**, an appropriate event variable is
-        **Patient Death**.
+        **Alive**.
 
 #.  Optionally, select **Enable binning**.
 
