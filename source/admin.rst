@@ -1,9 +1,6 @@
 Chapter 11: Administration
 ==========================
 
-.. important::
-    Only users with appropriate access rights can see this.
-
 As a tranSMART User Administrator, your responsibilities include the
 following tasks:
 
