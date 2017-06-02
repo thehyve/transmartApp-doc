@@ -924,6 +924,7 @@ All events within the specified timeframe display.
 
 
 .. _browse-tool-administration-label:
+
 Browse Tool Administration
 --------------------------
 
