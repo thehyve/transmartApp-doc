@@ -29,7 +29,7 @@ following kinds of information:
 
 .. note::
     Administrators only: For information on creating and editing Browse 
-    objects, see :ref:`browse-tool-administration-label`.   
+    objects, see :ref:`browse-tool-administration-label`   
 
 Overview of the Browse UI
 -------------------------
@@ -211,7 +211,7 @@ Active Filters box. As the search query changes, the contents of the
 Program Explorer changes along with it.
 
 .. note::
-	 Administrators only: For information on creating and editing the objects in the Program Explorer, see :ref:`browse-tool-administration-label`.   
+	 Administrators only: For information on creating and editing the objects in the Program Explorer, see :ref:`browse-tool-administration-label`   
 
 The following illustration shows the hierarchy of objects in the Program
 Explorer tree. Note that each node in the tree is associated with an
