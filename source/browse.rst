@@ -29,7 +29,7 @@ following kinds of information:
 
 .. note::
     Administrators only: For information on creating and editing Browse 
-    objects, see `admin.rst#browse-tool-administration`_.   
+    objects, see `here <admin.rst#browse-tool-administration>`_.   
 
 Overview of the Browse UI
 -------------------------
