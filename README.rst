@@ -25,4 +25,7 @@ changes in documents in folder "source".
 * removed , before the word "and" 
 * added quotation marks for concepts used in TM (at least when first mentioned in the text)
 
-
+Setup links:
+------------
+within a document: `link text <header-name>`__(e.g. `Active Filters <#managing-active-filters>`__)
+to another document in the project folder: `link text <file.rst#header>'_ (e.g. `here <admin.rst#browse-tool-administration>`_, between brackets is the last part of the specific URL which you can find when clicking on the link sign next to a header in a document)
