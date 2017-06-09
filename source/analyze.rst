@@ -53,7 +53,7 @@ The following table describes the tabs and buttons in the right pane of Analyze:
         
         The tables and charts are displayed in Summary Statistics view.
 
-        See :ref:`generating-summary-statistics-label`.
+        See `Generating summary statistics <summary_statistics.rst#generating-summary-statistics>`_.
 
     **Grid View tab**    
         Display the comparison and analysis data in grid format.  
@@ -79,7 +79,7 @@ The following table describes the tabs and buttons in the right pane of Analyze:
     **Analysis Jobs tab**    
         Review analyses you have run previously and view the status of analyses you have chosen to run in the background. 
     
-        See *Viewing Recent Analysis Jobs* on page 90.    
+        See 'Viewing Recent Analysis Jobs <advanced_workflow.rst#viewing-recent-analysis-jobs>`_.    
 
     **Workspace tab**    
         Perform actions related to a saved cohort definition for an analysis, 
@@ -100,12 +100,12 @@ The following table describes the tabs and buttons in the right pane of Analyze:
     **Genome Browser tab**   
         View data in the Dalliance Genome Browser.    
     
-        See *Dalliance Genome Browser* on page 93.    
+        See `Dalliance Genome Browser <third_party_tooling.rst#dalliance-genome-browser>`_.    
 
     **MetaCore Enrichment Analysis tab** 
         Provide enrichment of a gene list to evaluate the significance of the genes to the studied phenotype and/or patient cohort.   
     
-        See *MetaCore Enrichment Analysis* on page 95. 
+        See `MetaCore Enrichment Analysis <third_party_tooling.rst#metacore-enrichment-analysis-based-on-marker-selection-data>`_. 
 
     **Save Subset button**   
         Save the subset definition. This allows you to regenerate the comparison at a 
@@ -116,10 +116,6 @@ The following table describes the tabs and buttons in the right pane of Analyze:
     **Clear button** 
         Clear all data that has been specified by the user, including the data in 
         the subset definition boxes and in the Advanced Workflow variable input boxes.  
-
-
-.. todo::
-    reconnect links.
 
 .. note::
     If the tabs at the rightmost end of the tab bar are not visible, try shrinking 
@@ -217,7 +213,7 @@ Searching for a Study
 ^^^^^^^^^^^^^^^^^^^^^
 
 You define search filters with the Analyze tool as you do with the
-Browse tool. For information, see :ref:`defining-search-filters-label`.
+Browse tool. For information, see `Defining search filters <browse.rst#defining-search-filters>`_.
 
 Selecting Data from Multiple Studies in the Across Trials Folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -276,7 +272,7 @@ administrator will contact the study owner to find out if you should be
 granted VIEW access, EXPORT access, or no access.
 
 .. note::
-	 Even if you have no access rights to a private study, you can read a description of the study. For information, see *Viewing a Study Description* on page 19.   
+	 Even if you have no access rights to a private study, you can read a description of the study. For information, see 'Viewing a Study Description`_.   
 
 Viewing a Study Description
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
