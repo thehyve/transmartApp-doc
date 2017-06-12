@@ -58,13 +58,13 @@ The following table describes the tabs and buttons in the right pane of Analyze:
     **Grid View tab**    
         Display the comparison and analysis data in grid format.  
     
-        See *Viewing Analysis Data in Grid View*.  
+        See `Viewing Analysis Data in Grid View <summary_statistics.rst#viewing-analysis-data-in-grid-view>`_.  
 
     **Advanced Workflow tab**    
         Display advanced analyses and visualizations of the data — for example, heatmaps, 
         scatter plots, survival analyses, and many others.  
     
-        See Chapter 5: *Advanced Workflow Analyses*.  
+        See Chapter 5: `Advanced Workflow Analyses <advanced_workflow.rst#chapter-5-advanced-workflows>`_.  
 
     **Data Export tab**  
         Select data to export for further analysis in an external tool.   
@@ -79,7 +79,7 @@ The following table describes the tabs and buttons in the right pane of Analyze:
     **Analysis Jobs tab**    
         Review analyses you have run previously and view the status of analyses you have chosen to run in the background. 
     
-        See 'Viewing Recent Analysis Jobs <advanced_workflow.rst#viewing-recent-analysis-jobs>`_.    
+        See `Viewing Recent Analysis Jobs <advanced_workflow.rst#viewing-recent-analysis-jobs>`_.    
 
     **Workspace tab**    
         Perform actions related to a saved cohort definition for an analysis, 
@@ -741,11 +741,10 @@ For information about the Galaxy software, see http://galaxyproject.org/.
 
 To export data using the Galaxy Export tab:
 
-#.  Define one or both cohorts as described in *Defining the Cohorts* on page 21.
+#.  Define one or both cohorts as described in `Defining the Cohorts`_.
 
 #.  Click the **Data Export** tab and define the data to export, as
-    described in steps 2 through 4 in section *Exporting Cohort Data*
-    on page 30.
+    described in steps 2 through 4 in section `Exporting Cohort Data`_.
 
 #.  Click the **Export** **Data** button at the bottom of the page,
     but do not download the data when prompted to do so.
@@ -787,7 +786,7 @@ to explicitly open the Sample Explorer and searching for the data.
 
 To view sample data for the cohort(s) defined in Analysis:
 
-#.  Define one or both cohorts as described in *Defining the Cohorts* on page 21.
+#.  Define one or both cohorts as described in `Defining the Cohorts`_.
 
 #.  Click the **Sample Details** tab:
 
@@ -798,8 +797,8 @@ To view sample data for the cohort(s) defined in Analysis:
 
     |image74|
 
-For information about this page of the Sample Explorer, see *View and
-Refine Sample Search Results* on page 100.
+For information about this page of the Sample Explorer, see 'View and
+Refine Sample Search Results <sample_explorer.rst#view-and-refine-sample-search-results>`_.
 
 
 .. |image27| image:: media/image22.png
