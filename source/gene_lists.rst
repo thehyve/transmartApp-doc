@@ -144,9 +144,8 @@ To create a gene signature:
 #.  Specify values in the required field **P-value Cutoff**.
 
 #.  In the section **File Upload Information**, describe the text file
-    you created in the section *Step 1. Adding the Genes to a Text File*
-    on page 105, using the required fields **File Information** and
-    **Upload File**:
+    you created in the section `Step 1. Adding the Genes to a Text File`_
+    using the required fields **File Information** and **Upload File**:
 
     -   In the **File schema** section of **File Information**, select **Gene
         Symbol <tab> Metric Indicator** or **Probe Set Symbol <tab> Metric
