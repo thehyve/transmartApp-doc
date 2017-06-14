@@ -58,7 +58,7 @@ To begin to run any analysis:
 
 #.  Define the cohort(s) you want to analyze by dragging one or more
     concepts into empty subset definition boxes. For more information,
-    see *Defining the Cohorts* on page 21.
+    see `Defining the Cohorts <analyze.rst#defining-the-cohorts>`_.
 
 The following sections describe how to run specific analyses after you
 perform the above steps.
@@ -274,7 +274,7 @@ To perform a forest plot analysis:
 
 #.  Optionally, enable binning by clicking the **Enable** button.
 
-    For information, see `Data Binning Using Forest Plot`_ on page 85.
+    For information, see `Data Binning Using Forest Plot`_.
 
 #.  In **Statistic Type**, click **Odds Ratio** or **Relative Risk**.
 
@@ -718,7 +718,7 @@ the table by clicking any of the column headings. Optionally, you can
 view MetaCore settings and run a MetaCore Enrichment Analysis by
 clicking the buttons above the table.
 
-For information about MetaCore Enrichment Analysis, see :ref:`metacore-enrichtment-analysis-label`.
+For more information about MetaCore Enrichment Analysis see `here <third_party_tooling.rst#metacore-enrichment-analysis>`_.
 
 The following table represents a portion of the data from the Marker
 Selection heatmap illustrated above:
@@ -726,7 +726,7 @@ Selection heatmap illustrated above:
 |image125|
 
 .. note::
-	 For more information on the analyses used in Marker Selection, visit: http://mathworld.wolfram.com/bonferronicorrection.html.   
+	 For more information on the analyses used in Marker Selection, visit: http://mathworld.wolfram.com/BonferroniCorrection.html   
 
 IC50 Dose Response Curve
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -767,7 +767,7 @@ Line Graph
 A line graph is designed to plot serial numeric data (high or low
 dimensional); that is, a numeric variable that has been measured in a
 series of conditions for each subject (for example, several timepoints).
-For more information on serial data, see :ref:`serial-numeric-data-label`.
+For more information on serial data, see `here <analyze.rst#serial-numeric-data>`_.
 
 In a line graph, the various conditions are plotted along the x-axis, at
 scale (unless you check the **Plot evenly spaced** option) when the
@@ -1238,7 +1238,7 @@ one group for the purposes of this analysis.
 To use the data binning feature with a box plot analysis:
 
 #.  Begin to set up a Box Plot with ANOVA analysis by following the
-    instructions in section *Box Plot with ANOVA* on page 48.
+    instructions in section `Box Plot with ANOVA`_.
 
 #.  Enable binning by selecting **Enable** **binning**.
 
@@ -1463,7 +1463,7 @@ purposes of the analysis.
 To use the data binning feature with a Fisher Test analysis:
 
 #.  Begin to set up a Table with Fisher Test analysis by following the
-    instructions in section *Table with Fisher Test* on page 78.
+    instructions in section `Table with Fisher Test`_.
 
 #.  Enable binning by selecting **Enable binning**.
 
