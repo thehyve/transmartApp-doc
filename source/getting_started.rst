@@ -64,6 +64,6 @@ To log into tranSMART:
 
 #. Type your tranSMART login credentials and click **Login**.
 
-.. |image6| image:: media/image6.png
+.. |image6a| image:: media/image6a.png
    :width: 4.10000in
    :height: 2.21000in
