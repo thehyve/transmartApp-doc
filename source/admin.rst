@@ -922,6 +922,7 @@ All events within the specified timeframe display.
 .. note::
     If the **End Date** is before the **Start Date**, the event list contains no entries.
 
+
 .. _browse-tool-administration-label:
 
 Browse Tool Administration
