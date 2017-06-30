@@ -506,7 +506,20 @@ In an Analyze heatmap:
 
 Max rows to display
 """""""""""""""""""
-The order of data points to display is determined by the standard deviation on probe level. First the probes that do not have a standard deviation are removed. The standard deviation is calculated independently from groups, so the whole mRNA data set is used. Next the standard deviation values are sorted from the highest to the lowest, only the top rows will be displayed.
+
+The order of data points to display is determined by the standard deviation on probe level.
+First the probes that do not have a standard deviation are removed. The standard deviation is calculated independently from groups,
+so the whole mRNA data set is used. Next the standard deviation values are sorted from the highest to the lowest,
+only the top rows will be displayed.
+
+Selecting biomarker subsets
+"""""""""""""""""""""""""""
+
+When using the **High Dimensional Data** button to select only the biomarkers of interest it is possible selected biomarkers
+are not displayed in the heatmap image. This is due the dataset of interest not having any data for the selected biomarker.
+.. note::
+	The autocomplete in the High Dimensional Data pop-up uses biomarker dictionaries to suggest autocomplete. These dictionaries
+	do not take into considerations which biomarkers are available for a selected dataset.
 
 Analyze uses the R software environment for statistical computing and to
 generate analyses and visualizations. For more information, visit
