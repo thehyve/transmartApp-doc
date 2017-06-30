@@ -504,6 +504,10 @@ In an Analyze heatmap:
 .. note::
 	 A heatmap can display data points for up to 1000 samples.   
 
+Max rows to display
+"""""""""""""""""""
+The order of data points to display is determined by the standard deviation on probe level. First the probes that do not have a standard deviation are removed. The standard deviation is calculated independently from groups, so the whole mRNA data set is used. Next the standard deviation values are sorted from the highest to the lowest, only the top rows will be displayed.
+
 Analyze uses the R software environment for statistical computing and to
 generate analyses and visualizations. For more information, visit
 http://www.r-project.org.
