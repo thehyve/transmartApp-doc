@@ -44,6 +44,8 @@ visualizations:
 
 -  `Waterfall Plot`_
 
+- `Z score calculation`_
+
 Advanced Workflows use the R software environment for statistical
 computing and to generate analyses and visualizations. For more
 information, visit http://www.r-project.org.
@@ -491,6 +493,8 @@ the study.
 
 In an Analyze heatmap:
 
+-  The heatmap is based on the `z-score <https://github.com/thehyve/transmartApp-doc/blob/master/source/advanced_workflow.rst#z-score-calculation>`_
+
 -  The color red indicates higher-than-normal expression
 
 -  The color green indicates lower-than-normal expression
@@ -499,6 +503,23 @@ In an Analyze heatmap:
 
 .. note::
 	 A heatmap can display data points for up to 1000 samples.   
+
+Max rows to display
+"""""""""""""""""""
+
+The order of data points to display is determined by the standard deviation on probe level.
+First the probes that do not have a standard deviation are removed. The standard deviation is calculated independently from groups,
+so the whole mRNA data set is used. Next the standard deviation values are sorted from the highest to the lowest,
+only the top rows will be displayed.
+
+Selecting biomarker subsets
+"""""""""""""""""""""""""""
+
+When using the **High Dimensional Data** button to select only the biomarkers of interest it is possible selected biomarkers
+are not displayed in the heatmap image. This is due the dataset of interest not having any data for the selected biomarker.
+.. note::
+	The autocomplete in the High Dimensional Data pop-up uses biomarker dictionaries to suggest autocomplete. These dictionaries
+	do not take into considerations which biomarkers are available for a selected dataset.
 
 Analyze uses the R software environment for statistical computing and to
 generate analyses and visualizations. For more information, visit
@@ -1586,6 +1607,33 @@ To run a logged advanced workflow:
 
     |image164|
 
+Z score calculation
+~~~~~~~~~~~~~~~~~~~
+The z scores used by default in the advanced analysis like the `Heatmaps`_ are 
+calculated during the data loading and are dependent on the ETL tool used to load the 
+data. It is recommended to check the documentation of your ETL tool for more 
+information on this. Documentation 
+for `transmart-batch <https://github.com/thehyve/transmart-batch/blob/master/docs/hd-data-processing-details.md>`_.
+
+
+Some of the advanced analysis that use the z score have a check box to 
+indicate 'Calculate z-score on the fly'. This uses the log transformed 
+representation of the data to recalculate the z score based on the subset of 
+data that was selected. The z score is calculated using the following formula:
+
+.. math::
+  z-score = (probe_value - probe_median)\probe_stdev
+
+If the standard deviation of the probe is 0 the z-score will be equal to 0. The 
+final z-score will be cut-off with a minimum value of -2.5 and a maximum value of 2.5. 
+
+The median that is used in the calculation is retrieved from the subset of 
+the data you selected and the z-score calculation takes into consideration the 
+subset a patient is in. In practice this means when using two subsets in your 
+analysis the median value for the probe will be different between these two groups.
+
+
+
 .. |image97| image:: media/image80.png
    :width: 4.41667in
    :height: 3.97179in
@@ -1734,3 +1782,4 @@ To run a logged advanced workflow:
 .. |image164| image:: media/image122.png
    :width: 2.52052in
    :height: 0.98946in
+   
