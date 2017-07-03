@@ -1,6 +1,10 @@
 Chapter 2: Browse
 =================
 
+.. important::
+    This tab is not always activated. It might not appear in your
+    tranSMART environment.
+
 The tranSMART Browse feature provides a fine-grained search capability
 from a single user interface into studies and other data sources of
 interest.

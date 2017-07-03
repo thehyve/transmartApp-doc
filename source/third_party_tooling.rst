@@ -159,9 +159,53 @@ system Oracle user or the appropriate script for PostgreSQL, otherwise
 you will not be able to use full enrichment functionality. You can find
 scripts for creating this table here:
 
-https://github.com/transmart/transmart-data/tree/master/ddl/postgres/searchapp/search_user_settings.sql
+For postgres (see `postgres .sql`_).
 
-https://github.com/transmart/transmart-data/blob/master/ddl/oracle/searchapp/search_user_settings.sql
+.. code:: sql
+
+    --
+    -- Name: search_user_settings; Type: TABLE; Schema: searchapp; Owner: -
+    --
+    CREATE TABLE search_user_settings (
+        id bigint NOT NULL,
+        setting_name character varying(255) NOT NULL,
+        user_id bigint NOT NULL,
+        setting_value character varying(1024) NOT NULL);
+
+    --
+    -- Name: search_user_settings_pkey; Type: CONSTRAINT; Schema: searchapp; Owner: -
+    --
+    ALTER TABLE ONLY search_user_settings
+        ADD CONSTRAINT search_user_settings_pkey PRIMARY KEY (id);
+
+    --
+    -- Name: search_user_settings_uk; Type: CONSTRAINT; Schema: searchapp; Owner: -
+    --
+    ALTER TABLE ONLY search_user_settings
+        ADD CONSTRAINT search_user_settings_uk UNIQUE (user_id, setting_name, setting_value);
+
+
+For postgres (see `oracle .sql`_).
+
+.. code:: sql 
+
+    --
+    -- Type: TABLE; Owner: SEARCHAPP; Name: SEARCH_USER_SETTINGS
+    --
+    CREATE TABLE "SEARCHAPP"."SEARCH_USER_SETTINGS" 
+    (	"ID" NUMBER NOT NULL ENABLE, 
+    "USER_ID" NUMBER NOT NULL ENABLE, 
+    "SETTING_NAME" VARCHAR2(255 BYTE) NOT NULL ENABLE, 
+    "SETTING_VALUE" VARCHAR2(1024 BYTE) NOT NULL ENABLE, 
+    CONSTRAINT "SEARCH_USER_SETTINGS_PKEY" PRIMARY KEY ("ID")
+    USING INDEX
+    TABLESPACE "INDX"  ENABLE, 
+    CONSTRAINT "SEARCH_USER_SETTINGS_UK" UNIQUE ("USER_ID", "SETTING_NAME", "SETTING_VALUE")
+    USING INDEX
+    TABLESPACE "INDX"  ENABLE
+    ) SEGMENT CREATION IMMEDIATE
+    TABLESPACE "TRANSMART" ;
+
 
 .. todo::
     fix links to user settings, or copy 
@@ -174,8 +218,11 @@ credentials in *~/.grails/transmartApp/Config.groovy*:
 .. code::
 
     com.thomsonreuters.transmart.metacoreURL = 'https://portal.genego.com'
-    com.thomsonreuters.transmart.metacoreDefaultLogin = 'metacore\_login'
-    com.thomsonreuters.transmart.metacoreDefaultPassword = 'metacore\_password'
+    com.thomsonreuters.transmart.metacoreDefaultLogin = 'metacore_login'
+    com.thomsonreuters.transmart.metacoreDefaultPassword = 'metacore_password'
+
+.. _postgres .sql: https://github.com/transmart/transmart-data/tree/master/ddl/postgres/searchapp/search_user_settings.sql
+.. _oracle .sql: https://github.com/transmart/transmart-data/blob/master/ddl/oracle/searchapp/search_user_settings.sql
 
 .. |image165| image:: media/image123.png
    :width: 6.00000in
