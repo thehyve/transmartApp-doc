@@ -85,12 +85,14 @@ chi-squared statistics to determine the p-value:
 -   For continuous variables (for example, subject weight or age), a
     t-test compares the observed values in the two subsets.
     
-    See `this <http://commons.apache.org/math/apidocs/org/apache/commons/math3/stat/inference/TTest.html#tTest(double[],%20double[])>`__ if you're interested in the Java method used to calculate the t-test statistic:
+    See `this <http://commons.apache.org/math/apidocs/org/apache/commons/math4/stat/inference/TTest.html#tTest(double[],%20double[])>`__ 
+    if you're interested in the Java method used to calculate the t-test statistic.
 
 -   For categorical values (for example, diagnoses), a chi-squared test
     compares the counts in the two subsets.
 
-    See `this <http://commons.apache.org/math/apidocs/org/apache/commons/math4/stat/inference/ChiSquareTest.html#chiSquareTest(long[][])>`__ for the Java method that calculates the chi-squared statistic:
+    See `this <http://commons.apache.org/math/apidocs/org/apache/commons/math4/stat/inference/ChiSquareTest.html#chiSquareTest(long[][])>`__ 
+    for the Java method that calculates the chi-squared statistic.
 
 
 If there is not enough data to calculate a test, Analyze displays a
@@ -221,6 +223,8 @@ view, you can copy the chart to a file, as follows:
 
 #.  Click **Save**.
 
+
+.. _viewing-analysis-data-in-grid-view-label:
 
 Viewing Analysis Data in Grid View
 ----------------------------------

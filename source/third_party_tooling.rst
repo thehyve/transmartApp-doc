@@ -6,6 +6,8 @@ The following third-party tools are embedded into tranSMART Analyze:
 -  `Dalliance Genome Browser`_
 -  `MetaCore Enrichment Analysis`_
 
+.. _dalliance-genome-browser-label:
+
 Dalliance Genome Browser
 ------------------------
 
@@ -19,7 +21,7 @@ To view tranSMART data in the Genome Browser:
 #.  In **Analyze**, open the study of interest, or open the Advanced 
     Trials folder to run an analysis of data from multiple studies.
 
-#.  Define your cohort(s) as described in *Defining the Cohorts* on page 21.
+#.  Define your cohort(s) as described in :ref:`defining-the-cohorts-label`.
 
 #.  Click the **Genome Browser** tab to display the data in the Genome Browser: 
     |image165|
@@ -88,7 +90,7 @@ interface.
 
 To perform a MetaCore Enrichment Analysis:
 
-#.  Define a cohort as described in *Defining the Cohorts* on page 21.
+#.  Define a cohort as described in :ref:`defining-the-cohorts-label`.
 
 #.  Click the **MetaCore Enrichment Analysis** tab:
 
@@ -103,7 +105,7 @@ To perform a MetaCore Enrichment Analysis:
 
 #.  Specify the platform and other filters for the analysis.
 
-    For information, see *High Dimensional Data* on page 83.
+    For information, see :ref:`high-dimensional-data-label`.
 
 #.  Either click **Run Workflow** to run the analysis now, or click
     **Apply Selections** to define more parameters for the analysis and
@@ -159,7 +161,7 @@ system Oracle user or the appropriate script for PostgreSQL, otherwise
 you will not be able to use full enrichment functionality. You can find
 scripts for creating this table here:
 
-For postgres (see `postgres .sql`_).
+For postgres (see `postgres.sql`_).
 
 .. code:: sql
 
@@ -185,7 +187,7 @@ For postgres (see `postgres .sql`_).
         ADD CONSTRAINT search_user_settings_uk UNIQUE (user_id, setting_name, setting_value);
 
 
-For postgres (see `oracle .sql`_).
+For oracle (see `oracle.sql`_).
 
 .. code:: sql 
 
@@ -207,9 +209,6 @@ For postgres (see `oracle .sql`_).
     TABLESPACE "TRANSMART" ;
 
 
-.. todo::
-    fix links to user settings, or copy 
-
 If you want all users to use their personal MetaCore account, you don't
 need to do anything else. If you want an ability to use a common account
 for enrichments (users will have a choice), specify the default MetaCore
@@ -221,8 +220,8 @@ credentials in *~/.grails/transmartApp/Config.groovy*:
     com.thomsonreuters.transmart.metacoreDefaultLogin = 'metacore_login'
     com.thomsonreuters.transmart.metacoreDefaultPassword = 'metacore_password'
 
-.. _postgres .sql: https://github.com/transmart/transmart-data/tree/master/ddl/postgres/searchapp/search_user_settings.sql
-.. _oracle .sql: https://github.com/transmart/transmart-data/blob/master/ddl/oracle/searchapp/search_user_settings.sql
+.. _postgres.sql: https://github.com/transmart/transmart-data/tree/master/ddl/postgres/searchapp/search_user_settings.sql
+.. _oracle.sql: https://github.com/transmart/transmart-data/blob/master/ddl/oracle/searchapp/search_user_settings.sql
 
 .. |image165| image:: media/image123.png
    :width: 6.00000in

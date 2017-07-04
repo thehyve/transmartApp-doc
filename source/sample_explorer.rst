@@ -8,10 +8,10 @@ The Sample Explorer window has two panes:
 
 **Right pane**
     Lets you initiate a search for samples using one or more pre-defined
-    filters. For information, see *Select a Primary Search Filter*, next.
+    filters. For information, see `Select a Primary Search Filter`_, next.
 
     After you initiate a search, the pre-defined filters are replaced by
-    search results. For information, see `View and Refine Sample Search Results`.
+    search results. For information, see `View and Refine Sample Search Results`_.
 
 **Left pane**
     Reflects the currently selected filters and the number of a filter’s
@@ -33,6 +33,8 @@ Click a filter to initiate a sample search.
 Note that the number of samples that are associated with a filter appear
 in parentheses after the filter name.
 
+.. _view-and-refine-sample-search-results-label:
+
 View and Refine Sample Search Results
 -------------------------------------
 
@@ -50,10 +52,10 @@ after a primary search filter has been selected:
 
 Tasks you can perform in the Sample Explorer window include:
 
--  `Select and remove search filters* <#_Select_and_Remove>`_
+-  `Select and Remove Search Filters`_
 
--  `Sort and group the search results, and add/remove search result
-   columns <#_Manage_the_Search>`_
+-  Sort and group the search results, and add/remove search result
+   columns: `Manage the Search Result List`_
 
 Select and Remove Search Filters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

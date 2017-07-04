@@ -14,9 +14,9 @@ The tranSMART application includes a search tool that lets researchers
 query this vast ocean of disparate data for studies of interest and
 related resources.
 
-Another major tranSMART feature, called "Analyze", allows authorized users
+Another major tranSMART feature, called *Analyze*, allows authorized users
 to create and study cohorts of patients that have been involved in
-completed clinical research efforts. Analyze includes an "Across Trials"
+completed clinical research efforts. Analyze includes an *Across Trials*
 feature that allows users to define cohorts made up of patients from
 multiple studies.
 

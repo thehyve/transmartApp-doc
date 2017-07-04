@@ -1,3 +1,5 @@
+.. _advanced-workflow-label:
+
 Chapter 5: Advanced Workflows
 =============================
 
@@ -44,7 +46,7 @@ visualizations:
 
 -  `Waterfall Plot`_
 
-- `Z score calculation`_
+- `Z-score calculation`_
 
 Advanced Workflows use the R software environment for statistical
 computing and to generate analyses and visualizations. For more
@@ -60,7 +62,7 @@ To begin to run any analysis:
 
 #.  Define the cohort(s) you want to analyze by dragging one or more
     concepts into empty subset definition boxes. For more information,
-    see `Defining the Cohorts <analyze.rst#defining-the-cohorts>`_.
+    see :ref:`defining-the-cohorts-label`.
 
 The following sections describe how to run specific analyses after you
 perform the above steps.
@@ -493,7 +495,7 @@ the study.
 
 In an Analyze heatmap:
 
--  The heatmap is based on the `z-score <https://github.com/thehyve/transmartApp-doc/blob/master/source/advanced_workflow.rst#z-score-calculation>`_
+-  The values in the heatmap are based on the `Z-score calculation`_
 
 -  The color red indicates higher-than-normal expression
 
@@ -507,19 +509,20 @@ In an Analyze heatmap:
 Max rows to display
 """""""""""""""""""
 
-The order of data points to display is determined by the standard deviation on probe level.
-First the probes that do not have a standard deviation are removed. The standard deviation is calculated independently from groups,
-so the whole mRNA data set is used. Next the standard deviation values are sorted from the highest to the lowest,
-only the top rows will be displayed.
+The order of data points to be display is determined by the standard deviation on probe level.
+First, the probes that do not have a standard deviation are removed. Then, the standard deviation 
+is calculated independently from groups, so the whole mRNA data set is used. Next the standard 
+deviation values are sorted from the highest to the lowest and only the top rows will be displayed.
 
 Selecting biomarker subsets
 """""""""""""""""""""""""""
 
 When using the **High Dimensional Data** button to select only the biomarkers of interest it is possible selected biomarkers
 are not displayed in the heatmap image. This is due the dataset of interest not having any data for the selected biomarker.
+
 .. note::
-	The autocomplete in the High Dimensional Data pop-up uses biomarker dictionaries to suggest autocomplete. These dictionaries
-	do not take into considerations which biomarkers are available for a selected dataset.
+    The autocomplete in the High Dimensional Data pop-up uses biomarker dictionaries to suggest autocomplete. These dictionaries
+    do not take into considerations which biomarkers are available for a selected dataset.
 
 Analyze uses the R software environment for statistical computing and to
 generate analyses and visualizations. For more information, visit
@@ -739,7 +742,7 @@ the table by clicking any of the column headings. Optionally, you can
 view MetaCore settings and run a MetaCore Enrichment Analysis by
 clicking the buttons above the table.
 
-For more information about MetaCore Enrichment Analysis see `here <third_party_tooling.rst#metacore-enrichment-analysis>`_.
+For more information about MetaCore Enrichment Analysis see :ref:`metacore-enrichtment-analysis-label`.
 
 The following table represents a portion of the data from the Marker
 Selection heatmap illustrated above:
@@ -747,7 +750,8 @@ Selection heatmap illustrated above:
 |image125|
 
 .. note::
-	 For more information on the analyses used in Marker Selection, visit: http://mathworld.wolfram.com/BonferroniCorrection.html   
+    For more information on the analyses used in Marker Selection, 
+    visit: http://mathworld.wolfram.com/BonferroniCorrection.html   
 
 IC50 Dose Response Curve
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -788,7 +792,7 @@ Line Graph
 A line graph is designed to plot serial numeric data (high or low
 dimensional); that is, a numeric variable that has been measured in a
 series of conditions for each subject (for example, several timepoints).
-For more information on serial data, see `here <analyze.rst#serial-numeric-data>`_.
+For more information on serial data, see :ref:`serial-numeric-data-label`.
 
 In a line graph, the various conditions are plotted along the x-axis, at
 scale (unless you check the **Plot evenly spaced** option) when the
@@ -891,9 +895,6 @@ is plotted along the top and bottom of the analysis.
 
 |image132|
 
-|image133|
-
-
 PCA
 ~~~
 
@@ -985,10 +986,10 @@ To perform a scatter plot with linear regression analysis:
     |image139|
 
 Log\ :sub:`10` Transformation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""
 
 Often there will be a large spread between values in the x-axis of a
-scatter plot analysis. You can use the **log\ :sub:`10`** option to
+scatter plot analysis. You can use the log\ :sub:`10` option to
 transform the values in the x-axis, making the graph easier to analyze.
 
 To use the log\ :sub:`10` transformation:
@@ -1114,7 +1115,7 @@ To perform a table with fisher test analysis:
     |image143|
 
 Table with Fisher Test with Linked Events
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+"""""""""""""""""""""""""""""""""""""""""
 
 If you run the Table with Fisher test analysis using linked events data,
 the analysis contains two levels for each portion of the analysis:
@@ -1172,6 +1173,7 @@ To generate a waterfall plot:
 
     |image146|
 
+.. _high-dimensional-data-label:
 
 High Dimensional Data
 ---------------------
@@ -1264,7 +1266,6 @@ To use the data binning feature with a box plot analysis:
 #.  Enable binning by selecting **Enable** **binning**.
 
 #.  Define the following and then click **Run.**
-
 
     **Variable**    
         Select which variable should define the groups (Independent or Dependent) from the dropdown menu. 
@@ -1422,7 +1423,7 @@ To use the data binning feature with a survival analysis:
 
 #.  Enable binning by selecting **Enable binning**.
 
-#.  Define the following and then click **Run.**. 
+#.  Define the following and then click **Run.**
 
     **Variable Type**
         Select whether the variable you have defined above is continuous or categorical.
@@ -1494,8 +1495,8 @@ To use the data binning feature with a Fisher Test analysis:
         Select the variable(s) you want to bin by checking the **Bin the [*variableType*] Variable** box next to the appropriate variables.    
         You can bin from none to both variables.  
 
-        Example for binning an independent variable:                                                                                                                    
-                                                                                                                                                                                                                                                                                                                                
+        Example for binning an independent variable:
+        
         |image157|                                                                                                                                                       
 
     **Variable Type** 
@@ -1547,10 +1548,12 @@ You run analyses based on cohorts defined from the Across Trials folder
 just as you do analyses based on cohorts defined from single-study
 folders.
 
+.. _viewing-recent-analysis-jobs-label:
+
 Viewing Recent Analysis Jobs
 ----------------------------
 
-The **Analysis Job**\ s tab allows you to review analyses you have run
+The **Analysis Jobs** tab allows you to review analyses you have run
 previously, and also to see the status of analyses you have chosen to
 run in the background.
 
@@ -1607,22 +1610,24 @@ To run a logged advanced workflow:
 
     |image164|
 
-Z score calculation
+
+Z-score calculation
 ~~~~~~~~~~~~~~~~~~~
-The z scores used by default in the advanced analysis like the `Heatmaps`_ are 
+
+The z-scores used by default in the advanced analysis like the `Heatmaps`_ are 
 calculated during the data loading and are dependent on the ETL tool used to load the 
 data. It is recommended to check the documentation of your ETL tool for more 
 information on this. Documentation 
 for `transmart-batch <https://github.com/thehyve/transmart-batch/blob/master/docs/hd-data-processing-details.md>`_.
 
 
-Some of the advanced analysis that use the z score have a check box to 
-indicate 'Calculate z-score on the fly'. This uses the log transformed 
-representation of the data to recalculate the z score based on the subset of 
-data that was selected. The z score is calculated using the following formula:
+Some of the advanced analysis that use the z-score have a check box to 
+indicate *Calculate z-score on the fly*. This uses the log transformed 
+representation of the data to recalculate the z-score based on the subset of 
+data that was selected. The z-score is calculated using the following formula:
 
 .. math::
-  z-score = (probe_value - probe_median)\probe_stdev
+  z-score = \frac{X - \mu}{\sigma} = \frac{probe\_value - probe\_median}{probe\_stdev}
 
 If the standard deviation of the probe is 0 the z-score will be equal to 0. The 
 final z-score will be cut-off with a minimum value of -2.5 and a maximum value of 2.5. 
@@ -1704,10 +1709,6 @@ analysis the median value for the probe will be different between these two grou
    :height: 4.31806in
 .. |image132| image:: media/image100.png
    :width: 5.58958in
-   :height: 4.59509in
-.. |image133| image:: media/image100.png
-   :width: 5.58941in
-   :height: 3.35205in
 .. |image135| image:: media/image89.png
    :width: 0.13540in
 .. |image136| image:: media/image101.png

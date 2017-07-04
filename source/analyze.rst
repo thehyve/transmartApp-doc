@@ -53,18 +53,19 @@ The following table describes the tabs and buttons in the right pane of Analyze:
         
         The tables and charts are displayed in Summary Statistics view.
 
-        See `Generating summary statistics <summary_statistics.rst#generating-summary-statistics>`_.
+
+        See :ref:`generating-summary-statistics-label`.
 
     **Grid View tab**    
         Display the comparison and analysis data in grid format.  
     
-        See `Viewing Analysis Data in Grid View <summary_statistics.rst#viewing-analysis-data-in-grid-view>`_.  
+        See :ref:`viewing-analysis-data-in-grid-view-label`.  
 
     **Advanced Workflow tab**    
         Display advanced analyses and visualizations of the data — for example, heatmaps, 
         scatter plots, survival analyses, and many others.  
     
-        See Chapter 5: `Advanced Workflow Analyses <advanced_workflow.rst#chapter-5-advanced-workflows>`_.  
+        See :ref:`advanced-workflow-label`.  
 
     **Data Export tab**  
         Select data to export for further analysis in an external tool.   
@@ -79,7 +80,7 @@ The following table describes the tabs and buttons in the right pane of Analyze:
     **Analysis Jobs tab**    
         Review analyses you have run previously and view the status of analyses you have chosen to run in the background. 
     
-        See `Viewing Recent Analysis Jobs <advanced_workflow.rst#viewing-recent-analysis-jobs>`_.    
+        See :ref:`viewing-recent-analysis-jobs-label`.    
 
     **Workspace tab**    
         Perform actions related to a saved cohort definition for an analysis, 
@@ -100,12 +101,12 @@ The following table describes the tabs and buttons in the right pane of Analyze:
     **Genome Browser tab**   
         View data in the Dalliance Genome Browser.    
     
-        See `Dalliance Genome Browser <third_party_tooling.rst#dalliance-genome-browser>`_.    
+        See :ref:`dalliance-genome-browser-label`.
 
     **MetaCore Enrichment Analysis tab** 
         Provide enrichment of a gene list to evaluate the significance of the genes to the studied phenotype and/or patient cohort.   
     
-        See `MetaCore Enrichment Analysis <third_party_tooling.rst#metacore-enrichment-analysis-based-on-marker-selection-data>`_. 
+        See :ref:`metacore-enrichtment-analysis-label`.
 
     **Save Subset button**   
         Save the subset definition. This allows you to regenerate the comparison at a 
@@ -213,7 +214,7 @@ Searching for a Study
 ^^^^^^^^^^^^^^^^^^^^^
 
 You define search filters with the Analyze tool as you do with the
-Browse tool. For information, see `Defining search filters <browse.rst#defining-search-filters>`_.
+Browse tool. For information, see :ref:`defining-search-filters-label`.
 
 Selecting Data from Multiple Studies in the Across Trials Folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -272,7 +273,8 @@ administrator will contact the study owner to find out if you should be
 granted VIEW access, EXPORT access, or no access.
 
 .. note::
-	 Even if you have no access rights to a private study, you can read a description of the study. For information, see 'Viewing a Study Description`_.   
+    Even if you have no access rights to a private study, you can read a description of the study. 
+    For information, see `Viewing a Study Description`_.   
 
 Viewing a Study Description
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -327,6 +329,8 @@ can be hours (a single unit is used for the complete series).
 
 In Analyze, serial data specificities can be best exploited using Line
 Graph and Heatmap.
+
+.. _defining-the-cohorts-label:
 
 Defining the Cohorts
 --------------------
@@ -797,8 +801,8 @@ To view sample data for the cohort(s) defined in Analysis:
 
     |image74|
 
-For information about this page of the Sample Explorer, see 'View and
-Refine Sample Search Results <sample_explorer.rst#view-and-refine-sample-search-results>`_.
+For information about this page of the Sample Explorer, 
+see :ref:`view-and-refine-sample-search-results-label`.
 
 
 .. |image27| image:: media/image22.png
