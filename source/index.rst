@@ -64,6 +64,7 @@ The following was originally stated and still applies:
    getting_started
    browse
    analyze
+   hidome
    summary_statistics
    advanced_workflow
    third_party_tooling
