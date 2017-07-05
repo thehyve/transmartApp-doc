@@ -1,7 +1,7 @@
-Chapter 4: Summary Statistics
-=============================
+Summary Statistics
+==================
 
-This chapter explains how to review study information and populate the
+This chapter explains how to quickly review basic statistics about the
 cohorts you use for analyses.
 
 .. _generating-summary-statistics-label:
@@ -9,8 +9,8 @@ cohorts you use for analyses.
 Generating Summary Statistics
 -----------------------------
 
-When you finish defining criteria for the cohorts to compare — the
-subsets — click the **Summary Statistics** button.
+Once you have finished defining criteria for the cohorts to compare — the
+subsets — then click the **Summary Statistics** button.
 
 .. note::
     As an alternative to generating summary statistics, you can view a breakdown 
@@ -52,21 +52,15 @@ linked event, and NGS data.
 
     |image79|
 
-    **Example 1: Non-linked event.** 
-    
-    This example shows the analysis of the chemotherapy concept:
+    **Example 1: Non-linked event.**: this example shows the analysis of the chemotherapy concept.
 
     |image80|
 
-    **Example 2: Linked event.** 
-    
-    This example shows the analysis of concepts for adverse events:
+    **Example 2: Linked event.**: this example shows the analysis of concepts for adverse events.
 
     |image81|
 
-    **Example 3: NGS data.** 
-    
-    This example shows the analysis of concepts for description of planned arm:
+    **Example 3: NGS data.**: this example shows the analysis of concepts for description of planned arm.
 
 Significance Tests
 ~~~~~~~~~~~~~~~~~~
@@ -85,14 +79,11 @@ chi-squared statistics to determine the p-value:
 -   For continuous variables (for example, subject weight or age), a
     t-test compares the observed values in the two subsets.
     
-    See `this <http://commons.apache.org/math/apidocs/org/apache/commons/math4/stat/inference/TTest.html#tTest(double[],%20double[])>`__ 
-    if you're interested in the Java method used to calculate the t-test statistic.
-
 -   For categorical values (for example, diagnoses), a chi-squared test
     compares the counts in the two subsets.
 
-    See `this <http://commons.apache.org/math/apidocs/org/apache/commons/math4/stat/inference/ChiSquareTest.html#chiSquareTest(long[][])>`__ 
-    for the Java method that calculates the chi-squared statistic.
+    See `this <https://commons.apache.org/proper/commons-math/javadocs/api-2.2/org/apache/commons/math/stat/inference/TestUtils.html>`__ 
+    for the Java methods that calculate the chi-squared and t-test statistic.
 
 
 If there is not enough data to calculate a test, Analyze displays a
@@ -138,6 +129,9 @@ follows:
 
     |image86|
 
+.. note::
+    The Summary Statistics allows you to use high dimensional data as well, see :ref:`hidome-label`.
+  
 
 Defining Points of Comparison
 -----------------------------
@@ -202,34 +196,12 @@ You can print the contents of Summary Statistics view as shown below.
 
 #.  Click **Print this page**.
 
-
-Copying Individual Charts in Summary Statistics View
-----------------------------------------------------
-
-If you are interested in a particular chart in the Summary Statistics
-view, you can copy the chart to a file, as follows:
-
-#.  With the Summary Statistics view displayed, click **Print**.
-
-    The entire contents of the Summary Statistics view appear in a separate
-    browser window.
-
-#.  Right-click the chart you want to copy.
-
-#.  In the Internet Explorer popup menu, click **Save Image As**.
-
-#.  In the Save Image dialog, specify the name, location, and the file
-    type for the chart.
-
-#.  Click **Save**.
-
-
 .. _viewing-analysis-data-in-grid-view-label:
 
-Viewing Analysis Data in Grid View
-----------------------------------
+Viewing Data in Grid View
+-------------------------
 
-If you are displaying analysis data in the various tables and charts of
+If you are displaying data in the various tables and charts of
 Summary Statistics view, and want to view the data in a single table,
 use the **Grid View** option.
 
@@ -253,7 +225,10 @@ Sample of Grid View for a public study:
 |image92|
 
 .. note::
-	 The ID assigned in the **Subject** column is the internal tranSMART ID that is assigned at the time of data loading. The ID in the **Patient** field contains the original subject ID that was provided in the data.   
+    The ID assigned in the **Subject** column is the internal tranSMART ID that is assigned at the time of data loading. 
+    The ID in the **Patient** field contains the original subject ID that was provided in the data.   
+
+    And, also the Grid View allows you to use high dimensional data, see :ref:`hidome-label`.
 
 Grid View Display Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,7 +1,7 @@
 .. _advanced-workflow-label:
 
-Chapter 5: Advanced Workflows
-=============================
+Advanced Workflows
+==================
 
 tranSMART provides the ability to generate the following analyses and
 visualizations:
@@ -1610,6 +1610,8 @@ To run a logged advanced workflow:
 
     |image164|
 
+
+.. _z-score-calculation-label:
 
 Z-score calculation
 ~~~~~~~~~~~~~~~~~~~

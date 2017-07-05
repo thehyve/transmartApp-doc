@@ -1,3 +1,5 @@
+.. _hidome-label:
+
 HiDome
 ======
 
@@ -35,6 +37,9 @@ How does it work?
     |hidome1|
 
 #.  Fill in the gene, probe, or region of interest, and select the value projection to filter on.
+
+    .. note::
+        The z-score projection uses the values as calculated during ETL, see :ref:`z-score-calculation-label`.
     
     |hidome2|
 

@@ -64,13 +64,13 @@ The following was originally stated and still applies:
    getting_started
    browse
    analyze
-   hidome
    summary_statistics
    advanced_workflow
    third_party_tooling
    sample_explorer
    gene_lists
    gwas
+   hidome
    data_upload
    admin
    appendices
