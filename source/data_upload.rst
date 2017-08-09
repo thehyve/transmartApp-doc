@@ -1,5 +1,5 @@
-Chapter 10: Data Upload
-=======================
+Data Upload
+===========
 
 The **Upload Data** menu at the top of the tranSMART window lets you
 upload analysis data for a study. It also lets you define information

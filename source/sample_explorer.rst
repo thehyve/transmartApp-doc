@@ -1,5 +1,5 @@
-Chapter 7: Sample Explorer
-==========================
+Sample Explorer
+===============
 
 Sample Explorer lets you search for tissue and blood samples of interest
 so that you can learn more about the samples.

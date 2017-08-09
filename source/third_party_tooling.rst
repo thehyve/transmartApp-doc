@@ -1,5 +1,5 @@
-Chapter 6: Third-Party Tools
-============================
+Third-Party Tools
+=================
 
 The following third-party tools are embedded into tranSMART Analyze:
 

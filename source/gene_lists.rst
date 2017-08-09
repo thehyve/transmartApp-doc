@@ -1,5 +1,5 @@
-Chapter 8: Gene Signatures & Lists
-==================================
+Gene Signatures & Lists
+=======================
 
 The tranSMART gene signature wizard guides you through the process of
 creating a gene signature or gene list. You specify whether the gene

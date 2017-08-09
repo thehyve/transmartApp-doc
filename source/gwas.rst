@@ -1,5 +1,5 @@
-Chapter 9: GWAS
-===============
+GWAS
+====
 
 The genome-wide association study (GWAS) tool is used to find
 relationships between genetic variants in different individuals and a

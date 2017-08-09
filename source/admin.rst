@@ -1,5 +1,5 @@
-Chapter 11: Administration
-==========================
+Administration
+==============
 
 As a tranSMART User Administrator, your responsibilities include the
 following tasks:

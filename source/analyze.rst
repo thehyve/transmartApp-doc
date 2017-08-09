@@ -1,5 +1,5 @@
-Chapter 3: Analyze
-==================
+Analyze
+=======
 
 Analyze lets you compare data generated for test subjects in two
 different cohorts, based on criteria and points of comparison that you

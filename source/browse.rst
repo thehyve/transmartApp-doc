@@ -1,5 +1,5 @@
-Chapter 2: Browse
-=================
+Browse
+======
 
 .. important::
     This tab is not always activated. It might not appear in your

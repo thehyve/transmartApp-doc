@@ -1,5 +1,5 @@
-Chapter 1: Getting Started
-==========================
+Getting Started
+===============
 
 The tranSMART application reflects the efforts of various informatics
 groups to integrate data from internal and external data sources within
