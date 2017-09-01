@@ -39,6 +39,9 @@ How does it work?
 #.  Fill in the gene, probe, or region of interest, and select the value projection to filter on. 
 
     .. note::
+        Pressing the down arrow (or any other key) starts a dropdown with all possible markers as
+        taken from the platform definition of this particular data node.
+        
         Not all possible marker types will have associated data points, you might have to select
         the marker type that does by selecting the type in the *Search in* dropdown first.
 
