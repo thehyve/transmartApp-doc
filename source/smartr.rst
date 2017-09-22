@@ -67,3 +67,7 @@ Volcanoplot Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
 To be added.
+.. note:
+    Because the Volcanoplot draws a very large number of elements on screen, not
+    all web browsers will work seamlessly. Users might experience better performance
+    with Google Chrome than Firefox for instance.
