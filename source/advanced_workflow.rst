@@ -16,6 +16,8 @@ visualizations:
 
 -  `Frequency Plot for aCGH`_
 
+-  `Geneprint`_
+
 -  `Group Test for aCGH`_
 
 -  `Group Test for RNASeq`_
@@ -307,26 +309,26 @@ containing chromosomal region information.
 To begin the analysis, see `Running the Analyses`_, then
 perform the following steps.
 
-#. To perform a Frequency Plot for aCGH analysis:
+To perform a Frequency Plot for aCGH analysis:
 
-   1. Click the **Advanced Workflow** tab, then open the **Analysis**
-      menu.
+#.  Click the **Advanced Workflow** tab, then open the **Analysis**
+    menu.
 
-   2. Select **Frequency Plot for aCGH**.
+#.  Select **Frequency Plot for aCGH**.
 
-      The Variable Selection section appears.
+    The Variable Selection section appears.
 
-   1. Define the following variables:
+#.  Define the following variables:
 
-   -  **ArrayCGH**: A high-dimensional data node containing the
-      chromosomal regions.
+    -  **ArrayCGH**: A high-dimensional data node containing the
+       chromosomal regions.
 
-   -  **Group**: Categorical data nodes separating the samples into two
-      or more groups (though only one group may be plotted as well).
+    -  **Group**: Categorical data nodes separating the samples into two
+       or more groups (though only one group may be plotted as well).
 
-   1. Click **Run Analysis**.
+#.  Click **Run Analysis**.
 
-#. Result
+#.  Result
 
 Frequency plots of copy number alterations in each defined group are
 shown. Frequencies of chromosomal gains are in blue and chromosomal
@@ -341,6 +343,42 @@ Example of a plot of one group:
     Wieringen, Saskia M. Wilting and Bauke Ylstra. " CGHcall: calling
     aberrations for array CGH tumor profiles." *Bioinformatics, 23*,
     892-894.
+
+
+GenePrint
+~~~~~~~~~
+
+This analysis, that orginated from cBioPortal, allows a user to visualize a
+number of high dimensional nodes and the specific values for features for each patient.
+
+To create a geneprint:
+
+#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
+
+#.  Select **Geneprint**.
+
+    The Variable Selection section appears.
+
+#.  Define the following variables:
+
+   -   Atleast one high-dimensional data node of the following types:
+       -   aCGH
+       -   mRNA expression
+       -   proteomics
+       -   small variants
+
+   -  Use the **High Dimensional Data** popup to select the genes of interest.
+
+#.  Adjust the z-score threshold, if necessary. 
+
+#.  Click **Run**.
+
+Geneprint shows different glyphs for each high dimensional data type selected.
+
+Example of a plot with mRNA expression:
+
+|geneprint|
+
 
 
 Group Test for aCGH
@@ -1785,4 +1823,5 @@ analysis the median value for the probe will be different between these two grou
 .. |image164| image:: media/image122.png
    :width: 2.52052in
    :height: 0.98946in
-   
+.. |geneprint| image:: media/geneprint.png
+   :width: 8.00000in

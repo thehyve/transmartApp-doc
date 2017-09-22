@@ -39,7 +39,7 @@ Boxplot Workflow
 To be added.
 
 Correlation Workflow
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 To be added.
 
@@ -49,21 +49,21 @@ Heatmap Workflow
 To be added.
 
 Ipaconnector Workflow
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 To be added.
 
 Linegraph Workflow
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 To be added.
 
 Patientmapper Workflow
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 To be added.
 
 Volcanoplot Workflow
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 To be added.
