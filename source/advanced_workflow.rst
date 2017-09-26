@@ -361,13 +361,14 @@ To create a geneprint:
 
 #.  Define the following variables:
 
-   -   Atleast one high-dimensional data node of the following types:
-       -   aCGH
-       -   mRNA expression
-       -   proteomics
-       -   small variants
+    *   Atleast one high-dimensional data node of the following types:
+    
+        *   aCGH
+        *   mRNA expression
+        *   proteomics
+        *   small variants
 
-   -  Use the **High Dimensional Data** popup to select the genes of interest.
+    *  Use the **High Dimensional Data** popup to select the genes of interest.
 
 #.  Adjust the z-score threshold, if necessary. 
 
