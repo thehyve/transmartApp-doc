@@ -348,38 +348,48 @@ Example of a plot of one group:
 GenePrint
 ~~~~~~~~~
 
-This analysis, that orginated from cBioPortal, allows a user to visualize a
-number of high dimensional nodes and the specific values for features for each patient.
+The Geneprint provides a visual summary of notable features across different datatypes. These features include 
+mRNA expression (up/down regulation based on threshold), protein expression (up/down regulation based on threshold), 
+aCGH copy number aberrations (loss, normal, gain, amplified), vcf small genomic variants (indication of mutation or not).
 
-To create a geneprint:
+To begin the analysis, see `Running the Analyses`_, then perform the following steps.
 
-#.  Click the **Advanced Workflow** tab, then open the **Analysis** menu.
+To perform a Geneprint analysis:
 
-#.  Select **Geneprint**.
+#.  Click the Advanced Workflow tab, then open the Analysis menu.
 
-    The Variable Selection section appears.
+#.  Select Geneprint
 
-#.  Define the following variables:
+    *The Variable Selection section appears*
 
-    *   Atleast one high-dimensional data node of the following types:
+#.  Drag a high-dimensional data node into the Variable Selection box. The data node may be mRNA, protein, 
+    aCGH (copy number aberrations) or vcf (small genomic variants) data. It is possible to drag multiple nodes 
+    of different types into the box.
+
+#.  Click the High Dimensional Data button. 
+
+    *The Compare Subsets-Pathway Selection dialog box appears*
+
+#.  Select one or more Genes/Pathways/mirIDs/UniProtIDs by typing in their symbols and selecting them from the list.
+
+#.  Click ‘Apply Selections’.
+
+#.  Specify thresholds for the mRNA and/or protein expression z-scores (if applicable).
+
+#.  Click Run.
     
-        *   aCGH
-        *   mRNA expression
-        *   proteomics
-        *   small variants
-
-    *  Use the **High Dimensional Data** popup to select the genes of interest.
-
-#.  Adjust the z-score threshold, if necessary. 
-
-#.  Click **Run**.
-
-Geneprint shows different glyphs for each high dimensional data type selected.
-
-Example of a plot with mRNA expression:
+    *Your analysis appears below*
 
 |geneprint|
 
+**Explanation of Geneprint result:**
+
+The geneprint shows a glyph (rectangle) for each gene-subject pair. Each row represents a gene, each column a subject. 
+The columns are sorted by feature, starting at the first gene. Each glyph represents the data values using color coding 
+and icons. An explanation of these is provided in the legend.
+
+In order for data to be compatible with Geneprint, the patient/subject ids for the different data types must 
+match to show them in the same columns, and gene information must have been loaded in the database for all data types.
 
 
 Group Test for aCGH
