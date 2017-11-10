@@ -1,7 +1,11 @@
+|smartr_main|
+
 .. _smartr-label:
 
 SmartR
 ======
+
+Workflows provided by SmartR:
 
 -   `Boxplot Workflow`_
 
@@ -9,66 +13,192 @@ SmartR
 
 -   `Heatmap Workflow`_
 
--   `Ipaconnector Workflow`_
-
 -   `Linegraph Workflow`_
-
--   `Patientmapper Workflow`_
 
 -   `Volcanoplot Workflow`_
 
 
-.. note::
-    This documents quality is somewhat of a placeholder and not nearly finished.
-
-
 How to run SmartR workflows
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  create cohort
--  select a smartr workflow
--  select the data of interest
--  fetch data
--  any preprocessing if necessary
--  view data in smartr anlaysis
+To begin to run any analysis:
+
+#.  In **Analyze**, open the study of interest.
+
+#.  Define the cohort(s) you want to analyze by dragging one or more
+    concepts into empty subset definition boxes. For more information,
+    see :ref:`defining-the-cohorts-label`.
+
+    The following sections describe how to run specific analyses after you
+    perform the above steps.
+
+#.  Select a SmartR workflow from the main SmartR tab.
+
+#.  Empty selection boxes appear that allow you to drag in numerical, categorical and high dimensional 
+    nodes of interest:
+
+    |smartr_empty_selection|
+
+    For most workflows you need to select specific markers from the high dimensional data set:
+
+    |smartr_selection_highdim|
+    
+#.  Click **Fetch data**. Once ready, SmartR will provide summaries of the retrieved data.
+    
+    |smartr_fetch_summaries|
+
+#.  (Optional) The pre-processing tab allows you to perform modifications to your data if this is necessary.
+    For instance, this could be recalculating *z-scores* based on current selection criteria, or performing
+    *probe aggregation*.
+
+#.  Use your data in SmartR analyses by clicking **Run Analysis**. The page you see there is unique
+    to the workflow you have chosen.
 
 
 Boxplot Workflow
 ~~~~~~~~~~~~~~~~
 
-To be added.
+    |smartr_boxplot|
 
 Correlation Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
-To be added.
+    |smartr_correlation_selection|
+
+    |smartr_correlation_visualisation|
+
+    |smartr_correlation_subselection|
 
 Heatmap Workflow
 ~~~~~~~~~~~~~~~~
 
-To be added.
+    |smartr_heatmap_control| 
 
-Ipaconnector Workflow
-~~~~~~~~~~~~~~~~~~~~~
+Add information on:
+ 
+#.  Rows to show
 
-To be added.
+#.  Group columns by
+ 
+#.  GeneCard
+
+#.  Ranking criteria
+
+#.  expression level
+
+#.  Differential expression
+
+Clicking on gene identifiers takes you to external reference pages.
+
+    |smartr_heatmap_hover|
+
+Below the heatmap itself you can find a table with detailed results.
+
+    |smartr_heatmap_table|
+
+
+Heatmap: Toolbar
+----------------
+    
+    |smartr_heatmap_toolbar|
+
+Add information on:
+ 
+#.  range/mean/covariance
+
+#.  colour scheme
+ 
+#.  clustering
+
+#.  zoom
+
+#.  apply cutoff
+
+    |smartr_heatmap_clustering|
+
+Heatmap: Differential expression
+--------------------------------
+
+|smartr_heatmap_two_subsets_summaries|
+
+|smartr_heatmap_differential_expression_image|
+
+|smartr_heatmap_differential_expression_table|
 
 Linegraph Workflow
 ~~~~~~~~~~~~~~~~~~
 
-To be added.
+To create a graph, drag multiple numerical nodes from the same subfolder in the **Fetch data** step.
 
-Patientmapper Workflow
-~~~~~~~~~~~~~~~~~~~~~~
+|smartr_linegraph|
 
-To be added.
+.. important::
+    For the line graph to model your data correctly, the nodes in the concept tree have to be arranged
+    in a specific way. All nodes that belong to a single subfolder in the concept tree will be displayed
+    in a single graph. If nodes originate from different subfolders, then multiple graphs will be shown.
+    Like so:
+    
+        |smartr_linegraph_bad|
 
 Volcanoplot Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
-To be added.
+The Volcanoplot allows you to use a high dimensional expression data set to create the following plot:
 
-.. note::
+|smartr_volcanoplot_main|
+
+
+The blue (*logFC*) and red (*p-value*) lines are draggable and allow you to control the number of markers shown in the table on 
+on the right. 
+
+.. important::
     Because the Volcanoplot draws a very large number of elements on screen, not
     all web browsers will work seamlessly. Users might experience better performance
     with Google Chrome than Firefox for instance.
+
+
+Undocumented workflows
+----------------------
+
+Currently the **Patientmapper** and **Ipaconnector** workflows are not documented here.
+
+
+.. |smartr_main| image:: media/smartr_main.png
+   :width: 8.0in
+
+.. |smartr_empty_selection| image:: media/smartr_empty_selection.png
+   :width: 8.0in
+.. |smartr_selection_highdim| image:: media/smartr_selection_highdim.png
+   :width: 8.0in
+.. |smartr_fetch_summaries| image:: media/smartr_fetch_summaries.png
+   :width: 5.0in
+.. |smartr_boxplot| image:: media/smartr_boxplot.png
+   :width: 8.0in
+.. |smartr_correlation_selection| image:: media/smartr_correlation_selection.png
+   :width: 3.0in
+.. |smartr_correlation_visualisation| image:: media/smartr_correlation_visualisation.png
+   :width: 8.0in
+.. |smartr_correlation_subselection| image:: media/smartr_correlation_subselection.png
+   :width: 8.0in
+.. |smartr_heatmap_control| image:: media/smartr_heatmap_control.png
+   :width: 5.0in
+.. |smartr_heatmap_hover| image:: media/smartr_heatmap_hover.png
+   :width: 8.0in
+.. |smartr_heatmap_toolbar| image:: media/smartr_heatmap_toolbar.png
+   :width: 6.0in
+.. |smartr_heatmap_clustering| image:: media/smartr_heatmap_clustering.png
+   :width: 8.0in
+.. |smartr_heatmap_two_subsets_summaries| image:: media/smartr_heatmap_two_subsets_summaries.png
+   :width: 6.0in
+.. |smartr_heatmap_differential_expression_image| image:: media/smartr_heatmap_differential_expression.png
+   :width: 8.0in
+.. |smartr_heatmap_differential_expression_table| image:: media/smartr_heatmap_differential_expression_table.png
+   :width: 8.0in
+.. |smartr_heatmap_table| image:: media/smartr_heatmap_table.png
+   :width: 5.0in
+.. |smartr_linegraph| image:: media/smartr_linegraph.png
+   :width: 8.0in
+.. |smartr_linegraph_bad| image:: media/smartr_linegraph_bad.png
+   :width: 4.0in
+.. |smartr_volcanoplot_main| image:: media/smartr_volcanoplot_main.png
+   :width: 8.0in
