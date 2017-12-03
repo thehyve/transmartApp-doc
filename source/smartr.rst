@@ -58,14 +58,40 @@ To begin to run any analysis:
 Boxplot Workflow
 ~~~~~~~~~~~~~~~~
 
-    |smartr_boxplot|
+After fetching data the Boxplot workflow will draw a box and whiskers plot for every numerical node or gene
+selected in the previous step. Using the mouse you can zoom in to specific parts of the graphs.
+Also visible in the workflow are:
+
+-   Controls to select data transformations: *raw*, *log2*, or *log10* transformed.
+-   Dots with the value for each individual.
+-   Details available on hover-over.
+-   A legend that shows the colours for selected nodes.
+-   Controls to change or reset the current view on the data or to download the current image.
+
+|smartr_boxplot|
 
 Correlation Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
+After fetching data:
+
+#.  first the method for computing the correlation and a data transformation setting
+    have to be selected.
+
+    Options are: *Pearson*, *Kendall*, or *Spearman*, and *raw*, *log2*, or *log10* respectively.
+
     |smartr_correlation_selection|
 
+#.  The default view after creating the plot shows a scatter plot with the two selected nodes.
+    Every every dot represents an individual. On the axis bins are shown with counts for that
+    specific range. A line is drawn that represents the calculated correlation.
+    On the right some basic statistics are shown.
+
     |smartr_correlation_visualisation|
+
+#.  using the mouse, you can select a subgroup of individuals to recompute the basic statistics
+    on the right. The selection box you've created can be dragged. Right clicking it gives the option
+    to zoom in on that area or remove those individuals from the computed statistics.
 
     |smartr_correlation_subselection|
 
@@ -128,7 +154,13 @@ Heatmap: Differential expression
 Linegraph Workflow
 ~~~~~~~~~~~~~~~~~~
 
-To create a graph, drag multiple numerical nodes from the same subfolder in the **Fetch data** step.
+To create a graph, drag multiple numerical nodes from the same folder in the **Fetch data** step. The
+graph shows the average and error for both subsets at every time point.
+
+In the bottom of the screen a control bar is shown that contains:
+
+-   Drop down to set the type of statistics to display: *mean* vs *median* and *SEM* vs *SD*
+-   Tick boxes to *evenly space timepoints*, *Smooth graph*, and *User weighted events*
 
 |smartr_linegraph|
 
@@ -138,7 +170,7 @@ To create a graph, drag multiple numerical nodes from the same subfolder in the 
     in a single graph. If nodes originate from different subfolders, then multiple graphs will be shown.
     Like so:
     
-        |smartr_linegraph_bad|
+    |smartr_linegraph_bad|
 
 Volcanoplot Workflow
 ~~~~~~~~~~~~~~~~~~~~
