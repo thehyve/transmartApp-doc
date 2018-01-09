@@ -731,6 +731,8 @@ To perform a k-means clustering heatmap analysis:
 .. note::
 	 To read more about K-Means Clustering, visit: *http://www.ics.uci.edu/~eppstein/280/cluster.html*   
 
+.. _marker-selection-label:
+
 Marker Selection
 ^^^^^^^^^^^^^^^^
 
