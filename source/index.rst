@@ -66,6 +66,7 @@ The following was originally stated and still applies:
    analyze
    summary_statistics
    advanced_workflow
+   advanced_analysis_R_export
    smartr
    third_party_tooling
    sample_explorer
