@@ -1,5 +1,7 @@
 |smartr_main|
 
+*Heatmap: a typical SmartR view* 
+
 .. _smartr-label:
 
 SmartR
@@ -18,6 +20,15 @@ Workflows provided by SmartR:
 -   `Volcanoplot Workflow`_
 
 
+General
+~~~~~~~
+
+In addition to the :ref:`advanced-workflow-label` a more interactive mode of visualising 
+data in tranSMART has been created. *SmartR* uses modern technologies to create interactive
+graphs directly from within tranSMART. Although the technologies are different some of the 
+functionalities are similar, this means a user will have multiple options for creating a
+desired graph. Which is best depends on the type and volume of data to visualise.
+
 How to run SmartR workflows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -35,7 +46,7 @@ To begin to run any analysis:
 #.  Select a SmartR workflow from the main SmartR tab.
 
 #.  Empty selection boxes appear that allow you to drag in numerical, categorical and high dimensional 
-    nodes of interest:
+    nodes of interest. The boxes change colour based on whether suitable input is detected:
 
     |smartr_empty_selection|
 
@@ -43,7 +54,8 @@ To begin to run any analysis:
 
     |smartr_selection_highdim|
     
-#.  Click **Fetch data**. Once ready, SmartR will provide summaries of the retrieved data.
+#.  Click **Fetch data**. This will move the data from tranSMART into the SmartR computational *R* enviroment.
+    Once ready, SmartR will provide summaries of the retrieved data.
     
     |smartr_fetch_summaries|
 
