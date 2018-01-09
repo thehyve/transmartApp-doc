@@ -54,7 +54,7 @@ To begin to run any analysis:
 
     |smartr_selection_highdim|
     
-#.  Click **Fetch data**. This will move the data from tranSMART into the SmartR computational *R* enviroment.
+#.  Click **Fetch data**. This will transport the data from tranSMART into the SmartR computational *R* environment.
     Once ready, SmartR will provide summaries of the retrieved data.
     
     |smartr_fetch_summaries|
@@ -66,6 +66,16 @@ To begin to run any analysis:
 #.  Use your data in SmartR analyses by clicking **Run Analysis**. The page you see there is unique
     to the workflow you have chosen.
 
+.. important::
+    If you want to rerun a workflow after changing the source data, you **always** have to click **Fetch data** again.
+
+General Functionality
+~~~~~~~~~~~~~~~~~~~~~
+
+The following functionalities are available in multiple workflows:
+
+-   **Capture SVG**: this button allows you to download the current image to your local computer. Note: this
+    does not always work as well as expected.
 
 Boxplot Workflow
 ~~~~~~~~~~~~~~~~
@@ -75,19 +85,30 @@ selected in the previous step. Using the mouse you can zoom in to specific parts
 Also visible in the workflow are:
 
 -   Controls to select data transformations: *raw*, *log2*, or *log10* transformed.
--   Dots with the value for each individual.
--   Details available on hover-over.
+
 -   A legend that shows the colours for selected nodes.
 -   Controls to change or reset the current view on the data or to download the current image.
+-   Also, the plot title shows the result of a calculated ANOVA test for the selected variables.
 
 |smartr_boxplot|
+
+In each graph in the plot the following is shown:
+
+-   Dots with the value for each individual.
+-   A box that indicates the median and *interquartile range*, details are shown when you hover-over the graph.
+-   Whiskers that extend up- and downward 1.5 * the IQR.
+-   A diamond that indicates the mean and confidence level. 
+
+.. note::
+    
+    When zoomed in, you can reset the view by clicking the specific icon in the plot control bar.
 
 Correlation Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
 After fetching data:
 
-#.  first the method for computing the correlation and a data transformation setting
+#.  First the method for computing the correlation and a data transformation setting
     have to be selected.
 
     Options are: *Pearson*, *Kendall*, or *Spearman*, and *raw*, *log2*, or *log10* respectively.
@@ -95,17 +116,22 @@ After fetching data:
     |smartr_correlation_selection|
 
 #.  The default view after creating the plot shows a scatter plot with the two selected nodes.
-    Every every dot represents an individual. On the axis bins are shown with counts for that
-    specific range. A line is drawn that represents the calculated correlation.
+    Every dot represents an individual. On the axis bins are shown with counts for that
+    specific range. A line is drawn that represents the calculated correlation and intersection.
     On the right some basic statistics are shown.
 
     |smartr_correlation_visualisation|
 
-#.  using the mouse, you can select a subgroup of individuals to recompute the basic statistics
-    on the right. The selection box you've created can be dragged. Right clicking it gives the option
-    to zoom in on that area or remove those individuals from the computed statistics.
+#.  Using the mouse, you can select a subgroup of individuals to recompute the basic statistics
+    on the right. Also the correlation will be recomputed and redrawn. The selection box you've 
+    created can be dragged. Right clicking it gives the option to zoom in on that area, to remove 
+    those individuals from the computed statistics, or to reset the entire selection.
 
     |smartr_correlation_subselection|
+
+.. note::
+
+    You display values as coloured dots instead of black by including categorical values in the **Fetch data** step. 
 
 Heatmap Workflow
 ~~~~~~~~~~~~~~~~
@@ -166,8 +192,9 @@ Heatmap: Differential expression
 Linegraph Workflow
 ~~~~~~~~~~~~~~~~~~
 
-To create a graph, drag multiple numerical nodes from the same folder in the **Fetch data** step. The
-graph shows the average and error for both subsets at every time point.
+To create a graph, drag multiple *numerical* nodes from the same folder in the **Fetch data** step. The
+graph shows the average and error for both subsets at every time point. Adding categorical nodes provides
+boxed information per individual.
 
 In the bottom of the screen a control bar is shown that contains:
 
@@ -187,7 +214,8 @@ In the bottom of the screen a control bar is shown that contains:
 Volcanoplot Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
-The Volcanoplot allows you to use a high dimensional expression data set to create the following plot:
+The Volcanoplot allows you to use a high dimensional expression data set (not aCGH or VCF) 
+to create the following plot:
 
 |smartr_volcanoplot_main|
 
