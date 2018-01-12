@@ -136,56 +136,86 @@ After fetching data:
 Heatmap Workflow
 ~~~~~~~~~~~~~~~~
 
-    |smartr_heatmap_control| 
+After fetching data the following control panel will be shown:
 
-Add information on:
- 
-#.  Rows to show
+|smartr_heatmap_control| 
 
-#.  Group columns by
- 
-#.  GeneCard
+The panel provides the following options:
 
-#.  Ranking criteria
+-   **Rows to show**: change this number to control the number of rows to show in the final heatmap. The 
+    rows shown depends on the chosen *Ranking Criteria*.
 
-#.  expression level
+-   **Group columns by**: you can set this to either *Node Order* or *Subject ID*. 
 
-#.  Differential expression
+-   **GeneCard**: Set this to *Yes* to confirm you have read the terms of use for the GeneCards service.
+    If this is left to *No*, then clicking on biomarkers in the corresponding heatmap rows will open the 
+    relevant page at the EMBL EBI web service.
 
-Clicking on gene identifiers takes you to external reference pages.
+-   **Ranking criteria**: choose the metric to apply biomarker ranking. This will determine the order of
+    rows in the heatmap. Options include metrics based on *Expression level*, *Expression variability*, and 
+    *Differential expression*. The last option is only available when having defined two cohort subsets, 
+    see `Heatmap: Differential expression`_.
 
-    |smartr_heatmap_hover|
+The heatmap will appear after clicking **Create plot**.
+
+|smartr_heatmap_hover|
+
+By default the heatmap is sorted based on the chosen ranking criteria. The heatmap contains the following elements:
+
+-   Rows for each of the selected (or all) biomarkers for the selected data node. Clicking on gene identifiers 
+    takes you to external reference pages (GeneCards or EMBL EBI).
+-   Columns for each individual in the chosen dataset.
+-   Coloured squares based on the calculated z-score. The colour scheme can be changed in the `Heatmap: Toolbar`_.
+    Hovering your mouse over the squares provides additional information.
+-   Each row and column has a set of arrows that can be used to control the ordering of the heatmap. 
 
 Below the heatmap itself you can find a table with detailed results.
 
-    |smartr_heatmap_table|
+|smartr_heatmap_table|
 
 
 Heatmap: Toolbar
 ----------------
-    
-    |smartr_heatmap_toolbar|
 
-Add information on:
+The toolbar in the bottom right of the window provides a set of functionalities to change the 
+current representation of the heatmap.
+
+|smartr_heatmap_toolbar|
  
-#.  range/mean/covariance
+-   **Marker statistic**: a dropdown that allows choosing several statistics that can be used 
+    to display in the most left column of the heatmap. Available options: *coef*, *variance*, *range*, *mean*, and *median*.
 
-#.  colour scheme
- 
-#.  clustering
+-   **Colour scheme**: set the heatmap colours different multiple or single colour schemas.
 
-#.  zoom
+-   **Zoom**: make everything smaller or bigger.
 
-#.  apply cutoff
+-   **Apply cutoff**: remove rows from the heatmap based on a cut-off on the chosen ranking criteria.
+
+-   **Clustering**: the toolbar allows the user to create clustering instead of normal ordering, using
+    the *R* functions for ``dist()`` for calculating distances and ``hclust()`` 
+    (`docs <https://www.rdocumentation.org/packages/fastcluster/versions/1.1.24/topics/hclust>`__) for clustering.
+    Computed are *Euclidean* and *Manhattan* distances with *complete*, *average*, and *single* clustering.
+
+    Based on the chosen clustering the order of columns and rows will change to reflect the computed clusters.
+    Dendrograms are shown to display the results.
 
     |smartr_heatmap_clustering|
 
 Heatmap: Differential expression
 --------------------------------
 
-|smartr_heatmap_two_subsets_summaries|
+When having defined two cohort subsets some of the aspects of the analysis will be different. For one, the 
+summary page that is shown after **Fetch data** will show information for both subsets. The heatmap control
+panel will have the options for *Differential expression* enabled under **Ranking criteria**. This allows
+the users to order the rows based on one off multiple differential expression metrics. 
+
+The heatmap image itself will have an additional row to indicate to which subset an individual belongs. This bar 
+allows researchers to easily identify the groups based after performing ordering or clustering.
 
 |smartr_heatmap_differential_expression_image|
+
+The table below the heatmap will show additional columns for: *TTEST*, *LOGFOLD*, *PVAL*, *ADJPVAL*, and *BVAL*. 
+These measures that have been calculated between both subsets.
 
 |smartr_heatmap_differential_expression_table|
 
@@ -237,7 +267,6 @@ Currently the **Patientmapper** and **Ipaconnector** workflows are not documente
 
 .. |smartr_main| image:: media/smartr_main.png
    :width: 8.0in
-
 .. |smartr_empty_selection| image:: media/smartr_empty_selection.png
    :width: 8.0in
 .. |smartr_selection_highdim| image:: media/smartr_selection_highdim.png
@@ -261,13 +290,13 @@ Currently the **Patientmapper** and **Ipaconnector** workflows are not documente
 .. |smartr_heatmap_clustering| image:: media/smartr_heatmap_clustering.png
    :width: 8.0in
 .. |smartr_heatmap_two_subsets_summaries| image:: media/smartr_heatmap_two_subsets_summaries.png
-   :width: 6.0in
+   :width: 8.0in
 .. |smartr_heatmap_differential_expression_image| image:: media/smartr_heatmap_differential_expression.png
    :width: 8.0in
 .. |smartr_heatmap_differential_expression_table| image:: media/smartr_heatmap_differential_expression_table.png
    :width: 8.0in
 .. |smartr_heatmap_table| image:: media/smartr_heatmap_table.png
-   :width: 5.0in
+   :width: 8.0in
 .. |smartr_linegraph| image:: media/smartr_linegraph.png
    :width: 8.0in
 .. |smartr_linegraph_bad| image:: media/smartr_linegraph_bad.png
