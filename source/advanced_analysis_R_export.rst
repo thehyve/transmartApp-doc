@@ -11,6 +11,8 @@ Advanced Analysis Raw R Exports
 -  `aCGH Survival analysis`_
 -  `aCGH group test`_
 -  `RNASeq group test`_
+-  `Scatterplot`_
+-  `Table with Fisher-exact test`_
 
 Boxplot
 ~~~~~~~
@@ -736,3 +738,205 @@ MDS plot: a multi-dimensional scaling plot of the RNA samples in which distances
 BCV plot: shows the root-estimate, i.e., the genewise biological coefficient of variation (BCV) against gene abundance (in log2 counts per million).
 
 MA plot: Log-Fold Change (logFC) versus Log-Concentration count-per-million (logCPM).
+
+
+Scatterplot
+~~~~~~~~~~~
+
+Scatterplot download:
+Files included in the R data:
+
+- jobInfo.txt
+- outputfile.txt
+- request.json
+- LinearRegression.txt file(s)
+- ScatterPlot.png image file(s)
+
+
+jobInfo.txt
++++++++++++
+
+The job information submitted to tranSMART. The jobinformation gives an overview
+of the input data for the analysis. In parameters it shows the jobtype to
+indicate what analysis and image will be produced and it shows which variables
+were selected by displaying the full concept path names for each of them.
+
+In case of High dimensional data this file contains information on which genes
+where selected for independent and dependent variable names. The independent
+variables are plotted on the X-axis and the dependent variables on the Y-axis
+
+
+outputfile.txt
+++++++++++++++
+
+The data with five columns describing the points plotted:
+
+-   PATIENT_NUM; Patient identifier
+-   X; Value to be plotted on X-axis, the independent variable(s)
+-   GROUP; X-axis name
+-   Y; Value to be plotted on the Y-axis, the dependent variable(s)
+-   GROUP.1; Y-axis name
+
+When having selected high dimensional data, it is possible to select more than
+one dependent and independent variable. Multiple independent and/or dependent
+variables will produce one point per GROUP-GROUP.1 combination. Each combination
+consists of one line per patient identifier. In case of two dependent and two
+independent variables this will yield four lines of data points per patient.
+
+The GROUP and GROUP.1 names represent the probe names as stored in tranSMART.
+To find the gene names corresponding to the probes used the two GROUP columns
+need to be combined with jobInfo.txt to see what was used as input for the X &
+Y axis. The independent gene name is displayed next to the
+divIndependentPathwayName item and the dependent gene name is displayed next to
+the divDependentPathwayName item.
+
+
+request.json
+++++++++++++
+
+json representation of the jobInfo.txt
+
+LinearRegression.txt file(s)
+++++++++++++++++++++++++++++
+
+In this file, there are seven lines per dependent variable selected:
+
+-   name, name of the independent variable. In case of a High dimensional 
+    data node this is a probe name.
+-   n, the number of subjects with data for this variable
+-   intercept, the X-coordinate where the linear regression will hit Y=0
+-   slope, the coefficient of the line drawn
+-   nr2, the residual standard error
+-   ar2, the adjusted R-squared
+-   p, the calculated p value for the linear regression.
+
+In case more than one independent variable was selected the naming convention
+of the file is: LinearRegression_<DependentVariableName>.txt.
+
+In case more than one dependent variable was selected the above described seven
+lines repeated for each variable selected.
+
+
+ScatterPlot.png image file(s)
++++++++++++++++++++++++++++++
+Scatter plot image corresponding to the data. X-axis is independent and Y-axis
+the dependent variable. Coefficients of the plotted line(s) can be found in
+LinearRegression.txt & the coordinates of the points plotted are in output.txt.
+
+When more than one independent variable was selected the namingconvention is:
+ScatterPlot_<DependentVariableName>.txt
+
+If the independent variable is a high dimensional data point the name will be
+the probe name. GROUP.1 is used as the default group name for points that are
+plotted. To identify the gene names see the input variable in jobInfo.txt. The
+independent gene name is displayed next to the divIndependentPathwayName item &
+the dependent gene name is displayed next to the divDependentPathwayName item.
+
+
+Table with Fisher-exact test
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Fisher-exact test download:
+
+- jobInfo.txt
+- outputfile.txt
+- request.json
+- Count.txt file(s)
+- StatisticalTests.txt file(s)
+
+
+
+jobInfo.txt
++++++++++++
+
+The job information submitted to tranSMART. The jobinformation gives an
+overview of the input data for the analysis. In parameters it shows the jobType
+to indicate what analysis and image will be produced and it shows which
+variables were selected by displaying the full concept path names for each of
+them.
+
+In case of High dimensional data this file contains information on which genes
+where selected for independent and dependent variable names. The indepedent
+variables are used for the row names and the dependent variables for the column
+names
+
+binDistributionIndep and binDistributionDep indicate which distribution was
+used to bin continuous variables. The indication is an abbreviation:
+
+-   EDP; Evenly Distribute Population
+-   ESB; Evenly Spaced Bins
+
+.. note:: 
+    Manual binning is not indicated in the jobInfo.txt
+
+
+outputfile.txt
+++++++++++++++
+
+The data with three columns describing the points plotted:
+
+-   PATIENT_NUM, Patient identifier
+-   IND, the independent variable options, in case of numerical binned
+    variable this indicates the bin boundaries
+-   DEP, the dependent variable options, in case of numerical binned
+    variable this indicates the bin boundaries
+	
+Optional columns when using numerical variables
+
+-   GROUP; Name of the independent group, to be displayed in the table
+-   GROUP.1; Name of the dependent group, to be displayed in the table
+
+When having selected high dimensional data it is possible to select more than
+one dependent and independent variable. Multiple independent and/or dependent
+variables will produce one point per GROUP-GROUP.1 combination. Each combination
+consists of one line per patient identifier. In case of two dependent and
+independent variables this will yield four lines of data points per patient.
+
+The GROUP and GROUP.1 names represent a probe (or gene) name as stored in
+tranSMART. To find the gene names corresponding to the probes used, the two
+GROUP columns need to be combined with jobInfo.txt to see what was used as input
+for the IND & DEP columns. The independent gene name is displayed next to the
+divIndependentPathwayName item and the dependent gene name is displayed next to
+the divDependentPathwayName item.
+
+request.json
+++++++++++++
+
+json representation of the jobInfo.txt
+
+
+Count.txt
++++++++++
+
+Representation of the count table. Independent variables fill the rows and
+dependent variables the columns.
+
+In case of high dimensional data there will be one count file per independent
+probe (or gene) name, naming-convention: Count<ProbeName>.txt. If using probe
+data as input for the analysis, then in order to find the gene corresponding to 
+the probe name look in the jobInfo.txt file for the independent gene name.
+
+The count file produces one representation per dependent variable probe or gene
+name. For example when two probes (or genes) are selected for the dependent
+variable this will produce two table representations. Each table will have a
+name where the name is a probe (or gene) name.
+
+
+statisticalTests.txt
+++++++++++++++++++++
+
+Result of the Fisher-exact statistical test. Produces three lines of output,
+the fishp, chis and chip with are the Fisher-exact test p-value, the Chi-square
+value and the Chi-square p-value, respectively.
+
+In case of high dimensional data there will be one statisticalTest file per
+independent probe or gene, naming convention: statisticalTest<ProbeName>.txt.
+If using probe data as input for the analysis, then in order to find the gene
+corresponding to the probe name look in the jobInfo.txt file for the independent 
+gene name.
+
+The statisticalTest file produces one representation per dependent variable
+probe name. For example, when two probes (or genes) are selected for the
+dependent variable this will produce two lists with the three output items
+mentioned above. Each list will start with a name where the name is the probe
+(or gene) name of the dependent variable.
