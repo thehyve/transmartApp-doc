@@ -81,6 +81,7 @@ Boxplot Workflow
 ~~~~~~~~~~~~~~~~
 
 Data input requirements:
+
 -   Either one or two cohorts.
 -   At least one or more numerical nodes or a markers from a numerical HDD node.
 -   Categorical nodes are optional.
@@ -115,6 +116,7 @@ Correlation Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
 Data input requirements:
+
 -   Only one cohort is supported.
 -   You have to add two numerical nodes.
 -   Categorical nodes are optional to create coloured groups.
@@ -148,6 +150,12 @@ After fetching data:
 
 Heatmap Workflow
 ~~~~~~~~~~~~~~~~
+
+Data input requirements:
+
+-   Either one or two cohorts.
+-   At least one numerical HDD node with more than one biomarker selected.
+-   Low dimensional numerical and categorical nodes are optional.
 
 After fetching data the following control panel will be shown:
 
@@ -236,6 +244,7 @@ Linegraph Workflow
 ~~~~~~~~~~~~~~~~~~
 
 Data input requirements:
+
 -   Both one and two selected cohorts supported.
 -   Multiple numerical nodes.
 -   Categorical nodes are optional.
@@ -263,6 +272,7 @@ Volcanoplot Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
 Data input requirements:
+
 -   Only two selected cohorts is supported.
 -   A high dimensional numerical node.
 
