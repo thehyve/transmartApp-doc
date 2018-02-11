@@ -1,11 +1,10 @@
-|smartr_main|
+SmartR
+======
 
+|smartr_main|
 *Heatmap: a typical SmartR view* 
 
 .. _smartr-label:
-
-SmartR
-======
 
 Workflows provided by SmartR:
 
@@ -25,9 +24,10 @@ General
 
 In addition to the :ref:`advanced-workflow-label` a more interactive mode of visualising 
 data in tranSMART has been created. *SmartR* uses modern technologies to create interactive
-graphs directly from within tranSMART. Although the technologies are different some of the 
-functionalities are similar, this means a user will have multiple options for creating a
-desired graph. Which is best depends on the type and volume of data to visualise.
+graphs directly from within tranSMART. Although the technologies are different, some 
+of the functionalities are similar. This means a user will have multiple options for 
+creating a desired graph, which is best depends on the type (and sometimes the volume) of 
+data to visualise.
 
 How to run SmartR workflows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,8 +40,7 @@ To begin to run any analysis:
     concepts into empty subset definition boxes. For more information,
     see :ref:`defining-the-cohorts-label`.
 
-    The following sections describe how to run specific analyses after you
-    perform the above steps.
+    *Then, start a SmartR workflow:*
 
 #.  Select a SmartR workflow from the main SmartR tab.
 
@@ -64,7 +63,8 @@ To begin to run any analysis:
     *probe aggregation*.
 
 #.  Use your data in SmartR analyses by clicking **Run Analysis**. The page you see there is unique
-    to the workflow you have chosen.
+    to the workflow you have chosen. The following sections describe how to run specific 
+    analyses after you perform the above steps.
 
 .. important::
     If you want to rerun a workflow after changing the source data, you **always** have to click **Fetch data** again.
@@ -72,7 +72,7 @@ To begin to run any analysis:
 General Functionality
 ~~~~~~~~~~~~~~~~~~~~~
 
-The following functionalities are available in multiple workflows:
+The following functionality is available in multiple workflows:
 
 -   **Capture SVG**: this button allows you to download the current image to your local computer. Note: this
     does not always work as well as expected.
@@ -80,31 +80,44 @@ The following functionalities are available in multiple workflows:
 Boxplot Workflow
 ~~~~~~~~~~~~~~~~
 
+Data input requirements:
+-   Either one or two cohorts.
+-   At least one or more numerical nodes or a markers from a numerical HDD node.
+-   Categorical nodes are optional.
+
 After fetching data the Boxplot workflow will draw a box and whiskers plot for every numerical node or gene
-selected in the previous step. Using the mouse you can zoom in to specific parts of the graphs.
+selected in the previous step. Using the mouse you can zoom in to specific parts of the graphs. If you
+have created two subsets during cohort selection, you will see boxplots for both groups.
 Also visible in the workflow are:
 
 -   Controls to select data transformations: *raw*, *log2*, or *log10* transformed.
 
--   A legend that shows the colours for selected nodes.
--   Controls to change or reset the current view on the data or to download the current image.
--   Also, the plot title shows the result of a calculated ANOVA test for the selected variables.
+-   A legend that shows the colours for selected groups.
+-   Controls to change or reset the current view on the data or to download the current image. These 
+    controls appear on hover over.
+-   Also, the plot title shows the result of a calculated ANOVA test for the selected groups.
 
 |smartr_boxplot|
 
 In each graph in the plot the following is shown:
 
 -   Dots with the value for each individual.
--   A box that indicates the median and *interquartile range*, details are shown when you hover-over the graph.
+-   A box that indicates the median and *interquartile range*, details are shown when you hover 
+    over the graph.
 -   Whiskers that extend up- and downward 1.5 * the IQR.
 -   A diamond that indicates the mean and confidence level. 
 
 .. note::
     
-    When zoomed in, you can reset the view by clicking the specific icon in the plot control bar.
+    When zoomed in, you can reset the view by clicking the auto scaling icon in the plot control bar.
 
 Correlation Workflow
 ~~~~~~~~~~~~~~~~~~~~
+
+Data input requirements:
+-   Only one cohort is supported.
+-   You have to add two numerical nodes.
+-   Categorical nodes are optional to create coloured groups.
 
 After fetching data:
 
@@ -116,9 +129,9 @@ After fetching data:
     |smartr_correlation_selection|
 
 #.  The default view after creating the plot shows a scatter plot with the two selected nodes.
-    Every dot represents an individual. On the axis bins are shown with counts for that
-    specific range. A line is drawn that represents the calculated correlation and intersection.
-    On the right some basic statistics are shown.
+    Every dot represents an individual, with details shown on hover over. On the axes bins are 
+    shown with counts for that specific range. A line is drawn that represents the calculated 
+    correlation and intersection. On the right some basic statistics are shown.
 
     |smartr_correlation_visualisation|
 
@@ -222,6 +235,11 @@ These measures that have been calculated between both subsets.
 Linegraph Workflow
 ~~~~~~~~~~~~~~~~~~
 
+Data input requirements:
+-   Both one and two selected cohorts supported.
+-   Multiple numerical nodes.
+-   Categorical nodes are optional.
+
 To create a graph, drag multiple *numerical* nodes from the same folder in the **Fetch data** step. The
 graph shows the average and error for both subsets at every time point. Adding categorical nodes provides
 boxed information per individual.
@@ -244,14 +262,22 @@ In the bottom of the screen a control bar is shown that contains:
 Volcanoplot Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
+Data input requirements:
+-   Only two selected cohorts is supported.
+-   A high dimensional numerical node.
+
 The Volcanoplot allows you to use a high dimensional expression data set (not aCGH or VCF) 
 to create the following plot:
 
 |smartr_volcanoplot_main|
 
+Each dot represents a marker from the selected high dimensional data node. Its position on the x-axis 
+is the *log2 fold change* between the selected groups. Its position on the y-axis is the *-log10 p-value*
+as calculated to determine whether two groups have differential expression for this marker 
+(calculated using the Limma R package). 
 
 The blue (*logFC*) and red (*p-value*) lines are draggable and allow you to control the number of markers shown in the table on 
-on the right. 
+on the right or below (depends on screen size). Hovering over dots shows its details. 
 
 .. important::
     Because the Volcanoplot draws a very large number of elements on screen, not
