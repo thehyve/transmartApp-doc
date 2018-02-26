@@ -112,6 +112,11 @@ In each graph in the plot the following is shown:
     
     When zoomed in, you can reset the view by clicking the auto scaling icon in the plot control bar.
 
+.. warning::
+    The plots control bar has an option to *Save and edit plot in cloud*. Although there appear to be
+    no issues with this powerful feature, it does upload the generated data to the external plotly service.
+    This makes it potentially available to unauthorised individuals.
+
 Correlation Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
