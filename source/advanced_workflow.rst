@@ -1293,6 +1293,109 @@ that cluster (the central value).
     The data displayed after binning represents the data available in the study. If, for example, you have selected to bin based on date range
     (0-10 years of age), yet there is only data available for subjects eight years old and up, the bin will display the age range as 8-10. 
 
+Data binning caveats
+~~~~~~~~~~~~~~~~~~~~
+Implementation of the automatic binning causes in issues in some cases. Here we detail an example for both the Evenly distributed population (EDP) 
+and Evenly spaced bins options using the DeCoDe_WP5_demo study.
+
+Variables used:
+
+-   ``\DeCoDe_WP5_demo\..\Age\`` (continuous)
+-   ``\DeCoDe_WP5_demo\..\Number of first degree relatives with cancer diagnosis\`` (discrete)
+
+Steps for Evenly Distributed Population binning:
+
+#.  Checks if manual binning is enabled, if not executes
+
+#.  Uses the binning variable to create bins, if the variable is categoric makes use or nominal representation (Factors) to type cast to numeric.
+
+#.  Determine how many subjects per bin by dividing the total number of patients by number of bins.
+
+#.  Sort the binning column.
+
+#.  Set the starting and ending row number
+
+#.  Loop over all the bins but the last one and assign a bin number based on the sorted result
+
+#.  Checks if there are other values in the binning column that are equal to the first row of the 
+    current bin, if so assign them to the same bin.
+
+#.  This last step is where it screws up when you have a weird distribution in your data. The second 
+    concept used for binning (Number of first degree relatives with cancer diagnosis) has this distribution:
+
+    Original value overview:
+
+    +--------+-----+----+---+---+
+    | Value  | 0   | 1  | 2 | 3 |
+    +--------+-----+----+---+---+
+    | Counts | 120 | 14 | 4 | 2 |
+    +--------+-----+----+---+---+
+
+    Which gives the following bins:
+
+    +--------+----+----+---+----+
+    | Bin    | 1  | 2  | 3 | 4  |
+    +--------+----+----+---+----+
+    | Counts | 70 | 35 | 0 | 35 |
+    +--------+----+----+---+----+
+
+    Combined to see which values are in which bins:
+
+    +-----+-------+----+----+---+---+
+    |     | Value | 0  | 1  | 2 | 3 |
+    +-----+-------+----+----+---+---+
+    | Bin |       |    |    |   |   |
+    +-----+-------+----+----+---+---+
+    | 1   |       | 70 | 0  | 0 | 0 |
+    +-----+-------+----+----+---+---+
+    | 2   |       | 35 | 0  | 0 | 0 |
+    +-----+-------+----+----+---+---+
+    | 3   |       | 0  | 0  | 0 | 0 |
+    +-----+-------+----+----+---+---+
+    | 4   |       | 15 | 14 | 4 | 2 |
+    +-----+-------+----+----+---+---+
+
+    This gives weird results as you can see.
+
+In this particular case if you run this example in tranSMART you will only see 2 bins instead of 4. 
+That is because of the next piece of code that names the bins. The logic tries to be smart in finding the 
+smallest value from the next bin but as you see the first bins only have 0 values in the bins screwing 
+up the logic and basically returning 2 labels. These labels are then set as the bins and are returned 
+to the analysis to use as groups.
+
+If you turn around the variables and use Age to do the binning it works fine and gives the expected results:
+
++--------+----+----+----+----+
+| Bin    | 1  | 2  | 3  | 4  |
++--------+----+----+----+----+
+| Counts | 36 | 35 | 34 | 35 |
++--------+----+----+----+----+
+
+
+The reason this is happening is due to the following block of code when data is skewed and discrete.
+
+.. code:: R
+
+    # If any row in any bin has a value that matches the 
+    # first row in this bin, add those rows to the previous bin.
+    if(i>1) {
+        valuesInPreviousBins = (dataFrame[[binningColumn]]==dataFrame[[binningColumn]][binStart]) 
+        dataFrame$bins[
+            valuesInPreviousBins & (dataFrame$bins==i)
+            ] = i-1
+        }
+
+What happens for this example above is the following:
+
+#.  Code goes through first loop and assigns bin number 1 based on binStart and binEnd parameters.
+#.  Second iteration the bin number is larger than 1 so an additional statement updates the binStart to binStart + binSize.
+#.  The bin number 2 is assigned based on binStart and binEnd again.
+#.  Check if the first value of the bin is also in the previous bin, if so, adjust bin number to 1 (line of code above). NOTE! this is only done for the current bin we are looking at.
+#.  This is repeated for all bins except the last.
+#.  The last bin is assigned to all bins that did not have a bin assigned yet.
+#.  In our case this goes wrong because the 0 value is 85% of our subjects. Due to this heavy.
+#.  Skew the code breaks as it does not cover this assumption.
+
 
 Data Binning Using Box Plot with ANOVA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
