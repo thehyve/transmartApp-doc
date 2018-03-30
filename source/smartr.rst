@@ -26,8 +26,8 @@ In addition to the :ref:`advanced-workflow-label` a more interactive mode of vis
 data in tranSMART has been created. *SmartR* uses modern technologies to create interactive
 graphs directly from within tranSMART. Although the technologies are different, some 
 of the functionalities are similar. This means a user will have multiple options for 
-creating a desired graph, which is best depends on the type (and sometimes the volume) of 
-data to visualise.
+creating a desired graph. Which of the two technologies is best depends on the type 
+(and sometimes the volume) of data to visualise.
 
 How to run SmartR workflows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -83,7 +83,7 @@ Boxplot Workflow
 Data input requirements:
 
 -   Either one or two cohorts.
--   At least one or more numerical nodes or a markers from a numerical HDD node.
+-   One or more numerical nodes or markers from a numerical HDD node.
 -   Categorical nodes are optional.
 
 After fetching data the Boxplot workflow will draw a box and whiskers plot for every numerical node or gene
@@ -110,7 +110,7 @@ In each graph in the plot the following is shown:
 
 .. note::
     
-    When zoomed in, you can reset the view by clicking the auto scaling icon in the plot control bar.
+    When zoomed in, you can reset the view by clicking the auto scaling or reset axes icon in the plot control bar.
 
 .. warning::
     The plots control bar has an option to *Save and edit plot in cloud*. Although there appear to be
@@ -119,6 +119,9 @@ In each graph in the plot the following is shown:
 
 Correlation Workflow
 ~~~~~~~~~~~~~~~~~~~~
+
+In a correlation analysis, you are using statistical correlation to
+assess the relationship between variables.
 
 Data input requirements:
 
@@ -138,7 +141,8 @@ After fetching data:
 #.  The default view after creating the plot shows a scatter plot with the two selected nodes.
     Every dot represents an individual, with details shown on hover over. On the axes bins are 
     shown with counts for that specific range. A line is drawn that represents the calculated 
-    correlation and intersection. On the right some basic statistics are shown.
+    correlation and intersection. Details are shown when hovering over the line. 
+    On the right some basic statistics are shown.
 
     |smartr_correlation_visualisation|
 
@@ -156,10 +160,15 @@ After fetching data:
 Heatmap Workflow
 ~~~~~~~~~~~~~~~~
 
+A heatmap is a matrix of data points for a particular set of
+biomarkers, such as genes, at a particular point in time and/or for a
+particular tissue sample in the study, as measured for each subject in
+the study.
+
 Data input requirements:
 
 -   Either one or two cohorts.
--   At least one numerical HDD node with more than one biomarker selected.
+-   At least one numerical HDD node with one or more biomarkers selected.
 -   Low dimensional numerical and categorical nodes are optional.
 
 After fetching data the following control panel will be shown:
@@ -169,18 +178,19 @@ After fetching data the following control panel will be shown:
 The panel provides the following options:
 
 -   **Rows to show**: change this number to control the number of rows to show in the final heatmap. The 
-    rows shown depends on the chosen *Ranking Criteria*.
+    rows shown depend on the chosen *Ranking Criteria*.
 
 -   **Group columns by**: you can set this to either *Node Order* or *Subject ID*. 
 
--   **GeneCard**: Set this to *Yes* to confirm you have read the terms of use for the GeneCards service.
+-   **GeneCards**: Set this to *Yes* to confirm you have read the terms of use for the GeneCards service.
+    Using this option will create references to the GeneCards webservice for details about specific markers.
     If this is left to *No*, then clicking on biomarkers in the corresponding heatmap rows will open the 
     relevant page at the EMBL EBI web service.
 
 -   **Ranking criteria**: choose the metric to apply biomarker ranking. This will determine the order of
     rows in the heatmap. Options include metrics based on *Expression level*, *Expression variability*, and 
-    *Differential expression*. The last option is only available when having defined two cohort subsets, 
-    see `Heatmap: Differential expression`_.
+    *Differential expression*. The last option is only available when having defined two cohort subsets during
+    cohort selection, see `Heatmap: Differential expression`_.
 
 The heatmap will appear after clicking **Create plot**.
 
@@ -189,16 +199,23 @@ The heatmap will appear after clicking **Create plot**.
 By default the heatmap is sorted based on the chosen ranking criteria. The heatmap contains the following elements:
 
 -   Rows for each of the selected (or all) biomarkers for the selected data node. Clicking on gene identifiers 
-    takes you to external reference pages (GeneCards or EMBL EBI).
--   Columns for each individual in the chosen dataset.
+    takes you to external reference pages (GeneCards or EMBL EBI). 
+-   Numerical or categorical nodes added will be shown on separate rows.
+-   Columns for each individual in the chosen dataset, with the identifiers as they are known in the tranSMART.
 -   Coloured squares based on the calculated z-score. The colour scheme can be changed in the `Heatmap: Toolbar`_.
-    Hovering your mouse over the squares provides additional information.
--   Each row and column has a set of arrows that can be used to control the ordering of the heatmap. 
+    Hovering your mouse over the squares provides additional information. By default green means a low z-score where 
+    red means a high z-score. This can be adjusted in the toolbar.
+-   Each row and column has a set of arrows that can be used to control the ordering of the heatmap. Small checkboxes
+    allow users to highlight specific columns in the heatmap.
 
-Below the heatmap itself you can find a table with detailed results.
+Below the heatmap itself you can find a table with detailed results for all computed statistics that are available in 
+the **Ranking Criteria** section of the control panel.
 
 |smartr_heatmap_table|
 
+.. note::
+    Next to the *Create Plot*, *Capture SVG* button a *Download* button is available that downloads the input data 
+    data and the computed statistics. 
 
 Heatmap: Toolbar
 ----------------
@@ -208,14 +225,15 @@ current representation of the heatmap.
 
 |smartr_heatmap_toolbar|
  
--   **Marker statistic**: a dropdown that allows choosing several statistics that can be used 
+-   **Marker statistic**: a dropdown (default: *coef*) that allows choosing several statistics that can be used 
     to display in the most left column of the heatmap. Available options: *coef*, *variance*, *range*, *mean*, and *median*.
 
--   **Colour scheme**: set the heatmap colours different multiple or single colour schemas.
+-   **Colour scheme**: set the heatmap colours different multiple or single colour schemas, default is *Red to Green Schema*.
 
 -   **Zoom**: make everything smaller or bigger.
 
--   **Apply cutoff**: remove rows from the heatmap based on a cut-off on the chosen ranking criteria.
+-   **Apply cutoff**: remove rows from the heatmap based on a cut-off on the chosen ranking criteria. 
+    There is also a reset button.
 
 -   **Clustering**: the toolbar allows the user to create clustering instead of normal ordering, using
     the *R* functions for ``dist()`` for calculating distances and ``hclust()`` 
@@ -225,6 +243,8 @@ current representation of the heatmap.
     Based on the chosen clustering the order of columns and rows will change to reflect the computed clusters.
     Dendrograms are shown to display the results.
 
+    Clustering can be done for columns, rows or both.
+
     |smartr_heatmap_clustering|
 
 Heatmap: Differential expression
@@ -233,14 +253,15 @@ Heatmap: Differential expression
 When having defined two cohort subsets some of the aspects of the analysis will be different. For one, the 
 summary page that is shown after **Fetch data** will show information for both subsets. The heatmap control
 panel will have the options for *Differential expression* enabled under **Ranking criteria**. This allows
-the users to order the rows based on one off multiple differential expression metrics. 
+the users to order the rows based on one of multiple differential expression metrics. 
 
 The heatmap image itself will have an additional row to indicate to which subset an individual belongs. This bar 
-allows researchers to easily identify the groups based after performing ordering or clustering.
+allows researchers to easily identify the groups after performing ordering or clustering.
 
 |smartr_heatmap_differential_expression_image|
 
-The table below the heatmap will show additional columns for: *TTEST*, *LOGFOLD*, *PVAL*, *ADJPVAL*, and *BVAL*. 
+The table below the heatmap will show additional columns the additional options available in the **Ranking Criteria**
+section of the control panel (*TTEST*, *LOGFOLD*, *PVAL*, *ADJPVAL*, and *BVAL*).
 These measures that have been calculated between both subsets.
 
 |smartr_heatmap_differential_expression_table|
@@ -254,9 +275,9 @@ Data input requirements:
 -   Multiple numerical nodes.
 -   Categorical nodes are optional.
 
-To create a graph, drag multiple *numerical* nodes from the same folder in the **Fetch data** step. The
-graph shows the average and error for both subsets at every time point. Adding categorical nodes provides
-boxed information per individual.
+To create a graph, drag multiple *numerical* nodes from the same folder, containing a measurement performed 
+at multiple time points, in the **Fetch data** step. The graph shows the average and error for both subsets 
+at every time point. Adding categorical nodes provides boxed information per individual.
 
 In the bottom of the screen a control bar is shown that contains:
 
@@ -291,7 +312,7 @@ is the *log2 fold change* between the selected groups. Its position on the y-axi
 as calculated to determine whether two groups have differential expression for this marker 
 (calculated using the Limma R package). 
 
-The blue (*logFC*) and red (*p-value*) lines are draggable and allow you to control the number of markers shown in the table on 
+The blue (*logFC*) and red (*p-value*) lines are draggable and allow you to control the number of markers shown in the table
 on the right or below (depends on screen size). Hovering over dots shows its details. 
 
 .. important::
