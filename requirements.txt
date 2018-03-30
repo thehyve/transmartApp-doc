@@ -1,1 +1,5 @@
-guzzle_sphinx_theme
+guzzle-sphinx-theme==0.7.11
+Sphinx==1.6b3
+sphinxcontrib-fulltoc==1.2.0
+sphinxcontrib-websupport==1.0.1
+pandoc==1.0.0b2
